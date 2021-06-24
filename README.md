@@ -2,7 +2,7 @@
 
 ## 관리자
 - Javascript / html : 서울여대 장유진
-- html / CSS : 서울여대 (졸업) 이주현
+- html / CSS : 서울여대 이주현
 
 ---
 ## 페이지 소개
