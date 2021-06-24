@@ -18,24 +18,27 @@ async function separateRowFromJson(SOURCE, COLUMNS){
 	const FETCHED_SOURCE = await fetch(SOURCE);
   	let temp = await FETCHED_SOURCE.json();
  	temp = temp.feed.entry;
-    const idx_number = number;
-    console.log(idx_number);
+    const IDX_NUMBER = number -1;
+    console.log(IDX_NUMBER);
     const _DATA = {};
 		for(let k=0; k<Object.keys(COLUMNS).length; k++){;
-			_DATA[COLUMNS[k]] = temp[idx_number]['gsx$'+COLUMNS[k]].$t;
+            _DATA[COLUMNS[k]] = temp[IDX_NUMBER]['gsx$'+COLUMNS[k]].$t;
+            console.log(temp[IDX_NUMBER]['gsx$'+COLUMNS[k]].$t);
 		}
     
     let urlList = [];
     const LINK_COLUMNS = ['image_link', 'video_link'];
+
+    console.log(temp[IDX_NUMBER]['gsx$'+LINK_COLUMNS[0]].$t);
         if(parseInt(_DATA[COLUMNS[4]], 10) > 0 ){
-            const url = temp[idx_number]['gsx$'+LINK_COLUMNS[0]].$t;
+            const url = temp[IDX_NUMBER]['gsx$'+LINK_COLUMNS[0]].$t;
             urlList = url.split(',');
             console.log(urlList);
             setting = 'image';
             _DATA[LINK_COLUMNS[0]] = urlList;
         }
         if(parseInt(_DATA[COLUMNS[5]], 10) > 0){
-            const url = temp[idx_number]['gsx$'+LINK_COLUMNS[1]].$t;
+            const url = temp[IDX_NUMBER]['gsx$'+LINK_COLUMNS[1]].$t;
             urlList = url.split(',');
             console.log(urlList);
             _DATA[LINK_COLUMNS[1]] = urlList;
