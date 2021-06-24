@@ -84,6 +84,13 @@ async function separateRowFromJson(SOURCE, COLUMNS){
 	return _DATA;
 }
 
+function sendFunc( aValue ) { 
+	 location.href="page/detailworks.html?" + aValue; 
+	 // location.href="detailworks.html?"
+	}
+
+
+
 
 async function main(){
 	
@@ -96,7 +103,7 @@ async function main(){
 	const container = document.getElementById("container");
 
 	for (let count = 1; count <= allNumber; count++) {
-		container.innerHTML+=`<a class="item" href="#" id="item${count}"><img src='' onError="this.onerror=null; this.src='./images/thumbnail/altthumb.png'"/><p class="name"></p><p class="author"></p></a>`;
+		container.innerHTML+=`<a class="item" href="#" onclick="javascript:sendFunc('${count}'); return false;" id="item${count}"><img src='' onError="this.onerror=null; this.src='./images/thumbnail/altthumb.png'"/><p class="name"></p><p class="author"></p></a>`;
   
 	}
 		// document.write(`<a class="item" href="#"><img src='' onError="this.onerror=null; this.src='./images/thumbnail/altthumb.png'" id='item' class='uxui_img' /><p class="name"></p><p class="author"></p></a>`);
@@ -121,7 +128,8 @@ async function main(){
 		author.textContent = DATA[i].author;
 
 		TARGET.item[i].classList.add(DATA[i].section);
-		TARGET.item[i].setAttribute('href', DATA[i].link);
+		// TARGET.item[i].setAttribute('href', DATA[i].link);
+
 
 		// TARGET.item[i].textContent = DATA[i].num;
 		/*
@@ -135,7 +143,7 @@ async function main(){
 		console.log(author.textContent);
 	}
 
-				
+	
 }
 window.addEventListener('DOMContentLoaded', main);
 
