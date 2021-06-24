@@ -1,0 +1,156 @@
+@charset "UTF-8";
+/* CSS Document */
+* {
+	margin:0;
+	padding:0;
+}
+
+body {
+	margin: 0;
+	font-family: "Noto Sans KR";
+	background: #000;
+	line-height: 1.6;
+	height: 100vh;
+	
+}
+
+.container {
+	width: 100%;
+	height: 100%;
+	/* CSS Smooth Scroll */
+	
+}
+
+a {
+	text-decoration: none;
+	color : white;
+}
+
+
+
+
+.logo_text {
+	font-size: 20px;
+}
+
+.navbar {
+	position: fixed;
+	top: 0;
+	z-index: 1;
+	width: 100%;
+	height: 130px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: rgba(0, 0, 0, 0.7);
+	padding: 5px 20px;
+}
+
+
+
+.navbar_logo {
+	padding-left: 50px;
+	padding-top: 40px;
+	padding-bottom:0px;
+	font-size: 30px;
+	color: white;
+}
+
+.navbar_menu{
+	display: flex;
+	list-style: none;
+	padding-left: 0;
+}
+
+
+
+.navbar_menu li{
+	padding: 8px 100px;
+}
+
+
+
+.navbar_menu li a:hover{
+	color: #009999;
+}
+
+.navbar_logo p{
+	font-size: 12px;
+}
+
+
+.navbar_toggleBtn{
+	position: absolute;
+	right: 32px;
+	font-size: 24px;
+	color: white;
+	display: none;
+}
+
+.about_text {
+	font-size: 30px;
+	width: 61%;
+}
+
+section {
+	color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+	height: 100vh;
+}
+
+section h1 {
+	font-size:  9rem;
+}
+section div{
+	text-align: left;
+}
+
+section h2 {
+	font-size: 5rem;
+	text-align: left;
+}
+
+section p {
+	font-size: 1.5rem;
+}
+
+@media screen and (max-width: 950px){
+	
+}
+
+@media screen and (max-width: 768px){
+	.navbar_logo {
+		font-size: 1rem;
+		padding-left: 20px;
+	}
+	.navbar_logo, .logo_text {
+	font-size: 3rem;
+}
+
+	.navbar {
+		flex-direction: column;
+		align-items: flex-start;
+		padding: 8px 2px;
+	}
+	.navbar_menu {
+		flex-direction: column;
+		align-items: center;
+		font-size: 0.5rem;
+		width:100%;
+	}
+	.navbar_menu li{
+		width: 100%;
+		text-align: center;
+		
+	}
+	.navbar_toggleBtn{
+		display: block;
+	}
+	
+	.navbar_menu.active{
+		display: flex;
+	}
+}

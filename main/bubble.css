@@ -1,0 +1,52 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.bubble {
+    width: 250px;
+    height: 250px;
+    content: '';
+    border-radius: 54% 46% 42% 58% / 60% 58% 42% 40%;
+    background-image: linear-gradient(to bottom right, #009999, #119999, #003333, #001111);
+    animation:wave 5s linear infinite;
+    margin: 100px auto;
+}
+
+.longbubble {
+    width: 500px;
+    height: 250px;
+    content: '';
+    border-radius: 54% 46% 42% 58% / 60% 58% 42% 40%;
+    background-image: linear-gradient(to bottom right, #008798,#003333, #001111, #000000, #000000);
+    animation:wave2 10s linear infinite;
+    margin: 100px auto;
+}
+
+@keyframes wave{
+    20%{
+        border-radius: 45% 55% 62% 38% / 53% 51% 49% 47%;
+    }
+    40%{
+        border-radius: 45% 55% 49% 51% / 36% 51% 49% 64%;
+    }
+    60%{
+        border-radius: 60% 40% 57% 43% / 47% 62% 38% 53%;
+    }
+    80%{
+        border-radius: 60% 40% 32% 68% / 38% 36% 64% 62%;
+    }
+}
+
+@keyframes wave2{
+    20%{
+        border-radius: 37% 72% 62% 38% / 53% 51% 49% 47%;
+    }
+    40%{
+        border-radius: 45% 55% 49% 51% / 36% 51% 49% 64%;
+    }
+    60%{
+        border-radius: 60% 40% 57% 43% / 47% 62% 38% 53%;
+    }
+    80%{
+        border-radius: 60% 40% 32% 68% / 38% 36% 64% 62%;
+    }
+}

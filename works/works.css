@@ -1,0 +1,85 @@
+@charset "UTF-8";
+/* CSS Document */
+body {
+	background-color: #111;
+	font-family: "Noto Sans KR";
+}
+a {
+	text-decoration: none;
+	color : white;
+}
+* {
+	margin:0;
+	padding:0;
+}
+.container {
+	grid-auto-rows: minmax(200px, auto);
+	padding: 20px;
+	background-color: lightgray;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 1rem;
+	width: 700px;
+	height: 60vh;
+	/* CSS Smooth Scroll */
+}
+
+.logo{
+	color: white;
+	font-size: 50px;
+	padding: 50px;
+}
+
+section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.navbar_menu{
+	display: flex;
+	list-style: none;
+	padding-left: 0;
+}
+
+
+.navbar_menu li{
+	padding: 8px 50px;
+}
+
+
+.navbar_menu li a:hover{
+	color: #009999;
+}
+
+
+
+.item {
+	background-color: rgb(255, 0, 0, 0.5);
+}
+.name {
+	justify-content: center;
+	color: pink;
+	text-align: center;
+	align-items: center;
+	position: absolute;
+	z-index: 1;
+}
+
+.author {
+	justify-content: center;
+	color: pink;
+	text-align: center;
+	align-items: center;
+	position: absolute;
+	z-index: 1;
+}
+
+.item:nth-child(odd) {
+	background-color: rgb(0, 255, 0, 0.5);
+}
+
+.item:hover{
+	background-color: rgb(0, 0, 0, 0.5);
+}

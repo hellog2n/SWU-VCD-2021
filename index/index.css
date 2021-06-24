@@ -1,0 +1,44 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body{
+	background-image: url('images/bubble.gif');
+          background-repeat:no-repeat;
+         display: block;
+		background-size: cover;
+          height:100%;
+          margin:0;
+	width: 100%;
+	background-position: center;
+}
+
+.container {
+	width: 100vw;
+	height: 100vh;
+	margin: 0;
+}
+
+.centered {
+	position: absolute; top:50%; left:50%; transform: translate(-50%, -50%);
+}
+
+
+
+.mainText p{
+	width: 500px;
+	margin: 0 auto;
+	padding:50px 20px;
+	text-align: center;
+	list-style: center;
+	font-size: 5rem ;
+	color: white;
+}
+
+.logo p{
+	color:white;
+	font-size: 0.5rem ;
+	padding:0px 20px;
+}
+
+
+
