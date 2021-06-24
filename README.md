@@ -23,6 +23,7 @@ Works 클릭시 works.html로 이동
 ### (3) works.html
 3번째 메인 페이지
 - 약 82개의 작품
+- Thumbnail Img : image (해상도 확인 필요)
 - 구글 스프레드 시트에서 데이터 관리 (https://docs.google.com/spreadsheets/d/1uFbTYJ3_jMkA9FdCntAzzSmx67o-Deey3nm42WkQaKU/edit?usp=sharing)
 
 
