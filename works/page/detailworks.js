@@ -1,9 +1,13 @@
-const temps = location.href.split("?");
-    const number = temps[1];
-    let setting = "";
+
+
 /* global location */
 
 /* eslint no-restricted-globals: ["off"] */
+
+const temps = location.href.split("?");
+    const number = temps[1];
+    let setting = "";
+
 // JavaScript Document
 function getParameterByName(name) {
     name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
