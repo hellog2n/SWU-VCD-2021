@@ -14,38 +14,34 @@ function getParameterByName(name) {
 
 // 구글 스프레드 시트를 이용한 이미지 임베딩 소스코드 
 async function separateRowFromJson(SOURCE, COLUMNS){
-    
+    let urlList = [];
+    const LINK_COLUMNS = ['imagelink', 'videolink'];
 	const FETCHED_SOURCE = await fetch(SOURCE);
   	let temp = await FETCHED_SOURCE.json();
  	temp = temp.feed.entry;
     const IDX_NUMBER = number -1;
-    console.log(IDX_NUMBER);
     const _DATA = {};
 		for(let k=0; k<Object.keys(COLUMNS).length; k++){;
             _DATA[COLUMNS[k]] = temp[IDX_NUMBER]['gsx$'+COLUMNS[k]].$t;
-            console.log(temp[IDX_NUMBER]['gsx$'+COLUMNS[k]].$t);
 		}
     
-    let urlList = [];
-    const LINK_COLUMNS = ['image_link', 'video_link'];
+    
 
-    console.log(temp[IDX_NUMBER]['gsx$'+LINK_COLUMNS[0]].$t);
         if(parseInt(_DATA[COLUMNS[4]], 10) > 0 ){
             const url = temp[IDX_NUMBER]['gsx$'+LINK_COLUMNS[0]].$t;
             urlList = url.split(',');
-            console.log(urlList);
             setting = 'image';
             _DATA[LINK_COLUMNS[0]] = urlList;
         }
         if(parseInt(_DATA[COLUMNS[5]], 10) > 0){
             const url = temp[IDX_NUMBER]['gsx$'+LINK_COLUMNS[1]].$t;
             urlList = url.split(',');
-            console.log(urlList);
             _DATA[LINK_COLUMNS[1]] = urlList;
             setting = 'video';
         }
 	return _DATA;
 }
+
 
 
 async function main(){
@@ -76,15 +72,15 @@ async function main(){
         console.log(DATA.detail);
         console.log(setting);
 
-        console.log(DATA.image_link);
+        console.log(DATA.imagelink);
         if(DATA.image > 0){
-            for(let idx = 0; idx < DATA.image_link.length; idx++){
-                console.log(DATA.image_link[idx]);
+            for(let idx = 0; idx < DATA.imagelink.length; idx++){
+                console.log(DATA.imagelink[idx]);
             }
         }
         else if(DATA.video > 0){
-            for(let idx = 0; idx < DATA.video_link.length; idx++){
-                console.log(DATA.video_link[idx]);
+            for(let idx = 0; idx < DATA.videolink.length; idx++){
+                console.log(DATA.videolink[idx]);
             }
         }
         
