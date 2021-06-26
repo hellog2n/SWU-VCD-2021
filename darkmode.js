@@ -1,3 +1,41 @@
+
+// main.html에 맞게 되어있음. work.html에도 에러 없이 적용이 필요
+function settingDarkWhite(value){
+    const Plists = document.getElementsByTagName("p");
+    const Alists = document.getElementsByTagName("a");
+    switch(value){
+        
+        case 'dark':
+            document.body.style.backgroundColor = "black";
+        document.body.style.color = "white";
+        document.getElementsByClassName("navbar")[0].style.backgroundColor = "#11111188";
+        document.getElementsByClassName("navbar")[0].style.color = "white";
+    for(let idx = 0; idx <Plists.length; idx++){
+        Plists[idx].style.color = "white";
+    }
+    for(let idx = 0; idx <Alists.length; idx++){
+        Alists[idx].style.color = "white";
+    }
+    break;
+    case 'light':
+        document.body.style.backgroundColor = "white";
+        document.body.style.color = "black";
+        document.getElementsByClassName("navbar")[0].style.backgroundColor = "#ffffff88";
+        document.getElementsByClassName("navbar")[0].style.color = "black";
+        
+    for(let idx = 0; idx <Plists.length; idx++){
+        Plists[idx].style.color = "black";
+    }
+    for(let idx = 0; idx <Alists.length; idx++){
+        Alists[idx].style.color = "black";
+    }
+    break;
+    
+    default:
+            break;
+}
+}
+
 const setCookie = function(name, value, day) {
     const date = new Date();
     date.setTime(date.getTime() + day * 60 * 60 * 24 * 1000);
@@ -19,24 +57,18 @@ deleteCookie("darkMode");
     // setCookie(cookiename, 'true', 1);
     let cookie = getCookie(cookiename);
     console.log(cookie);
+    // Default Setting : Dark Mode
     if(cookie == null) {
-        document.body.style.backgroundColor = "black";
-        document.body.style.color = "white";
-    
-        
+        settingDarkWhite('dark');
     }
     // Light Mode 이면
     if(cookie == 'true')
     {
-        document.body.style.backgroundColor = "white";
-        document.body.style.color = "black";
-        
+        settingDarkWhite('light');
     }
     // Dark Mode 이면
     else if(cookie == 'false') {
-        document.body.style.backgroundColor = "black";
-        document.body.style.color = "white";
-        
+        settingDarkWhite('dark');
     }
 
 document.addEventListener("DOMContentLoaded", 
@@ -44,28 +76,23 @@ $('#darkMode').click(e => {
     console.log(e.target.hash);
     cookie = getCookie(cookiename);
     console.log(cookie);
+    // 처음에 Dark Mode라면 버튼을 눌렀을 시 Light Mode가 되어라.
     if(cookie== null) {
         setCookie(cookiename, 'true', 1);
         cookie = getCookie(cookiename);
-        
+        settingDarkWhite('light');
     }
-    if(cookie == 'true')
+    // Dark Mode가 되어라
+    else if(cookie == 'true')
     {
         console.log(cookie);
-        document.body.style.backgroundColor = "black";
-        document.body.style.color = "white";
-        
-        changeCookie(cookiename,"false");
+        settingDarkWhite('dark');
+        changeCookie(cookiename, 'false');
     }
+    // Light Mode가 되어라
     else if(cookie == 'false'){
-        document.body.style.backgroundColor = "white";
-        document.body.style.color = "black";
-        changeCookie(cookiename,"true");
+        settingDarkWhite('light');
+        changeCookie(cookiename, 'true');
     }
 }));
 
-
-
-
-    
-    
