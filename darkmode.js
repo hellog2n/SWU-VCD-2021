@@ -3,13 +3,18 @@
 function settingDarkWhite(value){
     const Plists = document.getElementsByTagName("p");
     const Alists = document.getElementsByTagName("a");
+    const fileName = document.location.href.split('/')[(document.location.href.split('/').length-1)].split('.')[0];
+    console.log(fileName);
+
     switch(value){
         
         case 'dark':
             document.body.style.backgroundColor = "black";
         document.body.style.color = "white";
+        if(fileName === 'main'){
         document.getElementsByClassName("navbar")[0].style.backgroundColor = "#11111188";
         document.getElementsByClassName("navbar")[0].style.color = "white";
+        }
     for(let idx = 0; idx <Plists.length; idx++){
         Plists[idx].style.color = "white";
     }
@@ -20,9 +25,10 @@ function settingDarkWhite(value){
     case 'light':
         document.body.style.backgroundColor = "white";
         document.body.style.color = "black";
+        if(fileName === 'main'){
         document.getElementsByClassName("navbar")[0].style.backgroundColor = "#ffffff88";
         document.getElementsByClassName("navbar")[0].style.color = "black";
-        
+    }
     for(let idx = 0; idx <Plists.length; idx++){
         Plists[idx].style.color = "black";
     }
@@ -52,7 +58,7 @@ const changeCookie = function(name, value){
     document.cookie = name + '=' + value + ';';
 }
 
-deleteCookie("darkMode");
+// deleteCookie("darkMode");
     const cookiename = "darkMode";
     // setCookie(cookiename, 'true', 1);
     let cookie = getCookie(cookiename);
@@ -83,7 +89,7 @@ $('#darkMode').click(e => {
         settingDarkWhite('light');
     }
     // Dark Mode가 되어라
-    else if(cookie == 'true')
+    if(cookie == 'true')
     {
         console.log(cookie);
         settingDarkWhite('dark');
