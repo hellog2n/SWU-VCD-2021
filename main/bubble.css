@@ -2,41 +2,129 @@
 /* CSS Document */
 
 .bubble {
+    width: 650px;
+    height: 450px;
+    content: '';
+    border-radius: 100% 40% 80% 85%;
+    background-image: linear-gradient(170deg, #009999 30%, #119999 9%, #003333, #000000);
+    animation:wave 7s ease infinite;
+    margin: 0px auto;
+}
+
+.bubble1 {
+    width: 500px;
+    height: 500px;
+    content: '';
+    border-radius: 80% 66% 80% 85%;
+    background-image: linear-gradient(200deg, #009999 30%, #119999 9%, #003333, #000000);
+    animation:wave1 7s ease infinite;
+    margin: 0px auto;
+}
+.bubble2 {
+    width: 350px;
+    height: 350px;
+    content: '';
+    border-radius: 90% 80% 80% 90% / 50% 50% 40% 40%;
+    background-image: linear-gradient(200deg, #009999 30%, #119999 9%, #003333, #000000,#000000);
+    animation:wave2 7s ease infinite;
+    margin: 0px auto;
+}
+.bubble3 {
+    width: 1000px;
+    height: 700px;
+    content: '';
+    border-radius: 80% 66% 80% 85%;
+    background-image: linear-gradient(200deg, #009999 30%, #119999 9%, #003333, #000000, #000000);
+    animation:wave3 10s ease infinite;
+    margin: 0px auto;
+}
+
+.bubble4 {
     width: 250px;
     height: 250px;
     content: '';
-    border-radius: 54% 46% 42% 58% / 60% 58% 42% 40%;
-    background-image: linear-gradient(to bottom right, #009999, #119999, #003333, #001111);
-    animation:wave 5s linear infinite;
-    margin: 100px auto;
+    border-radius: 80% 66% 80% 85%;
+    background-image: linear-gradient(130deg, #009999 30%, #119999 9%, #003333, #000000, #000000);
+    animation:wave1 10s ease infinite;
+    margin: 0px auto;
 }
-
+.bubble5 {
+    width: 900px;
+    height: 550px;
+    content: '';
+    border-radius: 80% 66% 80% 85%;
+    background-image: linear-gradient(200deg, #009999 30%, #119999 9%, #003333, #000000, #000000);
+    animation:wave 10s ease infinite;
+    margin: 0px auto;
+}
+.bubble6 {
+    width: 700px;
+    height: 700px;
+    content: '';
+    border-radius: 80% 66% 80% 85%;
+    background-image: linear-gradient(200deg, #009999 30%, #119999 9%, #003333, #000000, #000000);
+    animation:wave 10s ease infinite;
+    margin: 0px auto;
+}
 .longbubble {
     width: 500px;
-    height: 250px;
+    height: 350px;
     content: '';
     border-radius: 54% 46% 42% 58% / 60% 58% 42% 40%;
     background-image: linear-gradient(to bottom right, #008798,#003333, #001111, #000000, #000000);
-    animation:wave2 10s linear infinite;
+    animation:wave2 7s linear infinite;
     margin: 100px auto;
 }
 
 @keyframes wave{
-    20%{
-        border-radius: 45% 55% 62% 38% / 53% 51% 49% 47%;
+    0%{
+        border-radius: 37% 72% 62% 38% / 53% 51% 49% 47%;
     }
-    40%{
+    30%{
         border-radius: 45% 55% 49% 51% / 36% 51% 49% 64%;
     }
-    60%{
+    70%{
         border-radius: 60% 40% 57% 43% / 47% 62% 38% 53%;
     }
-    80%{
-        border-radius: 60% 40% 32% 68% / 38% 36% 64% 62%;
+    100%{
+        border-radius: 37% 72% 62% 38% / 53% 51% 49% 47%;
     }
+
+}
+
+@keyframes wave1{
+    0%{
+        border-radius: 30% 70% 60% 30% / 50% 50% 40% 40%;
+    }
+    20%{
+        border-radius: 60% 40% 57% 43% / 47% 62% 38% 53%;
+    }
+    60%{
+        border-radius: 45% 55% 49% 51% / 36% 51% 49% 64%;
+    }
+    100%{
+        border-radius: 30% 70% 60% 30% / 50% 50% 40% 40%;
+    }
+
 }
 
 @keyframes wave2{
+    0%{
+        border-radius: 37% 72% 62% 38% / 53% 51% 49% 47% ;
+    }
+    30%{
+        border-radius: 45% 55% 10% 51% / 36% 51% 49% 64%;
+    }
+    50%{
+        border-radius: 60% 40% 57% 43% / 47% 62% 80% 53%;
+    }
+    100%{
+        border-radius: 37% 72% 62% 38% / 53% 51% 49% 47% ;
+    }
+
+}
+
+@keyframes wave3{
     20%{
         border-radius: 37% 72% 62% 38% / 53% 51% 49% 47%;
     }

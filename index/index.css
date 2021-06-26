@@ -25,20 +25,21 @@ body{
 
 
 .mainText p{
-	width: 500px;
+	width: 10000px;
 	margin: 0 auto;
 	padding:50px 20px;
 	text-align: center;
 	list-style: center;
-	font-size: 5rem ;
+	font-size: 125px ;
 	color: white;
+	word-spacing:5px;
+
 }
 
 .logo p{
 	color:white;
-	font-size: 0.5rem ;
-	padding:0px 20px;
+	font-size: 15px ;
+	padding: 5px 20px;
+	line-height: 25px;
 }
-
-
 
