@@ -10,28 +10,33 @@ const getCookie = function(name) {
 const deleteCookie = function(name) {
     setCookie(name, "", -1);
 }
-    const changeCookie = function(name, value){
-        document.cookie = name + '=' + value + ';';
-    }
+const changeCookie = function(name, value){
+    document.cookie = name + '=' + value + ';';
+}
 
+deleteCookie("darkMode");
     const cookiename = "darkMode";
-    setCookie(cookiename, 'true', 1);
+    // setCookie(cookiename, 'true', 1);
     let cookie = getCookie(cookiename);
     console.log(cookie);
     if(cookie == null) {
         document.body.style.backgroundColor = "black";
         document.body.style.color = "white";
+    
+        
     }
+    // Light Mode 이면
     if(cookie == 'true')
     {
         document.body.style.backgroundColor = "white";
         document.body.style.color = "black";
-        changeCookie(cookie,"false");
+        
     }
+    // Dark Mode 이면
     else if(cookie == 'false') {
         document.body.style.backgroundColor = "black";
         document.body.style.color = "white";
-        changeCookie(cookie,"true");
+        
     }
 
 document.addEventListener("DOMContentLoaded", 
@@ -42,22 +47,20 @@ $('#darkMode').click(e => {
     if(cookie== null) {
         setCookie(cookiename, 'true', 1);
         cookie = getCookie(cookiename);
-        console.log('hi');
-        console.log(cookie);
+        
     }
     if(cookie == 'true')
     {
         console.log(cookie);
-        document.body.style.backgroundColor = "white";
-        document.body.style.color = "black";
-        changeCookie(cookiename,"false");
-        console.log('hi');
-    }
-    else if(cookie == 'false'){
         document.body.style.backgroundColor = "black";
         document.body.style.color = "white";
+        
+        changeCookie(cookiename,"false");
+    }
+    else if(cookie == 'false'){
+        document.body.style.backgroundColor = "white";
+        document.body.style.color = "black";
         changeCookie(cookiename,"true");
-        console.log('hi');
     }
 }));
 
