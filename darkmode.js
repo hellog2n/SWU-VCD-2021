@@ -1,3 +1,7 @@
+// Javascript
+
+
+
 
 // main.html에 맞게 되어있음. work.html에도 에러 없이 적용이 필요
 function settingDarkWhite(value){
