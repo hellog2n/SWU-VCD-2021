@@ -1,5 +1,5 @@
 // JavaScript Document
-const resolution = 100;
+const resolution = 220;
 // 네비게이션 섹션을 누를 때 보여지는 섹션이 다르게 적용되는 부분
 document.addEventListener("DOMContentLoaded", 
 
@@ -106,7 +106,8 @@ async function main(){
 
 	// resolution -> 해상도 표시하는 부분
 	for (let count = 1; count <= allNumber; count++) {
-		container.innerHTML+=`<a class="item" href="#" onclick="javascript:sendFunc('${count}'); return false;" id="item${count}"><img src='' onError="this.onerror=null;  this.src='./images/thumbnail/altthumb.png'" style="width: ${resolution}px; height: ${resolution}px;"/><p class="name"></p><p class="author"></p></a>`;
+		container.innerHTML+=`<a class="item" href="#" onclick="javascript:sendFunc('${count}'); return false;" id="item${count}"><img src='' onError="this.onerror=null;  this.src='./images/thumbnail/altthumb.png'" 
+		style="width: ${resolution}px; height: ${resolution}px;"/><p class="name"></p><p class="author"></p></a>`;
   
 	}
 		// document.write(`<a class="item" href="#"><img src='' onError="this.onerror=null; this.src='./images/thumbnail/altthumb.png'" id='item' class='uxui_img' /><p class="name"></p><p class="author"></p></a>`);
