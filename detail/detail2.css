@@ -113,16 +113,17 @@ ul, li {
 }
 
 .layout {
-  overflow: scroll;
     flex: 6;
-    overflow-y:  auto;
+    overflow-y: hidden;
     overflow-x: hidden;
     margin-top: 0%;
     margin-left: 5%;
     margin-right: 5%;
 
 }
-
+.chat-body::-webkit-scrollbar {
+  display: none;
+}
 
 .image {
     width: 100%;
