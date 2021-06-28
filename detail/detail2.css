@@ -1,20 +1,83 @@
+body{
+    background-color: black;
+    overflow-x: hidden;
+}
+a {
+    text-decoration: none;
+    color : white;
+}
 .container {
   display: flex;
   height: 100vh;
   background: lightblue;
 }
+.logo{
+    font-weight: 700;
+    font-family: "Noto Sans KR" 
+    color: white;
+    font-size: 50px;
+    padding-top: 0.2%;
+    padding-left: 40%;
+    width: 850%;
+}
+.back_button{
+    position: absolute;
+    font-weight: 700;
+    font-family: "Noto Sans KR" 
+    color: white;
+    font-size: 50px;
+    padding-top: 0.2%;
+    padding-left: 0%;
 
+
+}
+.explain {
+  line-height: 33px;
+padding-left: 10%;
+}
 .left {
   flex: 0.25;
-  background-color: lightgray;
+  background-color: black;
 }
 
 .right {
   flex: 5;
-  background-color: gray;
+  background-color: black;
   position: relative;
 }
+.category {
+    color:#04999A;
+    font-size: 18px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
 
+/* 작품제목 */
+.title {
+    color: white;
+    font-size: 20px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 900;
+    margin-bottom: 3px;
+}
+
+/* 이름 */
+.name {
+    font-size: 20px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 900;
+    margin-bottom: 15px;
+}
+
+/* 작품설명 */
+.script {
+    color:white;
+    font-size: 16px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
 .chat-wrapper {
   display: flex;
   flex-flow: row wrap;
@@ -29,7 +92,7 @@
 
 .chat-header {
   flex: 1;
-  background-color: blue;
+  background-color: black;
 }
 
 .chat-body {
@@ -42,7 +105,7 @@
 
 .chat-footer {
   flex: 1;
-  background-color: gray;
+  background-color:black;
 }
 
 ul, li {
@@ -72,3 +135,4 @@ ul, li {
     height: 100%;
     margin-bottom: 4%;
 }
+
