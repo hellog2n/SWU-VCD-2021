@@ -13,7 +13,7 @@ a {
 }
 .logo{
     font-weight: 700;
-    font-family: "Noto Sans KR" 
+    font-family: "Noto Sans KR"; 
     color: white;
     font-size: 50px;
     padding-top: 0.2%;
@@ -23,7 +23,7 @@ a {
 .back_button{
     position: absolute;
     font-weight: 700;
-    font-family: "Noto Sans KR" 
+    font-family: "Noto Sans KR"; 
     color: white;
     font-size: 50px;
     padding-top: 0.2%;
@@ -77,6 +77,7 @@ padding-left: 10%;
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: 500;
     margin-bottom: 10px;
+    white-space: pre-line;
 }
 .chat-wrapper {
   display: flex;

@@ -5,7 +5,8 @@
 /* eslint no-restricted-globals: ["off"] */
 
 const temps = location.href.split("?");
-    const number = temps[1];
+    // const number = temps[1];
+    const number = 1;
     let setting = "";
 
 // JavaScript Document
@@ -67,7 +68,10 @@ async function main(){
 		// document.write(`<a class="thumb" href="#"><img src='./images/thumbnail/${count}.png' id='thumb' class='uxui_img' /></a>`);
 
 		const TARGET={
-			item : document.getElementsByClassName('image'),
+            category : document.getElementsByClassName('category'),
+            title : document.getElementsByClassName('title'),
+            script : document.getElementsByClassName('script'),
+            image :document.getElementsByClassName('image')
 		};
         
         console.log(DATA.name);
@@ -78,28 +82,40 @@ async function main(){
 
         console.log(DATA.imagelink);
         if(DATA.image > 0){
-            for(let idx = 0; idx < DATA.imagelink.length; idx++){
-                console.log(DATA.imagelink[idx]);
-            }
+            
+        const image = new Array();
+        for(let count = 0; count < DATA.imagelink.length; count++){
+            image[count] = new Image();
+            let url = "https://drive.google.com/uc?id=";
+            url += DATA.imagelink[count];
+            image[count].src = url;
+            TARGET.image[0].appendChild(image[count]);
+        }
         }
         else if(DATA.video > 0){
             for(let idx = 0; idx < DATA.videolink.length; idx++){
                 console.log(DATA.videolink[idx]);
             }
         }
-        
+        TARGET.script[0].textContent = "";
+        const scriptList = DATA.detail.split('<br>');
+        for(let idx = 0; idx < scriptList.length; idx++){
+            if(idx != scriptList.length - 1){
+                scriptList[idx] += '\r\n';
+            }
+            TARGET.script[0].textContent += scriptList[idx];
+        }
+        TARGET.category[0].textContent = DATA.name;
+        TARGET.title[0].textContent = DATA.author;
+       // TARGET.script[0].textContent = DATA.detail;
 		// image.src = DATA.img;
 		
 
 
 		// TARGET.item[i].textContent = DATA[i].num;
-		/*
-		const image = new [DATA.imagelink.length]Image();
-		let url = "https://drive.google.com/uc?id=";
-		url += DATA[i].img;
-		image.src = url;
-		TARGET.img[i].appendChild(image);
-		*/
+        
+		
+		
 		
 	
 
