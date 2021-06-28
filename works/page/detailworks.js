@@ -6,7 +6,7 @@
 
 const temps = location.href.split("?");
     // const number = temps[1];
-    const number = 1;
+    const number = temps[1];
     let setting = "";
 
 // JavaScript Document
@@ -40,8 +40,7 @@ async function separateRowFromJson(SOURCE, COLUMNS){
         }
         if(parseInt(_DATA[COLUMNS[5]], 10) > 0){
             const url = temp[IDX_NUMBER]['gsx$'+LINK_COLUMNS[1]].$t;
-            urlList = url.split(',');
-            _DATA[LINK_COLUMNS[1]] = urlList;
+            _DATA[LINK_COLUMNS[1]] = url;
             setting = 'video';
         }
 	return _DATA;
@@ -71,7 +70,8 @@ async function main(){
             category : document.getElementsByClassName('category'),
             title : document.getElementsByClassName('title'),
             script : document.getElementsByClassName('script'),
-            image :document.getElementsByClassName('image')
+            image :document.getElementsByClassName('image'),
+            video : document.getElementsByClassName('video')
 		};
         
         console.log(DATA.name);
@@ -93,9 +93,17 @@ async function main(){
         }
         }
         else if(DATA.video > 0){
-            for(let idx = 0; idx < DATA.videolink.length; idx++){
-                console.log(DATA.videolink[idx]);
-            }
+            console.log(DATA.videolink);
+            const ifrm = document.createElement("iframe");
+            ifrm.setAttribute("src", DATA.videolink);
+            ifrm.style.width = "640px";
+            ifrm.style.height = "480px";
+            ifrm.setAttribute('frameborder', 0);
+            ifrm.setAttribute('allow', "autoplay");
+            ifrm.setAttribute('allow', "fullscreen");
+            ifrm.setAttribute('allow', "picture-in-picture");
+            TARGET.video[0].appendChild(ifrm);
+            
         }
         TARGET.script[0].textContent = "";
         const scriptList = DATA.detail.split('<br>');

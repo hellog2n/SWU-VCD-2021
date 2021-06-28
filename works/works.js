@@ -85,7 +85,7 @@ async function separateRowFromJson(SOURCE, COLUMNS){
 }
 
 function sendFunc( aValue ) { 
-	 location.href="page/detailworks.html?" + aValue; 
+	 location.href="../detail/ux2.html?" + aValue; 
 	 // location.href="detailworks.html?"
 	}
 
@@ -128,7 +128,6 @@ async function main(){
 
 
 		image.src = DATA[i].img;
-		image.
 		name.textContent = DATA[i].name;
 		author.textContent = DATA[i].author;
 
