@@ -85,7 +85,7 @@ async function separateRowFromJson(SOURCE, COLUMNS){
 }
 
 function sendFunc( aValue ) { 
-	 location.href="../detail/ux2.html?" + aValue; 
+	 location.href="../detail/detail.html?" + aValue; 
 	 // location.href="detailworks.html?"
 	}
 
