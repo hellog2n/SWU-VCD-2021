@@ -67,7 +67,7 @@ async function main(){
 		// document.write(`<a class="thumb" href="#"><img src='./images/thumbnail/${count}.png' id='thumb' class='uxui_img' /></a>`);
 
 		const TARGET={
-			item : document.getElementsByClassName('item'),
+			item : document.getElementsByClassName('image'),
 		};
         
         console.log(DATA.name);
@@ -94,7 +94,7 @@ async function main(){
 
 		// TARGET.item[i].textContent = DATA[i].num;
 		/*
-		const image = new Image();
+		const image = new [DATA.imagelink.length]Image();
 		let url = "https://drive.google.com/uc?id=";
 		url += DATA[i].img;
 		image.src = url;
