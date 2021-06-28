@@ -1,0 +1,74 @@
+.container {
+  display: flex;
+  height: 100vh;
+  background: lightblue;
+}
+
+.left {
+  flex: 0.25;
+  background-color: lightgray;
+}
+
+.right {
+  flex: 5;
+  background-color: gray;
+  position: relative;
+}
+
+.chat-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  flex-direction: column;
+  background: red;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.chat-header {
+  flex: 1;
+  background-color: blue;
+}
+
+.chat-body {
+    overflow: none;
+  flex: 6;
+  background-color: black;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.chat-footer {
+  flex: 1;
+  background-color: gray;
+}
+
+ul, li {
+  font-size: 28px;
+}
+
+.layout {
+  overflow: scroll;
+    flex: 6;
+    overflow-y:  auto;
+    overflow-x: hidden;
+    margin-top: 0%;
+    margin-left: 5%;
+    margin-right: 5%;
+
+}
+
+
+.image {
+    width: 100%;
+    margin-right: 2%;
+    float: left;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 4%;
+}
