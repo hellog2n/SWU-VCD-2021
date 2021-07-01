@@ -1,15 +1,23 @@
 @charset "UTF-8";
 /* CSS Document */
 .videopc {
-	background-size: cover;
-	
-	height: 100%;
-	background-position: center;
-	margin:0;
+     position:fixed;
+            right:0;
+            bottom:0;
+            width:auto;
+            min-width:100%;
+            height:auto;
+            min-height:100%;
+            z-index:-100;
 	display: inline-block;
 }
 
+img{
+	position: absolute; top:50%; left:50%; transform: translate(-50%, -50%);
+	margin: 0 auto;
 
+
+}
 
 
 body{
@@ -36,17 +44,7 @@ body{
 
 
 
-.mainText p{
-	width: 10000px;
-	margin: 0 auto;
-	padding:50px 20px;
-	text-align: center;
-	list-style: center;
-	font-size: 125px ;
-	color: white;
-	word-spacing:5px;
 
-}
 
 .logo p{
 	color:white;
