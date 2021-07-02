@@ -10,7 +10,6 @@ function settingDarkWhite(value){
     const Wrapper = document.getElementsByClassName("chat-wrapper")[0];
     
     switch(value){
-        
         case true:
         document.body.style.backgroundColor = "black";
         Wrapper.style.backgroundColor = "black";
@@ -42,7 +41,7 @@ function settingDarkWhite(value){
 }
 
 
-
+// 버튼 클릭시 흑백모드 적용 (기본 세팅값 : 흑)
 document.addEventListener("DOMContentLoaded", 
 $('.darkMode').click(e => {
     // console.log(e.target.hash);
