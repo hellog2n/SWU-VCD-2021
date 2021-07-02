@@ -83,7 +83,6 @@ padding-left: 10%;
   display: flex;
   flex-flow: row wrap;
   flex-direction: column;
-  background: red;
   position: absolute;
   top: 0;
   left: 0;
@@ -93,13 +92,11 @@ padding-left: 10%;
 
 .chat-header {
   flex: 1;
-  background-color: black;
 }
 
 .chat-body {
     overflow: none;
   flex: 6;
-  background-color: black;
   overflow-y: auto;
   overflow-x: hidden;
 }
