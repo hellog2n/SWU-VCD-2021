@@ -1,8 +1,32 @@
 @charset "UTF-8";
 /* CSS Document */
+@font-face {
+  font-family: "Noto Sans KR";
+  src: url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;900&display=swap")
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+.title_case{
+	text-transform: none;
+}
+
+
+@media screen and (max-width: 900px){
+	.ko{
+		--sans_small: 0.8rem;
+		--sans_med: 1rem;
+	}
+}
+
 * {
 	margin:0;
 	padding:0;
+}
+@media screen and (max-width: 1500px){
+	font-family: "Noto Sans KR";
 }
 
 body {
@@ -32,8 +56,21 @@ a {
 	text-decoration: none;
 	color:white;
 }
-
-
+.about_title {
+	font-size: 5rem;
+	padding-left: 100px;
+	position: absolute;
+}
+.about_title_center {
+    color: #00239C;
+    display: block;
+    font-size: 20px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 900;
+    letter-spacing: -0.5px;
+    text-align: center !important;  
+    margin-bottom: 40px; 
+}
 
 
 .logo_text {
@@ -54,15 +91,54 @@ a {
 	background-color: rgba(0, 0, 0, 1);
 	padding: 10px 20px;
 	color: white;
+	flex-basis: 50%;
+	transform: translateY(-0.2rem);
+	padding-top: var(--margin);
+	padding-bottom: .5rem;
+	box-sizing: border-box;
+	padding-left: var(--margin);
+	padding-right: var(--margin);
+	position: fixed;
+	display: flex;
+	flex-direction: row;
+	z-index: 100;
 }
 
+@media screen and (max-width: 900px){
+	.navbar{
+		flex-wrap: wrap;
+		padding-left: 0.5rem;
+	}
 
+	.navbar_logo{
+		width: 100%;
+		flex-basis: 100%;
+	}
+	.navbar_menu{
+		width: 100%;
+		flex-basis: 100%;
+		padding-top: 0.25rem;
+		padding-left: 0;
+	}
+
+	.ko #primary_title{
+		box-sizing: border-box;
+		padding-left: 0.1rem;
+	}
+	.en #general_nav{
+		margin-top: 0;
+	}
+	.navbar_menu{
+		padding-left: .1rem;
+	}
+
+}
 
 .navbar_logo {
 	padding-left: 80px;
 	padding-top: 40px;
 	padding-bottom:0px;
-	font-size: 30px;
+	font-size: 200%;
 	
 }
 
@@ -70,7 +146,7 @@ a {
 	font-weight: 900;
 	padding-top: 10px;
 	padding-bottom:0px;
-	font-size: 40px;
+	font-size: 100%;
 	
 }
 
@@ -79,7 +155,13 @@ a {
 	display: flex;
 	list-style: none;
 	padding-left: 0;
-	margin-right: 400px;
+	width: 50%;
+	flex-basis: 50%;
+	box-sizing: border-box;
+	padding-left: var(--margin);
+	transition: var(--speed) background-color var(--ease);
+	margin-top: -.2rem;
+	padding-left: calc(var(--margin) + 0.1rem);
 }
 
 
