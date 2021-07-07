@@ -6,15 +6,15 @@
     height: calc(30vw - 130px);
     content: '';
     border-radius: 100% 40% 80% 85%;
-    background: url(https://i.ibb.co/FhfBXMD/static.jpg), moz-linear-gradient(170deg, #009999 30%, #119999 9%, #003333, #000000);
-    background: url(https://i.ibb.co/FhfBXMD/static.jpg),-webkit-linear-gradient(170deg,#009999 30%, #119999 9%, #003333, #000000 100%);
-    background: url(https://i.ibb.co/FhfBXMD/static.jpg),-o-linear-gradient(170deg, #009999 30%, #119999 9%, #003333, #000000 100%);
-    background: url(https://i.ibb.co/FhfBXMD/static.jpg),-ms-linear-gradient(170deg, #009999 30%, #119999 9%, #003333, #000000 100%);
-  background: url(https://i.ibb.co/FhfBXMD/static.jpg),linear-gradient(170deg,#009999 30%, #119999 9%, #003333, #000000 100%);
-  
+    background: url(https://i.ibb.co/FhfBXMD/static.jpg)  , moz-linear-gradient(170deg, #009999 30%, #119999 9%, #003333, #000000);
+    background: url(https://i.ibb.co/FhfBXMD/static.jpg)  ,-webkit-linear-gradient(170deg,#009999 30%, #119999 9%, #003333, #000000 100%);
+    background: url(https://i.ibb.co/FhfBXMD/static.jpg)  ,-o-linear-gradient(170deg, #009999 30%, #119999 9%, #003333, #000000 100%);
+    background: url(https://i.ibb.co/FhfBXMD/static.jpg)  ,-ms-linear-gradient(170deg, #009999 30%, #119999 9%, #003333, #000000 100%);
+  background: url(https://i.ibb.co/FhfBXMD/static.jpg)  ,linear-gradient(170deg,#009999 30%, #119999 9%, #003333, #000000 100%);
     animation:wave 7s ease infinite, animatedBackground 40s ease infinite;
     margin: 0px auto;
  background-blend-mode: multiply;
+ 
  z-index: -1;
  
 }
@@ -35,7 +35,7 @@
         background: url(https://i.ibb.co/FhfBXMD/static.jpg),-o-linear-gradient(200deg, #009999 30%, #119999 9%, #003333, #000000);
             background: url(https://i.ibb.co/FhfBXMD/static.jpg),-ms-linear-gradient(200deg, #009999 30%, #119999 9%, #003333, #000000);
                 background: url(https://i.ibb.co/FhfBXMD/static.jpg),linear-gradient(200deg, #009999 30%, #119999 9%, #003333, #000000);
-    
+                
     animation:wave1 7s ease infinite, animatedBackground 40s ease infinite;
     margin: 0px auto;
     background-blend-mode: multiply;
@@ -51,7 +51,7 @@
         background: url(https://i.ibb.co/FhfBXMD/static.jpg),-o-linear-gradient(200deg, #009999 30%, #119999 9%, #003333, #000000,#000000);
             background: url(https://i.ibb.co/FhfBXMD/static.jpg),-ms-linear-gradient(200deg, #009999 30%, #119999 9%, #003333, #000000,#000000);
                 background: url(https://i.ibb.co/FhfBXMD/static.jpg),linear-gradient(200deg, #009999 30%, #119999 9%, #003333, #000000,#000000);
-    
+                
     animation:wave2 7s ease infinite, animatedBackground 40s ease infinite;
 z-index: -1;
     margin: 0px auto;
@@ -67,10 +67,11 @@ z-index: -1;
         background: url(https://i.ibb.co/FhfBXMD/static.jpg),-o-linear-gradient(200deg, #009999 30%, #119999 9%, #003333, #000000, #000000);
             background: url(https://i.ibb.co/FhfBXMD/static.jpg),-ms-linear-gradient(200deg, #009999 30%, #119999 9%, #003333, #000000, #000000);
                 background: url(https://i.ibb.co/FhfBXMD/static.jpg),linear-gradient(200deg, #009999 30%, #119999 9%, #003333, #000000, #000000);
-    
     animation:wave3 10s ease infinite, animatedBackground 40s ease infinite;
     margin: 0px auto;
     background-blend-mode: multiply;
+    z-index: -1;
+    
 }
 
 .bubble4 {
@@ -87,6 +88,8 @@ z-index: -1;
     animation:wave1 10s ease infinite, animatedBackground 40s ease infinite;
     margin: 0px auto;
     background-blend-mode: multiply;
+    z-index: -1;
+    
 }
 .bubble5 {
     width: 900px;
@@ -98,14 +101,15 @@ z-index: -1;
         background: url(https://i.ibb.co/FhfBXMD/static.jpg),-o-linear-gradient(200deg, #009999 30%, #119999 9%, #003333, #000000, #000000);
             background: url(https://i.ibb.co/FhfBXMD/static.jpg),-ms-linear-gradient(200deg, #009999 30%, #119999 9%, #003333, #000000, #000000);
                 background: url(https://i.ibb.co/FhfBXMD/static.jpg),linear-gradient(200deg, #009999 30%, #119999 9%, #003333, #000000, #000000);
-    
+                
     animation:wave 10s ease infinite, animatedBackground 40s ease infinite;
     margin: 0px auto;
     background-blend-mode: multiply;
+    z-index: -1;
 }
 .bubble6 {
-    width: 700px;
-    height: 700px;
+    width: 550px;
+    height: 550px;
     content: '';
     border-radius: 80% 66% 80% 85%;
     background: url(https://i.ibb.co/FhfBXMD/static.jpg), moz-linear-gradient(200deg, #009999 30%, #119999 9%, #003333, #000000, #000000);
@@ -113,10 +117,11 @@ z-index: -1;
         background: url(https://i.ibb.co/FhfBXMD/static.jpg),-o-linear-gradient(200deg, #009999 30%, #119999 9%, #003333, #000000, #000000);
             background: url(https://i.ibb.co/FhfBXMD/static.jpg),-ms-linear-gradient(200deg, #009999 30%, #119999 9%, #003333, #000000, #000000);
                 background: url(https://i.ibb.co/FhfBXMD/static.jpg),linear-gradient(200deg, #009999 30%, #119999 9%, #003333, #000000, #000000);
-    
+                
     animation:wave 10s ease infinite, animatedBackground 40s ease infinite;
     margin: 0px auto;
     background-blend-mode: multiply;
+    z-index: -1;
 }
 .longbubble {
     width: 500px;
@@ -128,10 +133,11 @@ z-index: -1;
         background: url(https://i.ibb.co/FhfBXMD/static.jpg),-o-linear-gradient(to bottom right, #008798,#003333, #001111, #000000, #000000);
             background: url(https://i.ibb.co/FhfBXMD/static.jpg),-ms-linear-gradient(to bottom right, #008798,#003333, #001111, #000000, #000000);
                 background: url(https://i.ibb.co/FhfBXMD/static.jpg),linear-gradient(to bottom right, #008798,#003333, #001111, #000000, #000000);
-    
+                
     animation:wave2 7s linear infinite, animatedBackground 40s ease infinite;
     margin: 100px auto;
     background-blend-mode: multiply;
+    z-index: -1;
 }
 
 @keyframes wave{
@@ -196,6 +202,25 @@ z-index: -1;
         border-radius: 60% 40% 32% 68% / 38% 36% 64% 62%;
     }
 }
+
+@media screen and (max-width: 1240px){
+    .bubble2 {
+        width: calc(30vw);
+        height: calc(30vw);
+        left: 1% !important;
+        top: 78% !important;
+
+    }
+    
+    .bubble3 {
+        right: 1% !important;
+        top: 80% !important;
+        width: calc(70vw);
+    height: calc(58vw);
+    
+    }
+}
+
 @media screen and (max-width: 900px){
     .bubble {
         width: calc(30vw);
@@ -209,6 +234,23 @@ z-index: -1;
         width: calc(25vw);
     height: calc(25vw);
 
+    }
+    .bubble2 {
+        
+        
+        top: 78% !important;
+
+    }
+    
+    .bubble3 {
+        top: 80% !important;
+        right: 2% !important;
+    }
+
+    .bubble5 {
+        
+        width: calc(80vw);
+    height: calc(44vw);
     }
 }
 
@@ -227,11 +269,39 @@ z-index: -1;
     height: calc(25vw);
 
     }
+    .bubble2 {
+        top: 78% !important;
+    }
+    .bubble3 {
+        top: 80% !important;
+        right: 3% !important;
+    }
+    .bubble4 {
+        
+        width: calc(23vw);
+    height: calc(23vw);
+    }
+
+    @media screen and (min-width:481px) and (max-width: 581px){
+    
+        .bubble2 {
+            top: 78% !important;
+        }
+        .bubble3 {
+            top: 80% !important;
+            right: 3% !important;
+        }
+        .bubble4 {
+        
+            width: calc(23vw);
+        height: calc(23vw);
+        }
+    }
 }
 
 @media screen and (min-width:361px) and (max-width: 480px){
     .bubble {
-        width: calc(30vw);
+        width: calc(40w);
         height: calc(20vw);
         left: 5% !important;
         top: 220px !important;
@@ -242,6 +312,11 @@ z-index: -1;
         width: calc(30vw);
     height: calc(30vw);
 
+    }
+    .bubble4 {
+        
+        width: calc(23vw);
+    height: calc(23vw);
     }
 }
 
@@ -261,4 +336,21 @@ z-index: -1;
 height: calc(30vw);
 
 }
+
+.bubble2 {
+    top: 60% !important;
 }
+.bubble3 {
+    top: 75% !important;
+    right: 3% !important;
+    width: calc(80vw);
+    height: calc(71vw);
+}
+.bubble4 {
+        
+    width: calc(23vw);
+height: calc(23vw);
+}
+
+}
+

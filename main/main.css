@@ -119,8 +119,14 @@ a {
 }
 
 .about_d {
-	width: auto;
+
 	margin-bottom: 40%;
+	width: calc(100vw - 20px) !important;
+}
+
+.aligns > p{
+	word-break: keep-all;
+	text-align: justify;
 }
 
 .credit_text > h2 {
@@ -168,6 +174,11 @@ line-height: 2;
 /* GRID 적용하는 부분 */
 
 @media screen and (max-width: 900px){
+
+	.vain {
+		height: 80%;
+	}
+
 	body {
 		padding-top: 240px;
 	}
@@ -299,8 +310,11 @@ section {
 	width : auto;
 }
 
-#vain {
+.vain {
 	height: 100%;
+}
+.vain2 {
+	height: 150px;
 }
 
 .about_a {
@@ -354,17 +368,23 @@ section {
 
 @media only screen and (min-width: 481px) and (max-width: 580px){
 	body {
-		min-width: 480px !important;
+		min-width: calc(100vw) !important;
+		max-width: calc(100vw) !important;
 		width : auto;
 	}
 	.desc > .text {
 		width: calc(100vw - 10px);
 		font-size: calc(5vw - 10px);
+		max-width: calc(100vw - 10px) !important;
 
 
 	}
 	.desc {
-		min-width: 480px !important;
+		width: calc(100vw);
+		
+	}
+	.vain {
+		height: 70%;
 	}
 
 }
@@ -372,8 +392,12 @@ section {
 
 @media (min-width: 580px) and (max-width: 767px){
 body {
-	min-width: 580px !important;
+	min-width: calc(100vw) !important;
 	width : auto;
+}
+
+.vain {
+	height: 80%;
 }
 .about_b  > h2 {
 	margin-top: 10%;
@@ -381,11 +405,12 @@ body {
 	padding-left: 60px;
 }
 .desc > .text {
+	max-width: calc(100vw) !important;
 	width: auto;
 	height: auto;
 	margin-bottom: 10%;
-	margin-left: 10%;
-	margin-right: 10%;
+	padding-left: 10%;
+	padding-right: 10%;
 }
 
 .about_a > h1 {
@@ -441,7 +466,13 @@ body {
 	.credit_items {
 		font-size: calc(2vw);
 	}
+	.about_d {
+		width: calc(100vw - 20px) !important;
+	}
 	
+	.vain {
+		height: 70%;
+	}
 	}
 
 
@@ -451,25 +482,30 @@ body {
 	@media only screen and (min-width: 0px) and (max-width: 360px){
 		body {
 			width: auto;
-			min-width: 360px;
-			max-width: 360px !important;
+			min-width: calc(100vw) !important;
+			max-width: calc(100vw) !important;
 		}
 		.navbar{
-			min-width: 360px;
-			width: 360px;
+			min-width: calc(100vw) !important;
+			width: calc(100vw) !important;
+		}
+		.navbar_menu{
+			width: calc(100vw) !important;
+			min-width: calc(100vw) !important;
+	
 		}
 
 		.navbar_logo {
 			font-size: 1em;
 		}
 		.navbar_logo .logo_text {
-			font-size: 0.2em;
+			font-size: 0.5em;
 		}
-		.navbar_menu, li {
-			font-size: 0.8em;
-			flex-basis: 50%;
+		.navbar_menu > li {
+			font-size: 0.9em;
+			padding: 0px 30px !important;
 		}
-		.about_a> h1 {
+		.about_a > h1 {
 			font-size: 0.4em;
 		}
 
@@ -488,6 +524,17 @@ body {
 			font-size: 0.5em;
 		}
 		.credit_text {
+			
 			column-gap: 10px;
+		}
+
+		.about_d {
+			width: calc(100vw - 20px) !important;
+		}
+		.aligns {
+			word-break: keep-all;
+		}
+		.vain {
+			height: 40%;
 		}
 	}
