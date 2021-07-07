@@ -15,6 +15,7 @@
     animation:wave 7s ease infinite, animatedBackground 40s ease infinite;
     margin: 0px auto;
  background-blend-mode: multiply;
+ z-index: -1;
  
 }
 @keyframes animatedBackground {
@@ -195,15 +196,69 @@ z-index: -1;
         border-radius: 60% 40% 32% 68% / 38% 36% 64% 62%;
     }
 }
+@media screen and (max-width: 900px){
+    .bubble {
+        width: calc(30vw);
+        height: calc(20vw);
+        left: 1% !important;
+        top: 280px !important;
+    }
+
+    .bubble1 {
+        top: 220px !important;
+        width: calc(25vw);
+    height: calc(25vw);
+
+    }
+}
 
 
+@media screen and (min-width:481px) and (max-width: 768px){
+    .bubble {
+        width: calc(30vw);
+        height: calc(20vw);
+        left: 1% !important;
+        top: 260px !important;
+    }
+    .bubble1 {
+        right: 10% !important;
+        top: 200px !important;
+        width: calc(25vw);
+    height: calc(25vw);
+
+    }
+}
+
+@media screen and (min-width:361px) and (max-width: 480px){
+    .bubble {
+        width: calc(30vw);
+        height: calc(20vw);
+        left: 5% !important;
+        top: 220px !important;
+    }
+    .bubble1 {
+        right: 10% !important;
+        top: 180px !important;
+        width: calc(30vw);
+    height: calc(30vw);
+
+    }
+}
 
 
 @media screen and (min-width:0) and (max-width: 360px){
 .bubble {
     width: calc(40vw);
     height: calc(30vw);
-    left: 0;
-    top: 0;
+    left: 1% !important;
+    top: 140px !important;
+}
+
+.bubble1 {
+    right: 10% !important;
+    top: 100px !important;
+    width: calc(30vw);
+height: calc(30vw);
+
 }
 }
