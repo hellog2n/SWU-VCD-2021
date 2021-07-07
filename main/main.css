@@ -31,7 +31,6 @@ body {
 	margin: 0;
 	padding-top:180px;
 	overflow-x: hidden;
-	min-width: 767px;
 }
 body p{
 	color: #ffffff;
@@ -184,7 +183,7 @@ line-height: 2;
 		margin-left: 20px !important;
 	}
 	.navbar_menu{
-		width: 100%;
+		width: auto;
 		flex-basis: 100% !important;
 		padding-top: 1rem;
 		padding-left: 0;
@@ -247,7 +246,7 @@ line-height: 2;
 	display: flex;
 	list-style: none;
 	padding-left: 0;
-	width: 100%;
+	width: auto;
 	flex-basis: 50%;
 	box-sizing: border-box;
 	padding-left: var(--margin);
@@ -413,7 +412,8 @@ body {
 	}
 	.navbar{
 		width: auto;
-		min-width: 480px;
+		min-width: calc(100vw) !important;
+
 	}
 
 	.navbar_logo {
@@ -424,11 +424,20 @@ body {
 	.desc > .text {
 		width: auto;
 		position: relative;
-		min-width: 460px;
+		
 		height: auto;
 		padding : 10px;
 		font-size: 0.8em;
 		margin: 0;
+	}
+
+	.navbar_menu {
+		width: auto !important;
+		min-width: calc(100vw) !important;
+		
+	}
+	.navbar_menu li{
+		padding: 0px 30px !important;
 	}
 	
 	}
