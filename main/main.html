@@ -11,59 +11,11 @@
 	<script src="main.js" defer></script>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Noto+Sans+KR:wght@400;500;900&display=swap"
+	<link
+		href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Noto+Sans+KR:wght@400;500;900&display=swap"
 		rel="stylesheet">
-		
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-		    <script>
 
-        $(document).ready(function () {
-
-            // 처음 화면에 모듈(회, 팀, 작) hide
-            $(".modulImg").hide();
-
-            // 처음 화면에 작은모듈(회, 팀, 작) hide
-            $(".minimodulImg").hide();
-
-            // 처음 화면에 영상 가운데정렬 hide
-            $(".video_center").hide();
-
-            // 처음 화면에 상단바 고정될 때 나오는 메뉴 hide
-            $("#hidemenu").hide();
-
-            // 처음 화면 크기 받아와서 정렬 방식 지정
-            var width = $(window).width();
-            var width1 = $(window).width();
-
-            // 화면 크기 작을 때
-            if (width <= 1576) {
-
-                // 전시소개 가운데 정렬 버젼 보이게 함
-                $(".layout_first_center").show();
-                $(".layout_first").hide();
-
-                // 지도소개글 가운데 정렬 버젼 보이게 함
-                $(".mapExplain_1_center").show();
-                $(".mapExplain_1").hide();
-                $(".mapExplain_2_center").show();
-                $(".mapExplain_2").hide();
-
-                // 가운데정렬로 변경
-                $(".about_title").removeClass("about_title").addClass("about_title_center");
-
-     
-            }
-        
-
-
-          
-
-   
-
-
-        });
-
-    </script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 <body>
@@ -82,21 +34,21 @@
 				<li><a class="credita" href="#credit">Credit</a></li>
 			</ul>
 		</nav>
-		<section style="align-items: center" id="about">
+		<section class="item about_a" style="align-items: center" id="about">
 			<div class="about_text">
-				<div class="bubble" style="position: absolute; left: 90px; top: 500px;"></div>
-				<div class="bubble1" style="position: absolute; left: 1300px; top: 320px;"></div>
-				<h1 style="position: relative;left: -50px;"> DEEP</h1>
-				<h1 style="position: relative; top: -130px; left: 700px;">LAYER</h1>
+				<!--	<div class="bubble" style="position: absolute; left: 90px; top: 500px;"></div>
+				<div class="bubble1" style="position: absolute; left: 1300px; top: 320px;"></div> -->
+				<h1 style="background-color: aqua;"> DEEP</h1>
+				<h1 style="background-color: pink;">LAYER</h1>
 
 
 			</div>
 		</section>
-		<section id="works">
+		<section id="works" class="item about_b">
 			<div style="padding-top: 400px; padding-left: 0px;">
-				<div class="bubble2" style="position: absolute; left: 400px; top: 1350px;"></div>
-				<div class="bubble3" style="position: absolute; left: 630px; top: 1480px;"></div>
-				<h2 class="about_title"style="position: relative; padding-top: -20px;"> DEEP LAYER</h2>
+				<!--	<div class="bubble2" style="position: absolute; left: 400px; top: 1350px;"></div>
+				<div class="bubble3" style="position: absolute; left: 630px; top: 1480px;"></div> -->
+				<h2 class="about_title" style="position: relative; padding-top: -20px;"> DEEP LAYER</h2>
 				<img src="poster.png" style="position: relative; height: 600px; top: 50px; left: 100px">
 				<div class="text" style="position: relative; top:-570px; ">
 					서울여자대학교 시각디자인학과 2021 졸업전시<br>
@@ -111,13 +63,13 @@
 				</div>
 			</div>
 		</section>
-		<section id="vain">
-			<div class="bubble4" style="position: absolute; left: 100px; top: 2400px;"></div>
-			<div class="bubble5" style="position: absolute; left: 1700px; top: 2500px;"></div>
+		<section id="vain" class="item about_c">
+			<!--	<div class="bubble4" style="position: absolute; left: 100px; top: 2400px;"></div>
+			<div class="bubble5" style="position: absolute; left: 1700px; top: 2500px;"></div> -->
 
 		</section>
-		<section id="credit">
-			<div class="bubble6" style="position: absolute; left: -0px; top: 3780px;"></div>
+		<section id="credit" class="item about_d">
+			<!--	<div class="bubble6" style="position: absolute; left: -0px; top: 3780px;"></div> -->
 
 			<div class="credit_text" style="position: relative; top:500px; ">
 				<h2 style="position: absolute; left: 213px;top: 0px;"> Credit</h2>

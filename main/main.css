@@ -2,10 +2,14 @@
 /* CSS Document */
 @font-face {
   font-family: "Noto Sans KR";
-  src: url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;900&display=swap")
+  src: url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;900&display=swap");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
+}
+
+item {
+	display: block;
 }
 
 
@@ -14,39 +18,28 @@
 }
 
 
-@media screen and (max-width: 900px){
-	.ko{
-		--sans_small: 0.8rem;
-		--sans_med: 1rem;
-	}
-}
 
-* {
-	margin:0;
-	padding:0;
-}
-@media screen and (max-width: 1500px){
-	font-family: "Noto Sans KR";
-}
 
 body {
-	margin: 20 0 0 0;
+	margin: 0 0 0 0;
 	font-family: "Noto Sans KR";
-	background: #000;
+	background: #fff;
 	line-height: 1.6;
 	height: 100vh;
-	margin-left: 30px;
 	text-decoration: none;
-	color: #ffffff;
+	color: #000;
+	padding-top: 100px;
+	margin: 0;
 }
 body p{
 	color: #ffffff;
 }
 
 .container {
-	width: 100%;
+	display: block;
+	flex-direction: column;
 	height: 100%;
-
+	
 
 	/* CSS Smooth Scroll */
 	
@@ -57,9 +50,8 @@ a {
 	color:white;
 }
 .about_title {
-	font-size: 5rem;
-	padding-left: 100px;
-	position: absolute;
+	width: 100%;
+	align-content: center;
 }
 .about_title_center {
     color: #00239C;
@@ -82,6 +74,7 @@ a {
 .navbar {
 	position: fixed;
 	top: 0;
+	left: 0;
 	z-index: 1;
 	width: 100%;
 	height: 150px;
@@ -89,25 +82,21 @@ a {
 	justify-content: space-between;
 	align-items: center;
 	background-color: rgba(0, 0, 0, 1);
-	padding: 10px 20px;
 	color: white;
-	flex-basis: 50%;
-	transform: translateY(-0.2rem);
+	/* flex-basis: 50%; */
+	/* transform: translateY(-0.2rem); */
 	padding-top: var(--margin);
 	padding-bottom: .5rem;
-	box-sizing: border-box;
-	padding-left: var(--margin);
-	padding-right: var(--margin);
-	position: fixed;
-	display: flex;
+	/* box-sizing: border-box; */
+	padding-left: 0px;
+	padding-right: var(--margin); */
 	flex-direction: row;
-	z-index: 100;
 }
 
 @media screen and (max-width: 900px){
 	.navbar{
 		flex-wrap: wrap;
-		padding-left: 0.5rem;
+		 /*padding-left: 0.5rem;*/
 	}
 
 	.navbar_logo{
@@ -192,10 +181,12 @@ a {
 
 .about_text {
 	isolation: isolate;
-	padding-top: 100px;
 	padding-left: 10px;
 	font-size: 30px;
-	width: 61%;
+}
+.about_text > h1{
+	margin:0;
+	text-align: center;
 }
 
 .text{
@@ -229,12 +220,14 @@ columns: 4;
 	width: 600px;
 }
 section {
-	display: flex;
+	display: inline-block;
 	flex-direction: column;
 	justify-content: center;
-	margin-top: 0px;
-	width: 100%;
 	height: 100vh;
+}
+
+section .about_a {
+	background-color: violet;
 }
 
 section h1{
@@ -260,35 +253,11 @@ section p {
 }
 
 @media screen and (max-width: 768px){
-	.navbar_logo {
-		font-size: 1rem;
-		padding-left: 20px;
-	}
-	.navbar_logo, .logo_text {
-	font-size: 3rem;
+	
+
+.about_text h1{
+	font-size: 5rem;
+	width: 0.8rem;
 }
 
-	.navbar {
-		flex-direction: column;
-		align-items: flex-start;
-		padding: 8px 2px;
-	}
-	.navbar_menu {
-		flex-direction: column;
-		align-items: center;
-		font-size: 0.5rem;
-		width:100%;
-	}
-	.navbar_menu li{
-		width: 100%;
-		text-align: center;
-		
-	}
-	.navbar_toggleBtn{
-		display: block;
-	}
-	
-	.navbar_menu.active{
-		display: flex;
-	}
 }
