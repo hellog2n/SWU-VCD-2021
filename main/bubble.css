@@ -2,8 +2,8 @@
 /* CSS Document */
 
 .bubble {
-    width: 650px;
-    height: 450px;
+    width: calc(40vw - 150px);
+    height: calc(30vw - 130px);
     content: '';
     border-radius: 100% 40% 80% 85%;
     background: url(https://i.ibb.co/FhfBXMD/static.jpg), moz-linear-gradient(170deg, #009999 30%, #119999 9%, #003333, #000000);
@@ -15,6 +15,7 @@
     animation:wave 7s ease infinite, animatedBackground 40s ease infinite;
     margin: 0px auto;
  background-blend-mode: multiply;
+ z-index: -1;
  
 }
 @keyframes animatedBackground {
@@ -25,8 +26,8 @@
 
 
 .bubble1 {
-    width: 500px;
-    height: 500px;
+    width: calc(40vw - 150px);
+    height: calc(40vw - 150px);
     content: '';
     border-radius: 80% 66% 80% 85%;
     background: url(https://i.ibb.co/FhfBXMD/static.jpg), moz-linear-gradient(200deg, #009999 30%, #119999 9%, #003333, #000000);
@@ -38,6 +39,7 @@
     animation:wave1 7s ease infinite, animatedBackground 40s ease infinite;
     margin: 0px auto;
     background-blend-mode: multiply;
+    z-index: -1;
 }
 .bubble2 {
     width: 350px;
@@ -51,7 +53,7 @@
                 background: url(https://i.ibb.co/FhfBXMD/static.jpg),linear-gradient(200deg, #009999 30%, #119999 9%, #003333, #000000,#000000);
     
     animation:wave2 7s ease infinite, animatedBackground 40s ease infinite;
-
+z-index: -1;
     margin: 0px auto;
     background-blend-mode: multiply;
 }
@@ -193,4 +195,70 @@
     80%{
         border-radius: 60% 40% 32% 68% / 38% 36% 64% 62%;
     }
+}
+@media screen and (max-width: 900px){
+    .bubble {
+        width: calc(30vw);
+        height: calc(20vw);
+        left: 1% !important;
+        top: 280px !important;
+    }
+
+    .bubble1 {
+        top: 220px !important;
+        width: calc(25vw);
+    height: calc(25vw);
+
+    }
+}
+
+
+@media screen and (min-width:481px) and (max-width: 768px){
+    .bubble {
+        width: calc(30vw);
+        height: calc(20vw);
+        left: 1% !important;
+        top: 260px !important;
+    }
+    .bubble1 {
+        right: 10% !important;
+        top: 200px !important;
+        width: calc(25vw);
+    height: calc(25vw);
+
+    }
+}
+
+@media screen and (min-width:361px) and (max-width: 480px){
+    .bubble {
+        width: calc(30vw);
+        height: calc(20vw);
+        left: 5% !important;
+        top: 220px !important;
+    }
+    .bubble1 {
+        right: 10% !important;
+        top: 180px !important;
+        width: calc(30vw);
+    height: calc(30vw);
+
+    }
+}
+
+
+@media screen and (min-width:0) and (max-width: 360px){
+.bubble {
+    width: calc(40vw);
+    height: calc(30vw);
+    left: 1% !important;
+    top: 140px !important;
+}
+
+.bubble1 {
+    right: 10% !important;
+    top: 100px !important;
+    width: calc(30vw);
+height: calc(30vw);
+
+}
 }
