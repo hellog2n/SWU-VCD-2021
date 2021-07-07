@@ -10,7 +10,7 @@ if(this.hash !== ''){
 		console.log('2');
 	}
 	$('html, body').animate({
-		scrollTop: $(hash).offset().top - 250
+		scrollTop: $(hash).offset().top
 	},700);
 }
 				  });

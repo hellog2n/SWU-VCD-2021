@@ -19,7 +19,9 @@
 }
 
 
-
+html {
+	overflow-x: hidden;
+}
 
 body {
 	font-family: "Noto Sans KR";
@@ -31,6 +33,7 @@ body {
 	margin: 0;
 	padding-top:180px;
 	overflow-x: hidden;
+	
 }
 body p{
 	color: #ffffff;
