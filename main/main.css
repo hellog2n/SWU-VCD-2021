@@ -203,7 +203,7 @@ line-height: 2;
 
 	.about_a > h1{
 		
-	
+			width : auto;
 			font-size: calc(17vw);
 		
 	}
@@ -215,11 +215,11 @@ line-height: 2;
 	}
 	.about_a > h1:nth-of-type(1){
 		width: auto;
-		margin-left: -40% !important;
+		padding-right: 20% !important;
 	}
 	.about_a > h1:nth-of-type(2){
 		width: auto;
-		margin-right: -40% !important;
+		padding-left: 20% !important;
 	}
 
 	
@@ -313,16 +313,15 @@ section {
 }
 .about_a > h1 {
 	margin: 0;
-	padding: 0;
 	line-height: 1.2;
 	text-align: center;	
 }
 
 .about_a > h1:nth-of-type(1){
-	margin-left: -40% !important;
+	padding-right: 40% !important;
 }
 .about_a > h1:nth-of-type(2){
-	margin-right: -30% !important;
+	padding-left: 30% !important;
 }
 
 .about_b  > h2 {
@@ -438,6 +437,9 @@ body {
 	}
 	.navbar_menu li{
 		padding: 0px 30px !important;
+	}
+	.credit_items {
+		font-size: calc(2vw);
 	}
 	
 	}
