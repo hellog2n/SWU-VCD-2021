@@ -108,7 +108,7 @@ border-radius: 50%;
     width: 400px;
     height:400px;
     background: linear-gradient(64deg, #f34868 23%, #f24768 23%, #9e00ff 80%, transparent);
-    animation: wave 8s ease-in-out infinite;
+    animation: wave 8s ease-in-out ;
 }
 .shape:nth-of-type(2){
     width: 400px;
