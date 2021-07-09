@@ -35,6 +35,7 @@
 	<title>서울여자대학교 38회 졸업전시</title>
 </head>
 <link rel="stylesheet" href="index/index.css">
+<link rel="stylesheet" href="index/water.css">
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -42,15 +43,15 @@
 <body>
 
 	<div class="container" onClick="location.href='main/main.html'" style="cursor:pointer">
-		
+
 		<div class="logo">
-			<p class="b" style="position: absolute;">서울여자대학교 시각디자인학과 2021 졸업전시<br>
+			<p class="b" style="position: absolute;">서울여자대학교 시각디자인학과 38회 졸업전시<br>
 				Seoul Women's University Visual Communication Design</p>
 		</div>
-	<video class="videopc" autoplay loop playsinline muted>
+		<video class="videopc" autoplay loop playsinline muted>
 			<source src="index/images/swu_vcd_intro.mp4" type="video/mp4">
 		</video>
-	<img src="index/images/DEEPLAYER1.png" style="position: absolute; width: 60%;">
+		<img src="index/images/DEEPLAYER1.png" style="position: absolute; width: 60%;">
 		<div class="centered">
 
 			<div class="mainText">
@@ -78,6 +79,44 @@
 			</div>
 		</div>
 	</div>
+	<svg viewBox="0 0 300 300">
+		<defs>
+			<mask id="MASK" maskunits="userSpaceOnUse" maskcontentunits="userSpaceOnUse">
+				<image xlink:href="index/images/smooth.gif" height="300px" width="300px" />
+			</mask>
+		</defs>
+		<g mask="url(#MASK)">
+			<image x="0" y="0" class="space" href="index/images/wa2.png" height="300px" width="300px" />
+		</g>
+	</svg>
+
+	<svg viewBox="0 0 300 300" class="pos cover_a">
+		<defs>
+			<mask id="MASK2" maskunits="userSpaceOnUse" maskcontentunits="userSpaceOnUse">
+				<image xlink:href="index/images/smooth.gif" height="300px" width="300px" />
+			</mask>
+		</defs>
+		<g mask="url(#MASK2)">
+			<image x="0" y="0" class="space" href="index/images/cover.png" height="300px" width="300px" />
+		</g>
+	</svg>
+
+
+	<svg viewBox="0 0 300 300" class="pos image_a">
+		<defs>
+			<mask id="MASK2" maskunits="userSpaceOnUse" maskcontentunits="userSpaceOnUse">
+				<image xlink:href="index/images/smooth.gif" height="300px" width="300px" />
+			</mask>
+		</defs>
+		<g mask="url(#MASK2)">
+			<image x="0" y="0" class="space" href="index/images/wa.png" height="300px" width="300px" />
+		</g>
+	</svg>
+
+
+
+
+
 </body>
 
 </html>

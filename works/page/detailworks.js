@@ -92,17 +92,18 @@ async function main(){
             TARGET.image[0].appendChild(image[count]);
         }
         }
-        else if(DATA.video > 0){
+        if(DATA.video > 0){
             console.log(DATA.videolink);
             const ifrm = document.createElement("iframe");
             ifrm.setAttribute("src", DATA.videolink);
-            ifrm.style.width = "640px";
-            ifrm.style.height = "480px";
+            ifrm.style.width = "1080px";
+            ifrm.style.height = "720px";
             ifrm.setAttribute('frameborder', 0);
             ifrm.setAttribute('allow', "autoplay");
             ifrm.setAttribute('allow', "fullscreen");
             ifrm.setAttribute('allow', "picture-in-picture");
             TARGET.video[0].appendChild(ifrm);
+            
             
         }
         TARGET.script[0].textContent = "";
