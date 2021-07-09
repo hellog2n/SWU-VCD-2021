@@ -1,0 +1,33 @@
+
+
+svg {
+    width: 300px;
+    height: 300px;
+   
+}
+
+.pos {
+    position: absolute;
+    left : 100px;
+    top : 500px;
+}
+.cover_a {
+    z-index: 2;
+}
+.image_a {
+    z-index: 1;
+}
+
+
+
+.hi1 {
+    background : radial-gradient( #009999 5% , #119999 10% , #003333 30%, #000000 80% ) no-repeat;
+    background-size: 300px 300px;
+    background-clip: content-box;
+    background-position: center;
+    width: 300px;
+    height: 300px;
+}
+
+
+
