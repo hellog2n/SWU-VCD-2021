@@ -92,7 +92,7 @@ async function main(){
             TARGET.image[0].appendChild(image[count]);
         }
         }
-        else if(DATA.video > 0){
+        if(DATA.video > 0){
             console.log(DATA.videolink);
             const ifrm = document.createElement("iframe");
             ifrm.setAttribute("src", DATA.videolink);
