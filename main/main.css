@@ -8,6 +8,20 @@
   font-display: swap;
 }
 
+
+.pos {
+    position: relative;
+    left : 0;
+    top : 0px;
+}
+.cover_a {
+    z-index: 2;
+}
+.image_a {
+    z-index: 1;
+}
+
+
 .item {
 	display: block;
 	position: relative;
@@ -173,7 +187,6 @@ line-height: 2;
 
 
 
-
 /* GRID 적용하는 부분 */
 
 @media screen and (max-width: 900px){
@@ -216,11 +229,14 @@ line-height: 2;
 
 
 	.about_a > h1{
-		
+
 			width : auto;
 			font-size: calc(17vw);
-		
+
 	}
+	
+
+
 	.about_a {
 		width: auto;
 		justify-content: center; align-items: center;

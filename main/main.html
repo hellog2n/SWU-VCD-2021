@@ -14,6 +14,7 @@
 	<script src="main.js" defer></script>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 	<link
 		href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Noto+Sans+KR:wght@400;500;900&display=swap"
 		rel="stylesheet">
@@ -37,11 +38,11 @@
 				<li><a class="credita" href="#credit">Credit</a></li>
 			</ul>
 		</nav>
-		<section class="item about_a" id="about">
-			<div class="bubble" style="position: absolute; left: 3%; top: 250px;"></div>
-			<div class="bubble1" style="position: absolute; right: 10%; top: 180px;"></div>
-			<h1> DEEP</h1>
-			<h1>LAYER</h1>
+		<section class="item about_a " id="about">
+			<div class="bubble" style="position: absolute; left: 3%; top: 250px;" data-aos="fade-up"></div>
+			<div class="bubble1" style="position: absolute; right: 10%; top: 180px;" data-aos="fade-up"></div>
+			<h1 data-aos="fade-right" data-aos-delay="50" data-aos-duration="2000"> DEEP</h1>
+			<h1 data-aos="fade-right" data-aos-delay="50" data-aos-duration="2500">LAYER</h1>
 		</section>
 		<section id="works" class="item about_b">
 
@@ -143,6 +144,12 @@
 		<!--div class="longbubble"></div-->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 		<script src="main.js"></script>
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<script>
+			AOS.init({
+				duration: 3000
+			});
+		</script>
 </body>
 
 </html>
