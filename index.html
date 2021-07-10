@@ -39,10 +39,15 @@
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<sciprt src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></sciprt>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js"
+	crossorigin="anonymous"></script>
 
 <body>
 
-	<div class="container" onClick="location.href='main/main.html'" style="cursor:pointer">
+	<div class="container" onClick="
+	setTimeout(()=>{location.href='main/main.html'},500)
+	" style="cursor:pointer">
 
 		<div class="logo">
 			<p class="b" style="position: absolute;">서울여자대학교 시각디자인학과 38회 졸업전시<br>
@@ -51,7 +56,8 @@
 		<video class="videopc" autoplay loop playsinline muted>
 			<source src="index/images/swu_vcd_intro.mp4" type="video/mp4">
 		</video>
-		<img src="index/images/DEEPLAYER1.png" style="position: absolute; width: 60%;">
+		<img class="waves" src="index/images/DEEPLAYER1.png" style="position: absolute; width: 60%;">
+		<p class="t waves" style="position: absolute; width: 60%;">DEEP LAYER </p>
 		<div class="centered">
 
 			<div class="mainText">
@@ -114,7 +120,11 @@
 	</svg>
 
 
+	<script type="text/javascript">
+		$('.container').ripples({
 
+		})
+	</script>
 
 
 </body>
