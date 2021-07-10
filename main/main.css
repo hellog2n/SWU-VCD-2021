@@ -173,7 +173,6 @@ line-height: 2;
 
 
 
-
 /* GRID 적용하는 부분 */
 
 @media screen and (max-width: 900px){
@@ -216,11 +215,14 @@ line-height: 2;
 
 
 	.about_a > h1{
-		
+
 			width : auto;
 			font-size: calc(17vw);
-		
+
 	}
+	
+
+
 	.about_a {
 		width: auto;
 		justify-content: center; align-items: center;

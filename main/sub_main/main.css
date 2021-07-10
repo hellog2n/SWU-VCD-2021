@@ -136,7 +136,12 @@ a {
 	padding-top: 10px;
 	padding-bottom:0px;
 	font-size: 100%;
-	
+}
+
+h1{
+	transition: 1s;
+	transform-origin: left;
+	transform: scaleX(1);
 }
 
 
