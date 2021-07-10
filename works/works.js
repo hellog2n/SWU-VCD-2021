@@ -94,6 +94,10 @@ function sendFunc( aValue ) {
 	 // location.href="detailworks.html?"
 	}
 
+// 난수 생성하는 함수
+function rand(min, max) {
+		return Math.floor(Math.random() * (max - min + 1)) + min;
+	  }
 
 
 // 구글스프레드시트에서 데이터를 갖고와서 처리하는 코드
@@ -156,20 +160,26 @@ const files = new Image();
 
 		// 해당 객체의 ID 값을 갖고와라
 		const id_check = $(this).attr("id");
+
 		// 문자열 중 숫자만 반환
 		const numID = id_check.replace(/[^0-9]/g, "");
 		files.src = DATA[numID-1].img;
+
 		// 이미지 파일 검증
 		if(files.complete == false){
 			// 파일이 존재하지 않다면 임시썸네일로 대체하라.
 			console.log(DATA[numID-1].img);
 			image_link = "images/thumbnail/altthumb.png";
 		}
+
 		// 파일이 존재한다면 해당 썸네일을 갖고오라.
 		else {
 			image_link = DATA[numID-1].img;
 		}
-		
+
+		// 랜덤하게 GIF 마스크 이미지 선택하도록 설정
+		const randNum = rand(1,3);
+
 		// (주현쓰가 관리해야할 부분) - id = item(1 ~ 82 보통 숫자로 되어있음)의 자식인 img 태그의 css를 display를 none하라.
 		 $(`#${id_check}`).children('img').css("display", "none");
 		// $(`#${id_check}`).children('svg').css("display", "block");
@@ -178,13 +188,14 @@ const files = new Image();
 		// (주현쓰가 관리해야할 부분) - id = item(1 ~ 82 보통 숫자로 되어있음)의 자식의 name, author 클래스를 보이게 하라.
 		$(`#${id_check}`).children('.name').css("visibility", "visible");
 		$(`#${id_check}`).children('.author').css("visibility", "visible");
+		
 		// (주현쓰가 관리해야할 부분) - id = item(1 ~ 82 보통 숫자로 되어있음)의 자식에 svg 태그를 추가하라.
 		// 첫번째 svg -> Cover SVG (그라데이션)
 		// 두번째 svg -> Image SVG (썸네일 이미지)
 		 $(`#${id_check}`).append(() => `<svg viewBox="0 0 330 330" class="pos cover_a">
 <defs>
 	<mask id="MASK2" maskunits="userSpaceOnUse" maskcontentunits="userSpaceOnUse">
-		<image xlink:href="../index/images/wave3.gif" height="330px" width="330px" />
+		<image xlink:href="../index/images/wave${randNum}.gif" height="330px" width="330px" />
 	</mask>
 </defs>
 <g mask="url(#MASK2)">
@@ -196,7 +207,7 @@ const files = new Image();
 <svg viewBox="0 0 330 330" class="pos image_a">
 <defs>
 	<mask id="MASK1" maskunits="userSpaceOnUse" maskcontentunits="userSpaceOnUse">
-		<image xlink:href="../index/images/wave3.gif" height="330px" width="330px" />
+		<image xlink:href="../index/images/wave${randNum}.gif" height="330px" width="330px" />
 	</mask>
 </defs>
 <g mask="url(#MASK1)">
@@ -205,7 +216,7 @@ const files = new Image();
 </svg>`);
 		
 	});
-	
+
 	
 	// 마우스가 호버 상태가 아닐 때, 마우스가 해당 객체에서 벗어날 때 이벤트 처리
 	$('.item').mouseleave(function(){
