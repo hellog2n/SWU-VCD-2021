@@ -135,3 +135,31 @@ ul, li {
     margin-bottom: 4%;
 }
 
+.glowing {
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  top: 50px;
+  right: 50px;
+  z-index: 4;
+  border-radius: 50%;
+  
+}
+
+.white{
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 1),
+  0 0 40px rgba(255, 255, 255, 1),
+  0 0 60px rgba(255, 255, 255, 1),
+  0 0 80px rgba(255, 255, 255, 1),
+  0 0 0 8px rgba(255, 255, 255, .1);
+}
+
+.black {
+  background: rgba(0, 0, 0, .7);
+  box-shadow: 0 0 20px rgba(0, 0, 0, .1),
+  0 0 40px rgba(0, 0, 0, .4),
+  0 0 60px rgba(0, 0, 0, .4),
+  0 0 80px rgba(0, 0, 0, .4),
+  0 0 0 8px rgba(0, 0, 0, .1);
+}

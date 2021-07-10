@@ -21,6 +21,9 @@ function settingDarkWhite(value){
         Alists[idx].style.color = "white";
     }
     
+    $('.darkMode').removeClass('black');
+    $('.darkMode').addClass('white');
+
     break;
     case false:
         document.body.style.backgroundColor = "white";
@@ -33,6 +36,8 @@ function settingDarkWhite(value){
     for(let idx = 0; idx <Alists.length; idx++){
         Alists[idx].style.color = "black";
     }
+    $('.darkMode').removeClass('white');
+    $('.darkMode').addClass('black');
     break;
     
     default:
