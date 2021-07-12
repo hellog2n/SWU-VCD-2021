@@ -78,6 +78,8 @@ padding-left: 10%;
     font-weight: 500;
     margin-bottom: 10px;
     white-space: pre-line;
+    padding-left: 7%;
+    padding-right: 7%;
 }
 .chat-wrapper {
   display: flex;
