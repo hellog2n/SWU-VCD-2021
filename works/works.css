@@ -72,29 +72,26 @@ section {
 	justify-content: center;
 	color: white;
 	text-align: center;
-	align-items: center;
 	position: absolute;
+	transform: translate(-50%, -50%);
 	z-index: 4;
-	position: absolute; 
-	top: 60%; 
-	left: 40%; 
+	top: 40%; 
+	left: 50%; 
 	width: 20%;
-	transform: translate(-50%, -80%)
-	display: inline-block;
   vertical-align: middle;
 	margin: 0 auto;
 }
 
 .author {
+	top: 60%; 
+	left: 50%; 
+	width: 20%;
+	transform: translate(-50%, -50%);
 	visibility: hidden;
-	justify-content: center;
 	color: white;
 	text-align: center;
-	align-items: center;
 	position: absolute;
 	z-index: 4;
-	padding-left: 140px;
-	padding-top: 150px;
 }
 
 

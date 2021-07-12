@@ -324,26 +324,29 @@ z-index: -2;
         height: calc(20vw);
         left: 5% !important;
         top: 220px !important;
+        background-size: contain;
     }
     .bubble1 {
         right: 10% !important;
         top: 180px !important;
         width: calc(30vw);
     height: calc(30vw);
+    background-size: contain;
 
     }
 
     .bubble3, .bubble5 {
-        background-size: cover;
+        background-size: contain;
     }
 
     .bubble4 {
-        
+        background-size: contain;
         width: calc(23vw);
     height: calc(23vw);
     }
     .bubble6 {
         top: 0;
+        background-size: contain;
         left: -10% !important;
         width: calc(50vw);
     height: calc(50vw);

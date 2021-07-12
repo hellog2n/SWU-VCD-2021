@@ -181,7 +181,7 @@ const files = new Image();
 		const randNum = rand(1,3);
 
 		// (주현쓰가 관리해야할 부분) - id = item(1 ~ 82 보통 숫자로 되어있음)의 자식인 img 태그의 css를 display를 none하라.
-		 $(`#${id_check}`).children('img').css("display", "none");
+		 $(`#${id_check}`).children('img').css("visibility", "hidden");
 		// $(`#${id_check}`).children('svg').css("display", "block");
 		console.log(id_check);
 
@@ -199,7 +199,7 @@ const files = new Image();
 	</mask>
 </defs>
 <g mask="url(#MASK2)">
-	<image x="0" y="0" class="space" href="../index/images/cover.png" height="330px" width="330px" opacity="80%" />
+	<image x="0" y="0" class="space" href="../index/images/cover_new.png" height="330px" width="330px" opacity="80%" />
 </g>
 </svg>
 
@@ -223,7 +223,7 @@ const files = new Image();
 		const id_check = $(this).attr("id");
 
 		// (주현쓰가 관리해야할 부분) - id = item(1 ~ 82 보통 숫자로 되어있음)의 자식인 img 태그의 css를 display를 block하라.
-		$(`#${id_check}`).children('img').css("display", "block");
+		$(`#${id_check}`).children('img').css("visibility", "visible");
 		
 		//	$(`#${id_check}`).children('svg').css("display", "none");
 
