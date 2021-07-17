@@ -7,8 +7,20 @@
   font-style: normal;
   font-display: swap;
 }
-
-
+.trigger {
+   width: 200px;
+  height: 200px;
+  margin: 50px auto;
+  padding-top: 75px;
+  background: #ccc;
+  text-align: center;
+  color: #FFF;
+  font-size: 3em;
+}
+.trigger span {
+  display: block;
+  font-size: 1rem;
+}
 .pos {
     position: relative;
     left : 0;
@@ -35,6 +47,7 @@
 
 html {
 	overflow-x: hidden;
+	overflow-y: hidden;
 }
 
 body {
