@@ -97,7 +97,6 @@ body{
   font-size: calc(10vw);
   text-align: center;
   height: 160px;
-  line-height: 110px;
   vertical-align: bottom;
   position: absolute;
   width: 100%;
@@ -110,8 +109,11 @@ body{
   0% {
     background-size: 200px 0px;
   }
+  70% {
+    background-size: 200px 400px;
+  }
   100% {
-    background-size: 200px 200px;
+    background-size: 200px 400px;
   }
 }
 .wave {
@@ -122,7 +124,7 @@ body{
   background-clip: text;
   color: transparent;
   text-shadow: black;
-  animation: wave-animation 1s infinite linear, loading-animation 5s infinite linear alternate;
+  animation: wave-animation 1s infinite linear, loading-animation 10s infinite linear alternate;
   background-size: 200px 100px;
   background-repeat: repeat-x;
   opacity: 1;
