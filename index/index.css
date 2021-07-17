@@ -31,7 +31,7 @@ img{
 	background-clip: text;
 -webkit-background-clip: text;
 color: transparent;
-animation: wave-animation 1s infinite linear, loading-animation 5s infinite linear alternate;
+animation: wave-animation 1s infinite linear, loading-animation 10s infinite linear alternate;
 background-size: 200px 100px;
 background-repeat: repeat-x;
 opacity: 1;
@@ -88,4 +88,41 @@ body{
 	line-height: 25px;
 }
 
-
+.loading {
+	color:white;
+  text-transform: uppercase;
+  font-family: 'Cabin Condensed', sans-serif;
+  font-weight: bold;
+  font-size: 80pt;
+  text-align: center;
+  height: 120px;
+  line-height: 110px;
+  vertical-align: bottom;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100px;
+  bottom: 0;
+  display: block;
+}
+@keyframes loading-animation {
+  0% {
+    background-size: 200px 0px;
+  }
+  100% {
+    background-size: 200px 200px;
+  }
+}
+.wave {
+  background-image: url("images/5hYlAGa.png");
+  -moz-background-clip: text;
+  -o-background-clip: text;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: black;
+  animation: wave-animation 1s infinite linear, loading-animation 10s infinite linear alternate;
+  background-size: 200px 100px;
+  background-repeat: repeat-x;
+  opacity: 1;
+}
