@@ -1,5 +1,6 @@
 @charset "UTF-8";
 /* CSS Document */
+
 body {
 	background-color: #000;
 	font-family: "Noto Sans KR";
@@ -24,6 +25,8 @@ a {
 	/* CSS Smooth Scroll */
 }
 
+
+
 .logo{
 	color: white;
 	font-size: 50px;
@@ -31,6 +34,7 @@ a {
 }
 
 section {
+	width: auto;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -41,12 +45,14 @@ section {
 	display: flex;
 	list-style: none;
 	padding-left: 0;
+	flex-wrap: nowrap;
 }
 
 
 .navbar_menu li{
 	padding: 8px 50px;
 	font-size: 1.5em;
+	text-align: center;
 }
 
 
@@ -60,7 +66,7 @@ section {
 	position: relative;
 	float: left;
 	height: 100%;
-    width: 100%;
+    width: auto;
 
 	background-color: black;
 	z-index: 0;
@@ -116,4 +122,47 @@ svg {
 
 	width: 330px;
 	height: 330px;
+}
+
+@media screen and (max-width: 360px){
+	body {
+		min-width: calc(100vw);
+		max-width: calc(100vw);
+		width: auto;
+	}
+	.container {
+		width: calc(100vw);
+		grid-auto-rows: minmax(100px, auto);
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.logo{
+		color: white;
+		font-size: 20px;
+		padding: 20px;
+		text-align: center;
+	}
+	section {
+		width: auto;
+	}
+
+	svg {
+
+		width: 100px;
+		height: 100px;
+	}
+
+	.item {
+		width: 100px;
+	}
+	.navbar_menu {
+		min-width: calc(100vw);
+		width: auto;
+	}
+	.navbar_menu > li {
+		
+		width: auto;
+		padding: 2px 20px;
+		font-size: 5vw;
+		flex-basis: 100%
+	}
 }

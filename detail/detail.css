@@ -1,12 +1,20 @@
 body{
-    background-color: black;
+  background-color: tomato;
+  margin: 0;
+  padding: 0;
+  min-width: calc(100vw);
+		max-width: calc(100vw);
+		width: auto;
+    
     overflow-x: hidden;
 }
+
 a {
     text-decoration: none;
     color : white;
 }
 .container {
+  width: auto;
   display: flex;
   height: 100vh;
   background: lightblue;
@@ -16,24 +24,23 @@ a {
     font-family: "Noto Sans KR"; 
     color: white;
     font-size: 50px;
+    text-align: center;
     padding-top: 0.2%;
-    padding-left: 40%;
-    width: 850%;
+    width: auto;
 }
 .back_button{
     position: absolute;
     font-weight: 700;
     font-family: "Noto Sans KR"; 
     color: white;
-    font-size: 50px;
-    padding-top: 0.2%;
-    padding-left: 0%;
+    font-size: calc(5vw);
+    padding-top: 55px;
+    padding-left: 55px;
 
 
 }
 .explain {
   line-height: 33px;
-padding-left: 10%;
 }
 .left {
   flex: 0.25;
@@ -105,6 +112,10 @@ padding-left: 10%;
   flex: 6;
   overflow-y: auto;
   overflow-x: hidden;
+}
+.chat-body ul{
+  margin: 0;
+  padding: 0;
 }
 
 .chat-footer {
