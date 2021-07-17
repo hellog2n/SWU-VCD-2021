@@ -89,19 +89,20 @@ body{
 }
 
 .loading {
+  top:50%; left:50%; transform: translate(-50%, -50%);
 	color:white;
   text-transform: uppercase;
   font-family: 'Cabin Condensed', sans-serif;
   font-weight: bold;
-  font-size: 80pt;
+  font-size: calc(10vw);
   text-align: center;
-  height: 120px;
+  height: 160px;
   line-height: 110px;
   vertical-align: bottom;
   position: absolute;
-  left: 0;
+  width: 100%;
   right: 0;
-  top: 100px;
+  
   bottom: 0;
   display: block;
 }
@@ -121,7 +122,7 @@ body{
   background-clip: text;
   color: transparent;
   text-shadow: black;
-  animation: wave-animation 1s infinite linear, loading-animation 10s infinite linear alternate;
+  animation: wave-animation 1s infinite linear, loading-animation 5s infinite linear alternate;
   background-size: 200px 100px;
   background-repeat: repeat-x;
   opacity: 1;
