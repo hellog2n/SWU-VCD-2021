@@ -9,17 +9,7 @@
 }
 
 
-.pos {
-    position: relative;
-    left : 0;
-    top : 0px;
-}
-.cover_a {
-    z-index: 2;
-}
-.image_a {
-    z-index: 1;
-}
+
 
 
 .item {
@@ -35,6 +25,7 @@
 
 html {
 	overflow-x: hidden;
+	overflow-y: hidden;
 }
 
 body {
