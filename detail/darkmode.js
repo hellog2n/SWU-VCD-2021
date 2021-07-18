@@ -9,6 +9,7 @@ function settingDarkWhite(value){
     const Alists = document.getElementsByTagName("a");
     const Wrapper = document.getElementsByClassName("chat-wrapper")[0];
     const backBtn = document.getElementsByClassName("back_button")[0];
+    const category = document.getElementsByClassName("category")[0];
     
     switch(value){
         case true:
@@ -45,6 +46,7 @@ function settingDarkWhite(value){
     default:
             break;
 }
+category.style.color = "#009999";
 }
 
 
