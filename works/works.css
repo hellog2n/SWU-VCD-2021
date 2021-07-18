@@ -124,6 +124,7 @@ svg {
 	height: 330px;
 }
 
+/*
 @media screen and (max-width: 360px){
 	body {
 		min-width: calc(100vw);
@@ -166,3 +167,4 @@ svg {
 		flex-basis: 100%
 	}
 }
+*/

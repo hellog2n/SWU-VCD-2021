@@ -15,8 +15,6 @@
 img{
 	position: absolute; top:50%; left:50%; transform: translate(-50%, -50%);
 	margin: 0 auto;
-
-
 }
 
 .t {
@@ -63,7 +61,7 @@ body{
 		background-size: cover;
           height:100%;
           margin:0;
-	width: 100%;
+	
 	background-position: center;
 }
 
@@ -73,9 +71,6 @@ body{
 	margin: 0;
 }
 
-.centered {
-	position: absolute; top:50%; left:50%; transform: translate(-50%, -50%);
-}
 
 
 
@@ -89,6 +84,7 @@ body{
 }
 
 .loading {
+  position: absolute;
   top:50%; left:50%; transform: translate(-50%, -50%);
 	color:white;
   text-transform: uppercase;
@@ -96,14 +92,11 @@ body{
   font-weight: bold;
   font-size: calc(10vw);
   text-align: center;
-  height: 160px;
+  height: auto;
   vertical-align: bottom;
-  position: absolute;
-  width: 100%;
-  right: 0;
+  width: 100vw;
+  margin: 0 auto;
   
-  bottom: 0;
-  display: block;
 }
 @keyframes loading-animation {
   0% {
