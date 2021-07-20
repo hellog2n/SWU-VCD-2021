@@ -2,6 +2,7 @@
 /* CSS Document */
 
 body {
+	padding-top: 180px;
 	background-color: #000;
 	font-family: "Noto Sans KR";
 }
@@ -9,6 +10,7 @@ a {
 	text-decoration: none;
 	color : white;
 }
+
 * {
 	margin:0;
 	padding:0;
@@ -25,16 +27,27 @@ a {
 	/* CSS Smooth Scroll */
 }
 
-
+.section-top {
+	top: 0;
+	z-index: 5;
+	position: fixed;
+	background-color: black;
+	width: 100vw;
+	margin-bottom: 10px;
+	height: auto;
+}
+.section-bottom {
+	margin-top: 10px;
+}
 
 .logo{
 	color: white;
 	font-size: 50px;
-	padding: 50px;
+	padding: 40px;
 }
 
 section {
-	width: auto;
+
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -42,10 +55,12 @@ section {
 }
 
 .navbar_menu{
+	width: auto;
 	display: flex;
 	list-style: none;
-	padding-left: 0;
+	padding: 0;
 	flex-wrap: nowrap;
+	margin: 0;
 }
 
 
@@ -64,8 +79,7 @@ section {
 
 .item {
 	position: relative;
-	float: left;
-	height: 100%;
+	
     width: auto;
 
 	background-color: black;
@@ -83,7 +97,7 @@ section {
 	z-index: 4;
 	top: 40%; 
 	left: 50%; 
-	width: 20%;
+	width: auto;
   vertical-align: middle;
 	margin: 0 auto;
 }
@@ -91,7 +105,7 @@ section {
 .author {
 	top: 60%; 
 	left: 50%; 
-	width: 20%;
+	width: auto;
 	transform: translate(-50%, -50%);
 	visibility: hidden;
 	color: white;
@@ -120,51 +134,101 @@ section {
 
 svg {
 
-	width: 330px;
-	height: 330px;
+	width: 100%;
+	height: 100%;
 }
 
-/*
-@media screen and (max-width: 360px){
+@media screen and (max-width: 779px){
+
 	body {
-		min-width: calc(100vw);
-		max-width: calc(100vw);
-		width: auto;
+		width: 100vw;
+		padding-top: 250px;
 	}
-	.container {
-		width: calc(100vw);
-		grid-auto-rows: minmax(100px, auto);
-		grid-template-columns: repeat(2, 1fr);
+
+	.logo {
+position: relative;
+margin: 0px auto;
 	}
-	.logo{
-		color: white;
-		font-size: 20px;
-		padding: 20px;
+
+	.navbar_menu {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+	}
+	.navbar_menu li {
+		
+		width: 25%;
+		padding: 8px 20px;
 		text-align: center;
 	}
-	section {
-		width: auto;
-	}
 
-	svg {
 
-		width: 100px;
-		height: 100px;
-	}
-
-	.item {
-		width: 100px;
-	}
-	.navbar_menu {
-		min-width: calc(100vw);
-		width: auto;
-	}
-	.navbar_menu > li {
+	.container {
+		grid-auto-rows: minmax(100px, auto);
+		padding: 20px;
 		
-		width: auto;
-		padding: 2px 20px;
-		font-size: 5vw;
-		flex-basis: 100%
+		grid-template-columns: repeat(2, 1fr);
+		
+		/* CSS Smooth Scroll */
 	}
+	img {
+		width: calc(45vw) - 20px !important;
+		height: calc(45vw) - 20px !important;
+	}
+
+	
+	@media screen and (max-width: 480px){
+		.navbar_menu li {
+			font-size: 1.2em;
+		}
+		.logo {
+			font-size: 2.5em;
+			padding-bottom: 20px;
+			
+		}
+	}
+
 }
-*/
+
+
+@media screen and (max-width: 400px){
+	body {
+		width: 100vw;
+		padding-top: 280px;
+	}
+
+.logo {
+	font-size: 2.5em;
+	padding-bottom: 20px;
+	
+}
+
+.logo-down {
+	font-size: 2.5em;
+	padding: 0px;
+}
+
+.navbar_menu li {
+	font-size: 1.2em;
+}
+}
+
+
+.nav-down {
+	top: 0;
+	z-index: 5;
+	position: fixed;
+	background-color: black;
+	width: 100vw;
+	margin-bottom: 10px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.nav-up {
+	padding: 20px;
+	font-size: 1.2em;
+	color: tomato;
+}
