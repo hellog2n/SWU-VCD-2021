@@ -90,7 +90,12 @@ async function separateRowFromJson(SOURCE, COLUMNS){
 
 // 해당 링크로 접속하는 함수
 function sendFunc( aValue ) { 
-	 location.href="../detail/detail.html?" + aValue; 
+	if(window.innerWidth < 480){
+		setTimeout(()=>{location.href="../detail/detail.html?" + aValue; },2000);
+	}
+	 else {
+		location.href="../detail/detail.html?" + aValue;
+	 }
 	 // location.href="detailworks.html?"
 	}
 
@@ -98,6 +103,13 @@ function sendFunc( aValue ) {
 function rand(min, max) {
 		return Math.floor(Math.random() * (max - min + 1)) + min;
 	  }
+
+
+function clickEvent() {
+
+}
+
+
 
 
 // 구글스프레드시트에서 데이터를 갖고와서 처리하는 코드
@@ -152,6 +164,18 @@ async function main(){
 
 	
 const files = new Image();
+
+
+$('.item').on("click", () => {
+	if(window.innerWidth < 480)
+console.log("click");
+
+});
+
+
+
+
+
 
 // 호버 관리하는 부분
 // 마우스가 호버 중이라면
@@ -239,6 +263,9 @@ const files = new Image();
 	});
 		
 	
+
+
+
 
 }
 window.addEventListener('DOMContentLoaded', main);

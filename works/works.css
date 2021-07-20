@@ -34,7 +34,7 @@ a {
 }
 
 section {
-	width: auto;
+
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -42,10 +42,12 @@ section {
 }
 
 .navbar_menu{
+	width: auto;
 	display: flex;
 	list-style: none;
-	padding-left: 0;
+	padding: 0;
 	flex-wrap: nowrap;
+	margin: 0;
 }
 
 
@@ -65,7 +67,6 @@ section {
 .item {
 	position: relative;
 	float: left;
-	height: 100%;
     width: auto;
 
 	background-color: black;
@@ -124,47 +125,38 @@ svg {
 	height: 330px;
 }
 
-/*
-@media screen and (max-width: 360px){
+@media screen and (max-width: 779px){
+
 	body {
-		min-width: calc(100vw);
-		max-width: calc(100vw);
-		width: auto;
+		width: 100vw;
 	}
-	.container {
-		width: calc(100vw);
-		grid-auto-rows: minmax(100px, auto);
-		grid-template-columns: repeat(2, 1fr);
+
+	.logo {
+position: relative;
+margin: 0px auto;
 	}
-	.logo{
-		color: white;
-		font-size: 20px;
-		padding: 20px;
+
+	.navbar_menu {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+	}
+	.navbar_menu li {
+		
+		width: 25%;
+		padding: 8px 20px;
 		text-align: center;
 	}
-	section {
-		width: auto;
-	}
 
-	svg {
 
-		width: 100px;
-		height: 100px;
-	}
-
-	.item {
-		width: 100px;
-	}
-	.navbar_menu {
-		min-width: calc(100vw);
-		width: auto;
-	}
-	.navbar_menu > li {
+	.container {
+		grid-auto-rows: minmax(100px, auto);
+		padding: 20px;
 		
-		width: auto;
-		padding: 2px 20px;
-		font-size: 5vw;
-		flex-basis: 100%
+		grid-template-columns: repeat(2, 1fr);
+		
+		/* CSS Smooth Scroll */
 	}
 }
-*/
