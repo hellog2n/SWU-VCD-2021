@@ -170,7 +170,9 @@ const files = new Image();
 
 
 $('.item').on("click", () => {
-	if(window.innerWidth < 480)
+	if(window.innerWidth < 480){
+		
+	}
 
 
 });
