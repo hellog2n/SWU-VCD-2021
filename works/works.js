@@ -1,5 +1,5 @@
 // JavaScript Document
-const resolution = 330;
+let resolution = "330px";
 
 
 // 네비게이션 섹션을 누를 때 보여지는 섹션이 다르게 적용되는 부분
@@ -123,12 +123,15 @@ async function main(){
 	const allNumber = DATA.length;
 	const container = document.getElementById("container");
 
-
+	// 초기 화면 크기 설정
+	if(window.innerWidth < 768){
+		resolution = "calc(45vw)";
+	}
 
 	// resolution -> 해상도 표시하는 부분
 	for (let count = 1; count <= allNumber; count++) {
 		container.innerHTML+=`<a class="item" href="#" onclick="javascript:sendFunc('${count}'); return false;" id="item${count}"><img src='' onError="this.onerror=null;  this.src='./images/thumbnail/altthumb.png'" 
-		style="width: ${resolution}px; height: ${resolution}px;"/><p class="name"></p><p class="author"></p>
+		style="width: ${resolution}; height: ${resolution};"/><p class="name"></p><p class="author"></p>
 		</a>`;
 	}
 		const TARGET={
@@ -269,6 +272,37 @@ console.log("click");
 
 }
 window.addEventListener('DOMContentLoaded', main);
+
+
+// Create a condition that targets viewports at least 768px wide
+const mediaQuery = window.matchMedia('(min-width: 780px)')
+
+function handleTabletChange(e) {
+  // Check if the media query is true
+  const img = document.getElementsByTagName('img');
+  if (e.matches) {
+	  console.log('matched');
+	// Then log the following message to the console
+	for(let i = 0; i < img.length; i++){
+		img[i].style.width = "330px";
+		img[i].style.height = "330px";
+	}
+	
+  }
+  else {
+	for(let i = 0; i < img.length; i++){
+		img[i].style.width = resolution;
+		img[i].style.height = resolution;
+	}
+  }
+  }
+
+
+// Register event listener
+mediaQuery.addListener(handleTabletChange)
+
+// Initial check
+handleTabletChange(mediaQuery)
 
 
 

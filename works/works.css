@@ -121,8 +121,8 @@ section {
 
 svg {
 
-	width: 330px;
-	height: 330px;
+	width: 100%;
+	height: 100%;
 }
 
 @media screen and (max-width: 779px){
@@ -159,4 +159,12 @@ margin: 0px auto;
 		
 		/* CSS Smooth Scroll */
 	}
+	img {
+		width: calc(45vw) - 20px !important;
+		height: calc(45vw) - 20px !important;
+	}
+
+	
+
+
 }
