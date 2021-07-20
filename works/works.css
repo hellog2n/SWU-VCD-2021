@@ -2,6 +2,7 @@
 /* CSS Document */
 
 body {
+	padding-top: 180px;
 	background-color: #000;
 	font-family: "Noto Sans KR";
 }
@@ -9,6 +10,7 @@ a {
 	text-decoration: none;
 	color : white;
 }
+
 * {
 	margin:0;
 	padding:0;
@@ -25,12 +27,22 @@ a {
 	/* CSS Smooth Scroll */
 }
 
-
+#section-top {
+	top: 0;
+	z-index: 5;
+	position: fixed;
+	background-color: black;
+	width: 100vw;
+	margin-bottom: 10px;
+}
+#section-bottom {
+	margin-top: 10px;
+}
 
 .logo{
 	color: white;
 	font-size: 50px;
-	padding: 50px;
+	padding: 40px;
 }
 
 section {
@@ -66,7 +78,7 @@ section {
 
 .item {
 	position: relative;
-	float: left;
+	
     width: auto;
 
 	background-color: black;
@@ -84,7 +96,7 @@ section {
 	z-index: 4;
 	top: 40%; 
 	left: 50%; 
-	width: 20%;
+	width: auto;
   vertical-align: middle;
 	margin: 0 auto;
 }
@@ -92,7 +104,7 @@ section {
 .author {
 	top: 60%; 
 	left: 50%; 
-	width: 20%;
+	width: auto;
 	transform: translate(-50%, -50%);
 	visibility: hidden;
 	color: white;
@@ -129,6 +141,7 @@ svg {
 
 	body {
 		width: 100vw;
+		padding-top: 250px;
 	}
 
 	.logo {
@@ -165,6 +178,39 @@ margin: 0px auto;
 	}
 
 	
+	@media screen and (max-width: 480px){
+		.navbar_menu li {
+			font-size: 1.2em;
+		}
+		.logo {
+			font-size: 2.5em;
+			padding-bottom: 20px;
+			
+		}
+	}
+
+}
 
 
+@media screen and (max-width: 400px){
+	body {
+		width: 100vw;
+		padding-top: 280px;
+	}
+
+.logo {
+	font-size: 2.5em;
+	padding-bottom: 20px;
+	
+}
+
+.navbar_menu li {
+	font-size: 1.2em;
+}
+}
+
+
+.logo-scroll {
+	padding: 15px;
+	font-size: 1.2em;
 }
