@@ -90,7 +90,7 @@ async function separateRowFromJson(SOURCE, COLUMNS){
 
 // 해당 링크로 접속하는 함수
 function sendFunc( aValue ) { 
-	if(window.innerWidth < 480){
+	if(window.innerWidth < 768){
 		setTimeout(()=>{location.href="../detail/detail.html?" + aValue; },2000);
 	}
 	 else {
@@ -130,7 +130,7 @@ async function main(){
 
 	// resolution -> 해상도 표시하는 부분
 	for (let count = 1; count <= allNumber; count++) {
-		container.innerHTML+=`<a class="item" href="#" onclick="javascript:sendFunc('${count}'); return false;" id="item${count}"><img src='' onError="this.onerror=null;  this.src='./images/thumbnail/altthumb.png'" 
+		container.innerHTML+=`<a class="item" data-aos="fade-right" data-aos-delay="50" data-aos-duration="2500" href="#" onclick="javascript:sendFunc('${count}'); return false;" id="item${count}"><img src='' onError="this.onerror=null;  this.src='./images/thumbnail/altthumb.png'" 
 		style="width: ${resolution}; height: ${resolution};"/><p class="name"></p><p class="author"></p>
 		</a>`;
 	}
@@ -171,7 +171,7 @@ const files = new Image();
 
 $('.item').on("click", () => {
 	if(window.innerWidth < 480){
-		
+
 	}
 
 

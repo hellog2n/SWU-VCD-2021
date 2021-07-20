@@ -17,16 +17,31 @@ function hasScrolled() {
     if (st > lastScrollTop && st > navbarHeight){ 
         console.log('scrolled-down');
         // Scroll Down 
+        if(window.innerWidth < 400){
+            $('#section-top').removeClass('section-top').addClass('nav-down-400'); 
+            $('#logo').removeClass('logo').addClass('logo-down-400');      
+        }
+        else{
         $('#section-top').removeClass('section-top').addClass('nav-down'); 
         $('#logo').removeClass('logo').addClass('logo-down'); 
+        }
     }
     else if (st <= navbarHeight){ 
              // Scroll Up 
              // eslint-disable-next-line no-lonely-if
              console.log('scrolled-up');
-             if(st + $(window).height() < $(document).height()) 
-                  $('#section-top').removeClass('nav-down').addClass('section-top'); 
-                  $('#logo').removeClass('logo-down').addClass('logo'); 
+
+             
+             if(st + $(window).height() < $(document).height()) {
+                 if(window.innerWidth < 400){
+                    $('#section-top').removeClass('nav-down-400').addClass('section-top'); 
+                    $('#logo').removeClass('logo-down-400').addClass('logo');
+                 }
+                 else {
+                    $('#section-top').removeClass('nav-down').addClass('section-top'); 
+                    $('#logo').removeClass('logo-down').addClass('logo'); 
+                 }
+             }
     
             }
             lastScrollTop = st; 
