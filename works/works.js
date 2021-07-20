@@ -171,7 +171,7 @@ const files = new Image();
 
 $('.item').on("click", () => {
 	if(window.innerWidth < 480)
-console.log("click");
+
 
 });
 
@@ -195,7 +195,7 @@ console.log("click");
 		// 이미지 파일 검증
 		if(files.complete == false){
 			// 파일이 존재하지 않다면 임시썸네일로 대체하라.
-			console.log(DATA[numID-1].img);
+			
 			image_link = "images/thumbnail/altthumb.png";
 		}
 
@@ -210,7 +210,7 @@ console.log("click");
 		// (주현쓰가 관리해야할 부분) - id = item(1 ~ 82 보통 숫자로 되어있음)의 자식인 img 태그의 css를 display를 none하라.
 		 $(`#${id_check}`).children('img').css("visibility", "hidden");
 		// $(`#${id_check}`).children('svg').css("display", "block");
-		console.log(id_check);
+		
 
 		// (주현쓰가 관리해야할 부분) - id = item(1 ~ 82 보통 숫자로 되어있음)의 자식의 name, author 클래스를 보이게 하라.
 		$(`#${id_check}`).children('.name').css("visibility", "visible");
@@ -261,7 +261,7 @@ console.log("click");
 		// (css 값을 jquery 코드로 처리해주고 있음)
 		$(`#${id_check}`).children('.name').css("visibility", "hidden");
 		$(`#${id_check}`).children('.author').css("visibility", "hidden");
-		console.log('out');
+		
 
 	});
 		
@@ -281,7 +281,7 @@ function handleTabletChange(e) {
   // Check if the media query is true
   const img = document.getElementsByTagName('img');
   if (e.matches) {
-	  console.log('matched');
+	 
 	// Then log the following message to the console
 	for(let i = 0; i < img.length; i++){
 		img[i].style.width = "330px";

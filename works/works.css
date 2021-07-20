@@ -205,6 +205,11 @@ margin: 0px auto;
 	
 }
 
+.logo-down {
+	font-size: 2.5em;
+	padding: 0px;
+}
+
 .navbar_menu li {
 	font-size: 1.2em;
 }
@@ -218,6 +223,7 @@ margin: 0px auto;
 	background-color: black;
 	width: 100vw;
 	margin-bottom: 10px;
+	padding-top: 15px;
 	padding-bottom: 15px;
 }
 

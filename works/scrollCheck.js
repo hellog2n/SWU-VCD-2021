@@ -18,13 +18,15 @@ function hasScrolled() {
         console.log('scrolled-down');
         // Scroll Down 
         $('#section-top').removeClass('section-top').addClass('nav-down'); 
+        $('#logo').removeClass('logo').addClass('logo-down'); 
     }
-    else { 
+    else if (st <= navbarHeight){ 
              // Scroll Up 
              // eslint-disable-next-line no-lonely-if
              console.log('scrolled-up');
              if(st + $(window).height() < $(document).height()) 
                   $('#section-top').removeClass('nav-down').addClass('section-top'); 
+                  $('#logo').removeClass('logo-down').addClass('logo'); 
     
             }
             lastScrollTop = st; 
