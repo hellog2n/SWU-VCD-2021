@@ -5,6 +5,7 @@ body {
 	padding-top: 180px;
 	background-color: #000;
 	font-family: "Noto Sans KR";
+	overflow-x: hidden;
 }
 a {
 	text-decoration: none;
@@ -179,17 +180,19 @@ margin: 0px auto;
 	}
 
 	
-	@media screen and (max-width: 480px){
-		.navbar_menu li {
-			font-size: 1.2em;
-		}
-		.logo {
-			font-size: 2.5em;
-			padding-bottom: 20px;
-			
-		}
-	}
+	
 
+}
+
+@media screen and (max-width: 480px){
+	.navbar_menu li {
+		font-size: 1.2em;
+	}
+	.logo {
+		font-size: 2.5em;
+		padding-bottom: 20px;
+		
+	}
 }
 
 
@@ -210,6 +213,11 @@ margin: 0px auto;
 	padding: 0px;
 }
 
+.logo-down-400 {
+	font-size: 2em;
+	padding: 0px;
+}
+
 .navbar_menu li {
 	font-size: 1.2em;
 }
@@ -225,6 +233,18 @@ margin: 0px auto;
 	margin-bottom: 10px;
 	padding-top: 15px;
 	padding-bottom: 15px;
+}
+
+.nav-down-400 {
+	top: 0;
+	z-index: 5;
+	position: fixed;
+	background-color: black;
+	width: 100vw;
+	margin-bottom: 10px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	font-size: 0.8em;
 }
 
 .nav-up {

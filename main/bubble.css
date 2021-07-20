@@ -100,10 +100,22 @@ z-index: -2;
     
     
 }
+.not-overflow {
+    width: auto;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    right: 0%;
+    top: 10%;
+}
+
+
 .bubble5 {
-    width: 900px;
+    width: 800px;
     height: 550px;
     content: '';
+    /* 66 80 */
+  
     border-radius: 80% 66% 80% 85%;
     background: url(mask.png), moz-linear-gradient(200deg, #009999 30%, #119999 9%, #003333, #000000, #000000);
     background: url(mask.png), -webkit-linear-gradient(200deg, #009999 30%, #119999 9%, #003333, #000000, #000000);
@@ -111,7 +123,7 @@ z-index: -2;
             background: url(mask.png),-ms-linear-gradient(200deg, #009999 30%, #119999 9%, #003333, #000000, #000000);
                 background: url(mask.png),linear-gradient(200deg, #009999 30%, #119999 9%, #003333, #000000, #000000);
                 
-    animation:wave 10s ease infinite, animatedBackground 40s ease infinite;
+     animation:wave 10s ease infinite, animatedBackground 40s ease infinite;
     margin: 0px auto;
     background-blend-mode: multiply;
     background-size: cover;

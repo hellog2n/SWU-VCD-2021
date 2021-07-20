@@ -108,10 +108,9 @@ a {
 }
 
 .chat-body {
-    overflow: none;
+  
   flex: 6;
-  overflow-y: auto;
-  overflow-x: hidden;
+  
 }
 .chat-body ul{
   margin: 0;
@@ -129,8 +128,7 @@ ul, li {
 
 .layout {
     flex: 6;
-    overflow-y: hidden;
-    overflow-x: hidden;
+    
     margin-top: 0%;
     margin-left: 5%;
     margin-right: 5%;
