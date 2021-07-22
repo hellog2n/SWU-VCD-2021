@@ -96,7 +96,9 @@ async function main(){
             console.log(DATA.videolink);
             const ifrm = document.createElement("iframe");
             ifrm.setAttribute("src", DATA.videolink);
-            ifrm.style.width = "1080px";
+            
+            ifrm.style.alignItems = "center";
+            ifrm.style.width = "calc(100vw)";
             ifrm.style.height = "720px";
             ifrm.setAttribute('frameborder', 0);
             ifrm.setAttribute('allow', "autoplay");

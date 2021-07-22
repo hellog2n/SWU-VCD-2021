@@ -8,12 +8,15 @@ function settingDarkWhite(value){
     const DivLists = document.getElementsByTagName("div");
     const Alists = document.getElementsByTagName("a");
     const Wrapper = document.getElementsByClassName("chat-wrapper")[0];
+    const backBtn = document.getElementsByClassName("back_button")[0];
+    const category = document.getElementsByClassName("category")[0];
     
     switch(value){
         case true:
         document.body.style.backgroundColor = "black";
         Wrapper.style.backgroundColor = "black";
         document.body.style.color = "white";
+        backBtn.style.color = "white";
     for(let idx = 0; idx <DivLists.length; idx++){
         DivLists[idx].style.color = "white";
     }
@@ -29,7 +32,7 @@ function settingDarkWhite(value){
         document.body.style.backgroundColor = "white";
         Wrapper.style.backgroundColor = "white";
         document.body.style.color = "black";
-        
+        backBtn.style.color = "black";
     for(let idx = 0; idx <DivLists.length; idx++){
         DivLists[idx].style.color = "black";
     }
@@ -43,6 +46,7 @@ function settingDarkWhite(value){
     default:
             break;
 }
+category.style.color = "#009999";
 }
 
 

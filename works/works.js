@@ -1,5 +1,5 @@
 // JavaScript Document
-const resolution = 330;
+let resolution = "330px";
 
 
 // 네비게이션 섹션을 누를 때 보여지는 섹션이 다르게 적용되는 부분
@@ -90,7 +90,12 @@ async function separateRowFromJson(SOURCE, COLUMNS){
 
 // 해당 링크로 접속하는 함수
 function sendFunc( aValue ) { 
-	 location.href="../detail/detail.html?" + aValue; 
+	if(window.innerWidth < 768){
+		setTimeout(()=>{location.href="../detail/detail.html?" + aValue; },2000);
+	}
+	 else {
+		location.href="../detail/detail.html?" + aValue;
+	 }
 	 // location.href="detailworks.html?"
 	}
 
@@ -98,6 +103,13 @@ function sendFunc( aValue ) {
 function rand(min, max) {
 		return Math.floor(Math.random() * (max - min + 1)) + min;
 	  }
+
+
+function clickEvent() {
+
+}
+
+
 
 
 // 구글스프레드시트에서 데이터를 갖고와서 처리하는 코드
@@ -111,12 +123,15 @@ async function main(){
 	const allNumber = DATA.length;
 	const container = document.getElementById("container");
 
-
+	// 초기 화면 크기 설정
+	if(window.innerWidth < 768){
+		resolution = "calc(45vw)";
+	}
 
 	// resolution -> 해상도 표시하는 부분
 	for (let count = 1; count <= allNumber; count++) {
-		container.innerHTML+=`<a class="item" href="#" onclick="javascript:sendFunc('${count}'); return false;" id="item${count}"><img src='' onError="this.onerror=null;  this.src='./images/thumbnail/altthumb.png'" 
-		style="width: ${resolution}px; height: ${resolution}px;"/><p class="name"></p><p class="author"></p>
+		container.innerHTML+=`<a class="item" data-aos="fade-right" data-aos-delay="50" data-aos-duration="2500" href="#" onclick="javascript:sendFunc('${count}'); return false;" id="item${count}"><img src='' onError="this.onerror=null;  this.src='./images/thumbnail/altthumb.png'" 
+		style="width: ${resolution}; height: ${resolution};"/><p class="name"></p><p class="author"></p>
 		</a>`;
 	}
 		const TARGET={
@@ -153,6 +168,20 @@ async function main(){
 	
 const files = new Image();
 
+
+$('.item').on("click", () => {
+	if(window.innerWidth < 480){
+
+	}
+
+
+});
+
+
+
+
+
+
 // 호버 관리하는 부분
 // 마우스가 호버 중이라면
 	$('.item').mouseenter(function(){
@@ -168,7 +197,7 @@ const files = new Image();
 		// 이미지 파일 검증
 		if(files.complete == false){
 			// 파일이 존재하지 않다면 임시썸네일로 대체하라.
-			console.log(DATA[numID-1].img);
+			
 			image_link = "images/thumbnail/altthumb.png";
 		}
 
@@ -181,9 +210,9 @@ const files = new Image();
 		const randNum = rand(1,3);
 
 		// (주현쓰가 관리해야할 부분) - id = item(1 ~ 82 보통 숫자로 되어있음)의 자식인 img 태그의 css를 display를 none하라.
-		 $(`#${id_check}`).children('img').css("display", "none");
+		 $(`#${id_check}`).children('img').css("visibility", "hidden");
 		// $(`#${id_check}`).children('svg').css("display", "block");
-		console.log(id_check);
+		
 
 		// (주현쓰가 관리해야할 부분) - id = item(1 ~ 82 보통 숫자로 되어있음)의 자식의 name, author 클래스를 보이게 하라.
 		$(`#${id_check}`).children('.name').css("visibility", "visible");
@@ -199,7 +228,7 @@ const files = new Image();
 	</mask>
 </defs>
 <g mask="url(#MASK2)">
-	<image x="0" y="0" class="space" href="../index/images/cover.png" height="330px" width="330px" opacity="80%" />
+	<image x="0" y="0" class="space" href="../index/images/cover_new.png" height="330px" width="330px" opacity="80%" />
 </g>
 </svg>
 
@@ -223,7 +252,7 @@ const files = new Image();
 		const id_check = $(this).attr("id");
 
 		// (주현쓰가 관리해야할 부분) - id = item(1 ~ 82 보통 숫자로 되어있음)의 자식인 img 태그의 css를 display를 block하라.
-		$(`#${id_check}`).children('img').css("display", "block");
+		$(`#${id_check}`).children('img').css("visibility", "visible");
 		
 		//	$(`#${id_check}`).children('svg').css("display", "none");
 
@@ -234,14 +263,48 @@ const files = new Image();
 		// (css 값을 jquery 코드로 처리해주고 있음)
 		$(`#${id_check}`).children('.name').css("visibility", "hidden");
 		$(`#${id_check}`).children('.author').css("visibility", "hidden");
-		console.log('out');
+		
 
 	});
 		
 	
 
+
+
+
 }
 window.addEventListener('DOMContentLoaded', main);
+
+
+// Create a condition that targets viewports at least 768px wide
+const mediaQuery = window.matchMedia('(min-width: 780px)')
+
+function handleTabletChange(e) {
+  // Check if the media query is true
+  const img = document.getElementsByTagName('img');
+  if (e.matches) {
+	 
+	// Then log the following message to the console
+	for(let i = 0; i < img.length; i++){
+		img[i].style.width = "330px";
+		img[i].style.height = "330px";
+	}
+	
+  }
+  else {
+	for(let i = 0; i < img.length; i++){
+		img[i].style.width = resolution;
+		img[i].style.height = resolution;
+	}
+  }
+  }
+
+
+// Register event listener
+mediaQuery.addListener(handleTabletChange)
+
+// Initial check
+handleTabletChange(mediaQuery)
 
 
 

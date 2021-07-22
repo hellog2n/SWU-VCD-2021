@@ -8,15 +8,13 @@
             min-width:100%;
             height:auto;
             min-height:100%;
-            z-index:-100;
+            z-index:-1;
 	display: inline-block;
 }
 
 img{
 	position: absolute; top:50%; left:50%; transform: translate(-50%, -50%);
 	margin: 0 auto;
-
-
 }
 
 .t {
@@ -57,13 +55,13 @@ opacity: 1;
 
 body{
 	
-	
+	overflow: hidden;
           background-repeat:no-repeat;
          display: block;
 		background-size: cover;
           height:100%;
           margin:0;
-	width: 100%;
+	
 	background-position: center;
 }
 
@@ -73,9 +71,6 @@ body{
 	margin: 0;
 }
 
-.centered {
-	position: absolute; top:50%; left:50%; transform: translate(-50%, -50%);
-}
 
 
 
@@ -89,28 +84,29 @@ body{
 }
 
 .loading {
+  position: absolute;
+  top:50%; left:50%; transform: translate(-50%, -50%);
 	color:white;
   text-transform: uppercase;
   font-family: 'Cabin Condensed', sans-serif;
   font-weight: bold;
-  font-size: 80pt;
+  font-size: calc(10vw);
   text-align: center;
-  height: 120px;
-  line-height: 110px;
+  height: auto;
   vertical-align: bottom;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 100px;
-  bottom: 0;
-  display: block;
+  width: 100vw;
+  margin: 0 auto;
+  
 }
 @keyframes loading-animation {
   0% {
     background-size: 200px 0px;
   }
+  70% {
+    background-size: 200px 400px;
+  }
   100% {
-    background-size: 200px 200px;
+    background-size: 200px 400px;
   }
 }
 .wave {
