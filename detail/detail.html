@@ -10,6 +10,26 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://player.vimeo.com/api/player.js"></script>
+  <script>
+      
+      
+    $(function() {
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 0) {
+                $('#MOVE_TOP_BTN').fadeIn();
+            } else {
+                $('#MOVE_TOP_BTN').fadeOut();
+            }
+        });
+        
+        $("#MOVE_TOP_BTN").click(function() {
+            $('html, body').animate({
+                scrollTop : 0
+            }, 1000);
+            return false;
+        });
+    });
+</script>
 
 </head>
 
@@ -66,11 +86,12 @@
 
 
           </ul>
+          
         </div>
 
       </div>
     </div>
-
+    <a id="MOVE_TOP_BTN"><img src="../main/top.svg" width="50px !important"></a>
     <script src="../works/page/detailworks.js"></script>
     <script src="darkmode.js"></script>
 </body>

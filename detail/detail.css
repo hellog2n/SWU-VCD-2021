@@ -169,3 +169,10 @@ ul, li {
   0 0 80px rgba(0, 0, 0, .4),
   0 0 0 8px rgba(0, 0, 0, .1);
 }
+#MOVE_TOP_BTN {
+    position: fixed;
+    right: 2%;
+    bottom: 2%;
+    display: none;
+    z-index: 999;
+ }

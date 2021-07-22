@@ -6,7 +6,7 @@
     height: calc(30vw - 130px);
     content: '';
     border-radius: 100% 40% 80% 85%;
-    background: url(https://i.ibb.co/FhfBXMD/static.jpg)  , moz-linear-gradient(170deg, #009999 30%, #119999 9%, #003333, #000000);
+    background: url(static.jpg)  , moz-linear-gradient(170deg, #009999 30%, #119999 9%, #003333, #000000);
     background: url(https://i.ibb.co/FhfBXMD/static.jpg)  ,-webkit-linear-gradient(170deg,#009999 30%, #119999 9%, #003333, #000000 100%);
     background: url(https://i.ibb.co/FhfBXMD/static.jpg)  ,-o-linear-gradient(170deg, #009999 30%, #119999 9%, #003333, #000000 100%);
     background: url(https://i.ibb.co/FhfBXMD/static.jpg)  ,-ms-linear-gradient(170deg, #009999 30%, #119999 9%, #003333, #000000 100%);
