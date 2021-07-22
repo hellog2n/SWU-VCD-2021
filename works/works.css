@@ -120,3 +120,10 @@ svg {
 	width: 330px;
 	height: 330px;
 }
+#MOVE_TOP_BTN {
+    position: fixed;
+    right: 2%;
+    bottom: 2%;
+    display: none;
+    z-index: 999;
+ }
