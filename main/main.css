@@ -449,6 +449,12 @@ section {
 	.vain {
 		height: 70%;
 	}
+	.credit_items {
+		font-size: calc(2.8vw);
+	}
+	.credit_text {	
+		column-gap: 8px;
+	}
 
 }
 
