@@ -11,6 +11,26 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://player.vimeo.com/api/player.js"></script>
+  <script>
+      
+      
+    $(function() {
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 0) {
+                $('#MOVE_TOP_BTN').fadeIn();
+            } else {
+                $('#MOVE_TOP_BTN').fadeOut();
+            }
+        });
+        
+        $("#MOVE_TOP_BTN").click(function() {
+            $('html, body').animate({
+                scrollTop : 0
+            }, 1000);
+            return false;
+        });
+    });
+</script>
 
 </head>
 
@@ -18,11 +38,26 @@
 
   <div class="container">
 
+ class="chat-wrapper">
+      <div class="flex_container">
+        <div class="flex_item1">
+           <a href="../works/works.html"><i class="fas fa-arrow-left back_button"></i></a>
+        </div>
+        <div class="flex_item2">
+          <div class="logo">
+          <p><a href="../main/main.html">DEEP LAYER</a></p>
+          </div>
+          </div>
+        <div class="flex_item3">
+          <div>
+                <div class="darkMode glowing white"></div>
+                </div>
+        </div>
 
-    <div class="chat-wrapper">
-      <div class="chat-header">
+      </div>
+    </div>  
+            <br>
 
-        <div class="darkMode glowing white"></div>
 
         <div class="explain">
           <a href="../works/works.html"><i class="fas fa-arrow-left back_button"></i></a>
@@ -64,17 +99,21 @@
 
 
 
+          </ul>
+          
+        </div>
+
+
       </div>
 
 
       </ul>
     </div>
 
-  </div>
-  </div>
+    <a id="MOVE_TOP_BTN"><img src="../main/top.svg" width="50px !important"></a>
+    <script src="../works/page/detailworks.js"></script>
+    <script src="darkmode.js"></script>
 
-  <script src="../works/page/detailworks.js"></script>
-  <script src="darkmode.js"></script>
 </body>
 
 </html>
