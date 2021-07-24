@@ -99,7 +99,7 @@ async function main(){
             
             ifrm.style.alignItems = "center";
             ifrm.style.width = "calc(85vw)";
-            ifrm.style.height = "720px";
+            ifrm.style.height = "calc(60vw)";
             ifrm.setAttribute('frameborder', 0);
             ifrm.setAttribute('allow', "autoplay");
             ifrm.setAttribute('allow', "fullscreen");
