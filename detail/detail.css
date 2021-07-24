@@ -57,9 +57,21 @@ margin-bottom: 5%;
     color: white;
     font-size: calc(5vw);
     padding-left: -20px;
-
-
 }
+
+
+
+.back_button:hover {
+  color: #009999;
+  transition: .5s;
+  transform:scale(1.1);             /*  default */
+-webkit-transform:scale(1.1);  /*  크롬 */
+-moz-transform:scale(1.1);     /* FireFox */
+-o-transform:scale(1.1);        /* Opera */
+  
+}
+
+
 .explain {
   line-height: 33px;
 }
@@ -215,6 +227,13 @@ writing-mode: horizontal-tb;
 .white{
   background: rgba(255, 255, 255, 1);
   box-shadow: 0 0 20px rgba(255, 255, 255, 1),
+  0 0 0 8px rgba(255, 255, 255, .1);
+ 
+}
+
+.white:hover {
+  transition: .5s;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 1),
   0 0 40px rgba(255, 255, 255, 1),
   0 0 60px rgba(255, 255, 255, 1),
   0 0 80px rgba(255, 255, 255, 1),
@@ -223,6 +242,12 @@ writing-mode: horizontal-tb;
 
 .black {
   background: rgba(0, 0, 0, .7);
+  box-shadow: 0 0 20px rgba(0, 0, 0, .1),
+  0 0 0 8px rgba(0, 0, 0, .1);
+  
+}
+.black:hover {
+  transition: .5s;
   box-shadow: 0 0 20px rgba(0, 0, 0, .1),
   0 0 40px rgba(0, 0, 0, .4),
   0 0 60px rgba(0, 0, 0, .4),
