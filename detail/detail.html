@@ -12,108 +12,84 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://player.vimeo.com/api/player.js"></script>
   <script>
-      
-      
-    $(function() {
-        $(window).scroll(function() {
-            if ($(this).scrollTop() > 0) {
-                $('#MOVE_TOP_BTN').fadeIn();
-            } else {
-                $('#MOVE_TOP_BTN').fadeOut();
-            }
-        });
-        
-        $("#MOVE_TOP_BTN").click(function() {
-            $('html, body').animate({
-                scrollTop : 0
-            }, 1000);
-            return false;
-        });
+
+
+    $(() => {
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 0) {
+          $('#MOVE_TOP_BTN').fadeIn();
+        } else {
+          $('#MOVE_TOP_BTN').fadeOut();
+        }
+      });
+
+      $("#MOVE_TOP_BTN").click(() => {
+        $('html, body').animate({
+          scrollTop: 0
+        }, 1000);
+        return false;
+      });
     });
-</script>
+  </script>
 
 </head>
 
 <body>
 
   <div class="container">
+    <section class="section-top">
+      <nav>
+        <ul class="navbar">
+          <li>
+            <a href="../works/works.html"><i class="fas fa-arrow-left back_button"></i></a>
+          </li>
+          <li>
+            <div class="logo">
+              <p><a href="../main/main.html">DEEP LAYER</a></p>
 
- class="chat-wrapper">
-      <div class="flex_container">
-        <div class="flex_item1">
-           <a href="../works/works.html"><i class="fas fa-arrow-left back_button"></i></a>
-        </div>
-        <div class="flex_item2">
-          <div class="logo">
-          <p><a href="../main/main.html">DEEP LAYER</a></p>
-          </div>
-          </div>
-        <div class="flex_item3">
-          <div>
-                <div class="darkMode glowing white"></div>
-                </div>
-        </div>
+            </div>
+          </li>
 
-      </div>
-    </div>  
-            <br>
+          <li>
+            <div class="darkMode glowing white"></div>
+          </li>
+      </nav>
 
+    </section>
+    <section class="chat-wrapper">
 
-        <div class="explain">
-          <a href="../works/works.html"><i class="fas fa-arrow-left back_button"></i></a>
-
-          <div class="logo">
-
-            <p><a href="../main/main.html">DEEP LAYER</a></p>
-
-          </div>
-          <br>
-
-
-
-
-        </div>
-
-      </div>
       <div class="chat-body">
         <ul>
           <!-- 작품 제목 부분-->
-          <div class="category"></div>
+          <div class="title"></div>
 
           <!-- 작가 이름 부분 -->
-          <div class="title"></div><br>
+          <div class="author"></div><br>
 
 
           <!-- 작품설명 넣어주기 -->
           <div class="script"></div>
           <div class="layout">
-            <p align="middle">
-              <div class="video">
-            </p>
-          </div>
-          <!-- 구글드라이브에서 이미지 링크 따오기 -->
-          <div class="image" style="overflow-x:hidden">
+            <div class="video">
 
-
+            </div>
+            <!-- 구글드라이브에서 이미지 링크 따오기 -->
+            <div class="image">
+            </div>
           </div>
 
 
-
-          </ul>
-          
-        </div>
-
+        </ul>
 
       </div>
 
-
-      </ul>
-    </div>
-
-    <a id="MOVE_TOP_BTN"><img src="../main/top.svg" width="50px !important"></a>
-    <script src="../works/page/detailworks.js"></script>
-    <script src="darkmode.js"></script>
-
+  </div>
+  </div>
+  <a id="MOVE_TOP_BTN" href="#"><img src="../main/top.svg" width="50px !important"></a>
+  </div>
+  </section>
+  <script src="../works/page/detailworks.js"></script>
+  <script src="darkmode.js"></script>
 </body>
 
 </html>
