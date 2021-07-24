@@ -17,7 +17,6 @@ a {
   width: auto;
   display: flex;
   height: 100vh;
-  background: lightblue;
 }
 .logo{
     font-weight: 700;
@@ -94,13 +93,13 @@ a {
 }
 .chat-wrapper {
   display: flex;
-  flex-flow: row wrap;
   flex-direction: column;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+
 }
 
 .chat-header {
@@ -177,4 +176,9 @@ ul, li {
   0 0 60px rgba(0, 0, 0, .4),
   0 0 80px rgba(0, 0, 0, .4),
   0 0 0 8px rgba(0, 0, 0, .1);
+}
+
+
+.video {
+  text-align: center;
 }
