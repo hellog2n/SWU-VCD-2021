@@ -128,8 +128,7 @@ margin-bottom: 5%;
 .script {
     color:white;
     font-size: 1.3em;
-    font-family: 'Noto Sans KR', sans-serif;
-    
+    font-family: 'Noto Sans KR';
     margin-bottom: 10px;
     white-space: pre-line;
     padding-left: 7%;
