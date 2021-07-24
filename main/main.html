@@ -22,6 +22,27 @@
 		rel="stylesheet">
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script>
+			
+  		
+    $(function() {
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 0) {
+                $('#MOVE_TOP_BTN').fadeIn();
+            } else {
+                $('#MOVE_TOP_BTN').fadeOut();
+            }
+        });
+        
+        $("#MOVE_TOP_BTN").click(function() {
+            $('html, body').animate({
+                scrollTop : 0
+            }, 1000);
+            return false;
+        });
+    });
+</script>
+
 </head>
 
 <body>
@@ -41,22 +62,22 @@
 			</ul>
 		</nav>
 		<section class="item about_a " id="about">
-			<div class="bubble" style="position: absolute; left: 3%; top: 250px;" data-aos="fade-up"></div>
-			<div class="bubble1" style="position: absolute; right: 10%; top: 180px;" data-aos="fade-up"></div>
+			<div class="bubble" data-aos="fade-up" style="position: absolute; left: 3%; top: 250px;" data-aos="fade-up"></div>
+			<div class="bubble1" data-aos="fade-up" style="position: absolute; right: 10%; top: 180px;" data-aos="fade-up"></div>
 			<h1 id="trigger-left" data-aos="fade-right" data-aos-delay="50" data-aos-duration="2000"> DEEP</h1>
 			<h1 data-aos="fade-right" data-aos-delay="50" data-aos-duration="2500">LAYER</h1>
 		</section>
 		<section id="works" class="item about_b">
 
-			<div class="bubble2" style="position: absolute; left: 100px; top: 80px;"></div>
-			<div class="bubble3" style="position: absolute; right: 20px; top: 180px;"></div>
+			<div class="bubble2" data-aos="fade-up" style="position: absolute; left: 100px; top: 80px;"></div>
+			<div class="bubble3" data-aos="fade-up" style="position: absolute; right: 20px; top: 180px;"></div>
 
 
 
 			<h2 class="about_title" data-aos="fade-right"> DEEP LAYER</h2>
 			<div class="desc">
-				<img src="poster.jpeg">
-				<div class="text">
+				<img src="poster.jpeg" data-aos="fade-right">
+				<div class="text" data-aos="fade-right">
 
 					서울여자대학교 시각디자인학과 38회 졸업전시<br>
 					Seoul Women's University Visual Communication Design<br><br><br><br>
@@ -72,25 +93,25 @@
 
 		</section>
 		<section class="item vain">
-			<div class="bubble4" style="position: absolute; left: 5%; top: 80px;"></div>
+			<div class="bubble4" data-aos="fade-up" style="position: absolute; left: 5%; top: 80px;"></div>
 			<div class="not-overflow">
-				<div class="bubble5" style="position: absolute; right: -30%; top: 40%;"></div>
+				<div class="bubble5" data-aos="fade-up" style="position: absolute; right: -30%; top: 40%;"></div>
 			</div>
 
 		</section>
 		<section id="credit" class="item about_d">
-			<div class="bubble6" style="position: absolute; left: 10px; top: -100px;"></div>
+			<div class="bubble6" data-aos="fade-up" style="position: absolute; left: 10px; top: -100px;"></div>
 
-			<div class="credit_text">
-				<h2 class="credit_items"> Credit</h2>
-				<div class="credit_items"> 서울여자대학교 시각디자인학과 38회 졸업전시<br>
+			<div class="credit_text" data-aos="fade-right">
+				<h2 class="credit_items" data-aos="fade-right"> Credit</h2>
+				<div class="credit_items" data-aos="fade-right"> 서울여자대학교 시각디자인학과 38회 졸업전시<br>
 					Seoul Women's University Visual Communication Design</div>
 				<!--div style="font-weight: 700; position: relative; left:-212px;top: -20px;">졸업준비위원회</div-->
 				<!-- 중앙 정렬 시 레이아웃 변경되므로 따로 만들어줌 -->
-				<div class="credit_items" style="font-weight: 700; ">
+				<div class="credit_items" data-aos="fade-right" style="font-weight: 700; ">
 					졸업준비위원회
 				</div>
-				<div class="credit_items">
+				<div class="credit_items" >
 					위원장 <br>
 					그래픽 팀장<br>
 					설치 팀장<br>
@@ -121,14 +142,14 @@
 					주연희<br>
 				</div>
 
-				<div class="credit_items" style="font-weight: 700; ">
+				<div class="credit_items" style="font-weight: 700; " data-aos="fade-right">
 					지도교수
 
 				</div>
 				<div class="credit_items">
 					민병걸&nbsp;&nbsp;유영재&nbsp;&nbsp;최장섭&nbsp;&nbsp;박고은
 				</div>
-				<div class="credit_items" style="font-weight: 700; ">
+				<div class="credit_items" style="font-weight: 700; " data-aos="fade-right">
 					참여학생
 
 				</div>
@@ -148,15 +169,21 @@
 		</section>
 		<section class="vain2"></section>
 		</div>
+		<a id="MOVE_TOP_BTN" href=""><img src="../main/top.svg" width="50px !important"></a>
 		<!--div class="longbubble"></div-->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 		<script src="main.js"></script>
 		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		
 		<script>
+			 
+
 			AOS.init({
 				duration: 3000,
 
 			});
+			 // 스크롤하면 'top' 아이콘 fadeIn/Out 4초
+          
 		</script>
 </body>
 

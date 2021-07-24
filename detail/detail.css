@@ -16,17 +16,42 @@ a {
 .container {
   width: auto;
   display: flex;
-  height: 100vh;
-  background: lightblue;
+  height: 15vh;
+  
+}
+.flex_container{
+  display: flex;
+  border:1px solid white;
+}
+.flex_item1{
+  flex-grow:1;
+  margin:5px;
+  width: 50px;
+  height: 100px;
+  background-color: #f2c94c;
+}
+.flex_item2{
+  flex-grow:30;
+  margin:5px;
+  width: 50px;
+  height: 100px;
+  background-color: #f2c94c;
 }
 .logo{
-    font-weight: 700;
+    font-weight: 500;
     font-family: "Noto Sans KR"; 
     color: white;
-    font-size: 50px;
+    font-size: 3em;
     text-align: center;
-    padding-top: 0.2%;
     width: auto;
+   
+}
+.flex_item3{
+  flex-grow:1;
+  margin:5px;
+  width: 50px;
+  height: 100px;
+  background-color: #f2c94c;
 }
 .back_button{
     position: absolute;
@@ -178,3 +203,10 @@ ul, li {
   0 0 80px rgba(0, 0, 0, .4),
   0 0 0 8px rgba(0, 0, 0, .1);
 }
+#MOVE_TOP_BTN {
+    position: fixed;
+    right: 2%;
+    bottom: 2%;
+    display: none;
+    z-index: 999;
+ }
