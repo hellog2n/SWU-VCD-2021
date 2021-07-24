@@ -252,3 +252,10 @@ margin: 0px auto;
 	font-size: 1.2em;
 	color: tomato;
 }
+#MOVE_TOP_BTN {
+    position: fixed;
+    right: 2%;
+    bottom: 2%;
+    display: none;
+    z-index: 999;
+ }
