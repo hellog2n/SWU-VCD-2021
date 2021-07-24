@@ -7,16 +7,17 @@ document.addEventListener("DOMContentLoaded",
 
 // ALL
 $('#all').click(e => {
-	console.log(e.target.hash);
+	
 	$(".uxui").show();
 	$(".bx").show();
 	$(".graphic").show();
 	$(".print").show();
 	$(".video").show();
+	AOS.refresh();
 }),
 // UXUI
 $('#uxui').click(e => {
-	console.log(e.target.hash);
+	
 	$(".uxui").show();
 	$(".bx").hide();
 	$(".graphic").hide();
@@ -26,42 +27,45 @@ $('#uxui').click(e => {
 }),
 // Bx
 $('#bx').click(e => {
-	console.log(e.target.hash);
+	
 	$(".uxui").hide();
 	$(".bx").show();
 	$(".graphic").hide();
 	$(".print").hide();
 	$(".video").hide();
+	AOS.refresh();
 
 }),
 // Graphic
 $('#graphic').click(e => {
-	console.log(e.target.hash);
+
 	$(".uxui").hide();
 	$(".bx").hide();
 	$(".graphic").show();
 	$(".print").hide();
 	$(".video").hide();
+	AOS.refresh();
 
 }),
 // 출판
 $('#print').click(e => {
-	console.log(e.target.hash);
+
 	$(".uxui").hide();
 	$(".bx").hide();
 	$(".graphic").hide();
 	$(".print").show();
 	$(".video").hide();
-
+	AOS.refresh();
 }),
 // 영상
 $('#video').click(e => {
-	console.log(e.target.hash);
+
 	$(".uxui").hide();
 	$(".bx").hide();
 	$(".graphic").hide();
 	$(".print").hide();
 	$(".video").show();
+	AOS.refresh();
 }),
 
 
@@ -285,14 +289,14 @@ function handleTabletChange(e) {
   if (e.matches) {
 	 
 	// Then log the following message to the console
-	for(let i = 0; i < img.length; i++){
+	for(let i = 0; i < img.length - 1; i++){
 		img[i].style.width = "330px";
 		img[i].style.height = "330px";
 	}
 	
   }
   else {
-	for(let i = 0; i < img.length; i++){
+	for(let i = 0; i < img.length - 1; i++){
 		img[i].style.width = resolution;
 		img[i].style.height = resolution;
 	}

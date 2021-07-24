@@ -13,9 +13,9 @@ function hasScrolled() {
     // add class .nav-up. 
     // This is necessary so you never see what is "behind" the navbar. 
     
-    console.log(st, lastScrollTop, navbarHeight);
+    
     if (st > lastScrollTop && st > navbarHeight){ 
-        console.log('scrolled-down');
+        
         // Scroll Down 
         if(window.innerWidth < 400){
             $('#section-top').removeClass('section-top').addClass('nav-down-400'); 
@@ -29,7 +29,7 @@ function hasScrolled() {
     else if (st <= navbarHeight){ 
              // Scroll Up 
              // eslint-disable-next-line no-lonely-if
-             console.log('scrolled-up');
+             
 
              
              if(st + $(window).height() < $(document).height()) {

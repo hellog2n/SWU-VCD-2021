@@ -37,6 +37,9 @@ a {
 }
 
 .logo{
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0;
 margin-top: 5%;
 margin-bottom: 5%;
     font-weight: 500;
@@ -81,6 +84,9 @@ margin-bottom: 5%;
 	font-size: 1.5em;
 	text-align: center;
 }
+
+
+
 /* 작품제목 */
 .title {
     color:#04999A;
@@ -116,6 +122,9 @@ margin-bottom: 5%;
     white-space: pre-line;
     padding-left: 7%;
     padding-right: 7%;
+    word-break: keep-all;
+	text-align: justify;
+	text-justify:inter-word;
 }
 .section-bottom {
   margin-top: 10px;
@@ -163,6 +172,7 @@ height: calc(10vw);
   color: white;
   height: 100%;
   font-size: 2em;
+  padding-right: calc(5vw);
 }
 
 
@@ -270,10 +280,14 @@ writing-mode: horizontal-tb;
 /* 480 ~ 639px media query */
 @media screen  and (min-width: 480px) and (max-width: 639px){
   .logo {
-    font-size: calc(5vw);
+    width: 100%;
+    font-size: calc(4.5vw);
   }
   .script {
     font-size: 1rem;
+  }
+  .navbar li:nth-child(2){
+    padding: 8px 10px;
   }
 }
 
@@ -313,16 +327,22 @@ writing-mode: horizontal-tb;
   .logo {
     font-size: calc(5vw);
   }
+  .container {
+    padding-top: calc(15vw);
+}
 }
 
-/*
-/* 1600px ~ media query 
- @media screen and (max-width: 1600px){
+
+ /* 1600px ~ media query  */
+ @media screen and (min-width: 1600px){
    .logo {
      font-size: calc(5vw);
    }
+   .container {
+    padding-top: calc(15vw);
+}
  }
- */
+ 
 
 
 

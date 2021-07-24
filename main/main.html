@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -9,7 +9,7 @@
 	<title>서울여자대학교 38회 졸업전시</title>
 	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 	<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:300'>
-	<link rel="stylesheet" href="main.css?v=2">
+	<link rel="stylesheet" href="main.css">
 	<link rel="stylesheet" href="bubble.css">
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/c171f64d6e.js" crossorigin="anonymous"></script>
@@ -23,25 +23,25 @@
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script>
-			
-  		
-    $(function() {
-        $(window).scroll(function() {
-            if ($(this).scrollTop() > 0) {
-                $('#MOVE_TOP_BTN').fadeIn();
-            } else {
-                $('#MOVE_TOP_BTN').fadeOut();
-            }
-        });
-        
-        $("#MOVE_TOP_BTN").click(function() {
-            $('html, body').animate({
-                scrollTop : 0
-            }, 1000);
-            return false;
-        });
-    });
-</script>
+
+
+		$(() => {
+			$(window).scroll(function () {
+				if ($(this).scrollTop() > 0) {
+					$('#MOVE_TOP_BTN').fadeIn();
+				} else {
+					$('#MOVE_TOP_BTN').fadeOut();
+				}
+			});
+
+			$("#MOVE_TOP_BTN").click(() => {
+				$('html, body').animate({
+					scrollTop: 0
+				}, 1000);
+				return false;
+			});
+		});
+	</script>
 
 </head>
 
@@ -62,8 +62,10 @@
 			</ul>
 		</nav>
 		<section class="item about_a " id="about">
-			<div class="bubble" data-aos="fade-up" style="position: absolute; left: 3%; top: 250px;" data-aos="fade-up"></div>
-			<div class="bubble1" data-aos="fade-up" style="position: absolute; right: 10%; top: 180px;" data-aos="fade-up"></div>
+			<div class="bubble" data-aos="fade-up" style="position: absolute; left: 3%; top: 250px;" data-aos="fade-up">
+			</div>
+			<div class="bubble1" data-aos="fade-up" style="position: absolute; right: 10%; top: 180px;"
+				data-aos="fade-up"></div>
 			<h1 id="trigger-left" data-aos="fade-right" data-aos-delay="50" data-aos-duration="2000"> DEEP</h1>
 			<h1 data-aos="fade-right" data-aos-delay="50" data-aos-duration="2500">LAYER</h1>
 		</section>
@@ -111,7 +113,7 @@
 				<div class="credit_items" data-aos="fade-right" style="font-weight: 700; ">
 					졸업준비위원회
 				</div>
-				<div class="credit_items" >
+				<div class="credit_items">
 					위원장 <br>
 					그래픽 팀장<br>
 					설치 팀장<br>
@@ -159,8 +161,8 @@
 
 
 				<div class="credit_items aligns">
-					최승아, 이혁희, 정은아, 송정연, 오반디, 김태연, 김민정, 윤송희, 김민경, <br> 김다솔, 김미조, 김민별, 김소정, 김영은, 김윤경, 마찬영, 백지우, 서지송, <br>
-					신다은, 신별은, 신수민, 양예진, 양은성, 염혜빈, 이민희, 이은비, 임나리, <br>전형주, 정서림, 정하영, 주연희, 최지원, 최지혜, 최희선, 황선영, 김진서, <br>
+					최승아, 이혁희, 정은아, 송정연, 오반디, 김태연, 김민정, 윤송희, 김민경, 김다솔, 김미조, 김민별, 김소정, 김영은, 김윤경, 마찬영, 백지우, 서지송,
+					신다은, 신별은, 신수민, 양예진, 양은성, 염혜빈, 이민희, 이은비, 임나리, 전형주, 정서림, 정하영, 주연희, 최지원, 최지혜, 최희선, 황선영, 김진서,
 					서미연, 송하은, 오화은, 양혜림, 정수빈
 
 
@@ -168,22 +170,27 @@
 			</div>
 		</section>
 		<section class="vain2"></section>
+		<footer class="chat-footer">
+			<p>Copyright © 2021 SWUVD. All rights reserved.</p>
+			<a href="https://www.instagram.com/swu_vcd/" target='_blank'><i class="fab fa-instagram"></i></a>
+			<a href="http://swu-design.com/" target='_blank'><i class="fas fa-home"></i></a>
+		</footer>
 		</div>
 		<a id="MOVE_TOP_BTN" href=""><img src="../main/top.svg" width="50px !important"></a>
 		<!--div class="longbubble"></div-->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 		<script src="main.js"></script>
 		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-		
+
 		<script>
-			 
+
 
 			AOS.init({
 				duration: 3000,
-
+				once: true,
 			});
 			 // 스크롤하면 'top' 아이콘 fadeIn/Out 4초
-          
+
 		</script>
 </body>
 

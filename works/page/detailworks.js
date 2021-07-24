@@ -74,13 +74,7 @@ async function main(){
             video : document.getElementsByClassName('video')
 		};
         
-        console.log(DATA.name);
-        console.log(DATA.author);
-        console.log(DATA.num);
-        console.log(DATA.detail);
-        console.log(setting);
-
-        console.log(DATA.imagelink);
+        
         if(DATA.image > 0){
             
         const image = new Array();
@@ -93,7 +87,7 @@ async function main(){
         }
         }
         if(DATA.video > 0){
-            console.log(DATA.videolink);
+            
             const ifrm = document.createElement("iframe");
             ifrm.setAttribute("src", DATA.videolink);
             
