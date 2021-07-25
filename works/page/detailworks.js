@@ -67,20 +67,14 @@ async function main(){
 		// document.write(`<a class="thumb" href="#"><img src='./images/thumbnail/${count}.png' id='thumb' class='uxui_img' /></a>`);
 
 		const TARGET={
-            category : document.getElementsByClassName('category'),
             title : document.getElementsByClassName('title'),
+            author : document.getElementsByClassName('author'),
             script : document.getElementsByClassName('script'),
             image :document.getElementsByClassName('image'),
             video : document.getElementsByClassName('video')
 		};
         
-        console.log(DATA.name);
-        console.log(DATA.author);
-        console.log(DATA.num);
-        console.log(DATA.detail);
-        console.log(setting);
-
-        console.log(DATA.imagelink);
+        
         if(DATA.image > 0){
             
         const image = new Array();
@@ -93,13 +87,13 @@ async function main(){
         }
         }
         if(DATA.video > 0){
-            console.log(DATA.videolink);
+            
             const ifrm = document.createElement("iframe");
             ifrm.setAttribute("src", DATA.videolink);
             
             ifrm.style.alignItems = "center";
-            ifrm.style.width = "calc(100vw)";
-            ifrm.style.height = "720px";
+            ifrm.style.width = "calc(85vw)";
+            ifrm.style.height = "calc(60vw)";
             ifrm.setAttribute('frameborder', 0);
             ifrm.setAttribute('allow', "autoplay");
             ifrm.setAttribute('allow', "fullscreen");
@@ -116,8 +110,8 @@ async function main(){
             }
             TARGET.script[0].textContent += scriptList[idx];
         }
-        TARGET.category[0].textContent = DATA.name;
-        TARGET.title[0].textContent = DATA.author;
+        TARGET.title[0].textContent = DATA.name;
+        TARGET.author[0].textContent = DATA.author;
        // TARGET.script[0].textContent = DATA.detail;
 		// image.src = DATA.img;
 		
