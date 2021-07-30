@@ -92,8 +92,8 @@ async function main(){
             ifrm.setAttribute("src", DATA.videolink);
             
             ifrm.style.alignItems = "center";
-            ifrm.style.width = "calc(85vw)";
-            ifrm.style.height = "calc(60vw)";
+            ifrm.style.width = "calc(75vw)";
+            ifrm.style.height = "calc(50vw)";
             ifrm.setAttribute('frameborder', 0);
             ifrm.setAttribute('allow', "autoplay");
             ifrm.setAttribute('allow', "fullscreen");
