@@ -13,6 +13,12 @@ function settingDarkWhite(value){
     const backBtn = document.getElementsByClassName("back_button")[0];
     const title = document.getElementsByClassName("title")[0];
     
+    let circleDelay;
+    if(window.innerWidth < 600){
+        circleDelay = [500, 900];
+    }else {
+        circleDelay = [300, 700];
+    }
    
     
 
@@ -47,15 +53,15 @@ function settingDarkWhite(value){
     $('.darkMode').removeClass('black');
     $('.darkMode').addClass('white');
     
-   
-}, 300);
+    title.style.color = "#009999";
+}, circleDelay[0]);
 
 setTimeout(() => {
     $('.background').removeClass('js-circle').removeClass('circle');
     document.body.style.backgroundColor = "black";
     Wrapper.style.backgroundColor = "black";
-    title.style.color = "#009999";
-}, 700);
+    
+}, circleDelay[1]);
 
     break;
     case false:
@@ -80,14 +86,14 @@ setTimeout(() => {
     }
    $('.darkMode').removeClass('white');
     $('.darkMode').addClass('black');
-    
-}, 300);
+    title.style.color = "#009999";
+}, circleDelay[0]);
 setTimeout(() => {
     $('.background').removeClass('js-circle').removeClass('circle');
     document.body.style.backgroundColor = "white";
     Wrapper.style.backgroundColor = "white";
-    title.style.color = "#009999";
-}, 700);
+    
+}, circleDelay[1]);
     break;
     
     default:

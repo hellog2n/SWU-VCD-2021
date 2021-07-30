@@ -118,7 +118,7 @@ $('.menuLink').on('mouseover' , e => {
 	if(e.target){
 		
 		e.target.style.color = '#009999';
-		console.log(e.target.id);
+		
 	}
 	
 	
@@ -135,7 +135,7 @@ $('.menuLink').on('mouseout' , e => {
 		if (clickCheck == 5 && e.target.id == 'print') return;
 		if (clickCheck == 6 && e.target.id == 'video') return;
 		e.target.style.color = '#ffffff';
-		console.log(e.target.id);
+		// console.log(e.target.id);
 	}
 	
 	
