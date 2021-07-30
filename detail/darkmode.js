@@ -13,10 +13,23 @@ function settingDarkWhite(value){
     const backBtn = document.getElementsByClassName("back_button")[0];
     const title = document.getElementsByClassName("title")[0];
     
+   
+    
+
+
     switch(value){
         case true:
-        document.body.style.backgroundColor = "black";
-        Wrapper.style.backgroundColor = "black";
+
+            Wrapper.style.backgroundColor = "";
+            $('.background').addClass('js-circle').addClass('circle');
+            $('.circle').css('backgroundColor', '#000000');
+            
+        setTimeout(() => {
+                
+              
+        
+        // document.body.style.backgroundColor = "black";
+       // Wrapper.style.backgroundColor = "black";
         document.body.style.color = "white";
         backBtn.style.color = "white";
         Navbar.style.backgroundColor = "black";
@@ -33,11 +46,26 @@ function settingDarkWhite(value){
     
     $('.darkMode').removeClass('black');
     $('.darkMode').addClass('white');
+    
+   
+}, 300);
+
+setTimeout(() => {
+    $('.background').removeClass('js-circle').removeClass('circle');
+    document.body.style.backgroundColor = "black";
+    Wrapper.style.backgroundColor = "black";
+    title.style.color = "#009999";
+}, 700);
 
     break;
     case false:
-        document.body.style.backgroundColor = "white";
-        Wrapper.style.backgroundColor = "white";
+
+        Wrapper.style.backgroundColor = "";
+        $('.background').addClass('js-circle').addClass('circle');
+        $('.circle').css('backgroundColor','#ffffff');
+
+        setTimeout(() => {
+        
         document.body.style.color = "black";
         backBtn.style.color = "black";
         Navbar.style.backgroundColor = "white";
@@ -50,14 +78,22 @@ function settingDarkWhite(value){
     for(let idx = 0; idx <Alists.length; idx++){
         Alists[idx].style.color = "black";
     }
-    $('.darkMode').removeClass('white');
+   $('.darkMode').removeClass('white');
     $('.darkMode').addClass('black');
+    
+}, 300);
+setTimeout(() => {
+    $('.background').removeClass('js-circle').removeClass('circle');
+    document.body.style.backgroundColor = "white";
+    Wrapper.style.backgroundColor = "white";
+    title.style.color = "#009999";
+}, 700);
     break;
     
     default:
             break;
 }
-title.style.color = "#009999";
+
 }
 
 

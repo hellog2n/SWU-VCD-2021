@@ -3,7 +3,7 @@ body{
   
   margin: 0;
   padding: 0;
-  
+  overflow-x: hidden;
     
 }
 p {
@@ -22,7 +22,7 @@ a {
 
 
   width: auto;
-  background-color: black;
+  
   height: auto;
 }
 .section-top{
@@ -367,7 +367,68 @@ writing-mode: horizontal-tb;
 }
  }
  
+.background {
+  overflow: hidden;
+  width: auto;
+  height: auto;
+}
 
+ .js-circle {
+   top: 50%;
+   left: 50%;
+  position: absolute;
+  z-index: -2;
+}
+ .circle {
+   
+	left: 50%;
+	top: 50%;
+background-color: thistle;
+  position: fixed;
+  z-index: -2;
+  border-radius: 50%;
+ 
+	transform: translate(-50%, -50%);
+  animation: circleGrowUp 1s ease-in forwards;
+ 
+}
 
+.circle-hide {
+  content: '';
+  display: none;
+  top: 0%;
+  left: 0%;
+  
+  background-color: black;
+  position: absolute;
+  z-index: 1;
+  border-radius: 100%;
+
+}
+
+/*
+.js-circle:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: -50px;
+  left: -50px;
+  right: -50px;
+  bottom: -50px;
+  background-color: rgba(255, 255, 255, .2);
+  border-radius: 50%;
+}
+*/
+ @keyframes circleGrowUp {
+  from {
+    width: 0;
+    height: 0;
+  }
+
+  to {
+    width: 200vw;
+    height: 200vw;
+  }
+}
 
  
