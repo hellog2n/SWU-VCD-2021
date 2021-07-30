@@ -198,7 +198,7 @@ async function main(){
 
 	// 초기 화면 크기 설정
 	if(window.innerWidth < 768){
-		resolution = "calc(45vw)";
+		resolution = "calc(40vw)";
 	}
 
 	// resolution -> 해상도 표시하는 부분
@@ -242,13 +242,7 @@ async function main(){
 const files = new Image();
 
 
-$('.item').on("click", () => {
-	if(window.innerWidth < 480){
 
-	}
-
-
-});
 
 
 
