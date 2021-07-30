@@ -283,3 +283,50 @@ font-weight: 700;
     display: none;
     z-index: 999;
  }
+
+@keyframes wave-animation {
+  0% {
+    background-position: 0 bottom;
+  }
+  100% {
+    background-position: 200px bottom;
+  }
+}
+@keyframes loading-animation {
+  0% {
+    background-position: 200px 0;
+  }
+  100% {
+    background-position: 200px 200px;
+  }
+}
+
+
+
+
+
+
+@keyframes loading-animation {
+  0% {
+    background-size: 200px 0px;
+  }
+  70% {
+    background-size: 200px 400px;
+  }
+  100% {
+    background-size: 200px 400px;
+  }
+}
+.wave {
+  background-image: url("5hYlAGa.png");
+  -moz-background-clip: text;
+  -o-background-clip: text;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: black;
+  animation: wave-animation 3s infinite linear, loading-animation 9s infinite linear alternate;
+  background-size: 100px 50px;
+  background-repeat: repeat-x;
+  opacity: 1;
+}
