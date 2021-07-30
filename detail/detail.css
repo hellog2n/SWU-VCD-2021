@@ -54,7 +54,7 @@ margin-bottom: 5%;
   padding-top: 8px;
     font-weight: 700;
     font-family: "Noto Sans KR"; 
-    color: white;
+    
     font-size: calc(5vw);
     padding-left: -20px;
 }
@@ -280,7 +280,7 @@ writing-mode: horizontal-tb;
     width: auto;
   }
   .script {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
   .navbar li{
     padding: 8px calc(7vw);
@@ -291,6 +291,9 @@ writing-mode: horizontal-tb;
     height: calc(7vw) - 30px;
 
   }
+  .circle{
+    animation: circleGrowUp-300 1s ease-in forwards !important;
+    }
 }
 
 /* 360 ~ 479px media query */
@@ -302,8 +305,11 @@ writing-mode: horizontal-tb;
     padding: 8px calc(8vw);
   }
   .script {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
+  .circle{
+    animation: circleGrowUp-300 1s ease-in forwards !important;
+    }
 }
 
 /* 480 ~ 639px media query */
@@ -313,10 +319,14 @@ writing-mode: horizontal-tb;
     font-size: calc(4.5vw);
   }
   .script {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
   .navbar li:nth-child(2){
     padding: 8px 10px;
+  }
+
+  .circle{
+  animation: circleGrowUp-300 1s ease-in forwards !important;
   }
 }
 
@@ -326,7 +336,7 @@ writing-mode: horizontal-tb;
     font-size: calc(5vw);
   }
   .script {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
   .chat-footer p{
     position: relative;
@@ -436,6 +446,18 @@ background-color: thistle;
   to {
     width: 200vw;
     height: 200vw;
+  }
+}
+
+@keyframes circleGrowUp-300 {
+  from {
+    width: 0;
+    height: 0;
+  }
+
+  to {
+    width: 300vw;
+    height: 300vw;
   }
 }
 
