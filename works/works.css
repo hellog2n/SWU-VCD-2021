@@ -219,12 +219,14 @@ font-weight: 700;
 @media screen and (max-width: 400px){
 	body {
 		width: 100vw;
-		padding-top: 100px;
+		padding-top: 150px;
 	}
 
 .logo {
+	padding-top: 10px;
 	font-size: 2em;
-	padding-bottom: 20px;
+	padding-top : 10px;
+	padding-bottom: 10px;
 	font-weight: 700;
 }
 
@@ -241,8 +243,8 @@ font-weight: 700;
 }
 
 .navbar_menu li {
-	font-size: 1.2em;
-
+	font-size: 1em;
+	padding: 8px 10px;
 }
 }
 
@@ -262,7 +264,7 @@ font-weight: 700;
 	top: 0;
 	z-index: 5;
 	position: fixed;
-	background-color: black;
+	background-color: "000000f0";
 	width: 100vw;
 	margin-bottom: 10px;
 	padding-top: 15px;
