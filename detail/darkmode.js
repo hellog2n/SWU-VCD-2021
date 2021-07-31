@@ -15,7 +15,7 @@ function settingDarkWhite(value){
     
     let circleDelay;
     if(window.innerWidth < 600){
-        circleDelay = [500, 900];
+        circleDelay = [400, 900];
     }else {
         circleDelay = [300, 700];
     }

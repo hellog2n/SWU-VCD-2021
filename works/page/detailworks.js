@@ -73,7 +73,7 @@ async function main(){
             script : document.getElementsByClassName('script'),
             image :document.getElementsByClassName('image'),
             video : document.getElementsByClassName('video'),
-           // email : document.getElementsByClassName('email')
+            email : document.getElementsByClassName('email')
 		};
         
         
@@ -94,7 +94,7 @@ async function main(){
             ifrm.setAttribute("src", DATA.videolink);
             
             ifrm.style.alignItems = "center";
-            ifrm.style.width = "calc(75vw)";
+            ifrm.style.width = "calc(65vw)";
             ifrm.style.height = "calc(50vw)";
             ifrm.setAttribute('frameborder', 0);
             ifrm.setAttribute('allow', "autoplay");
@@ -112,7 +112,7 @@ async function main(){
         }
         TARGET.title[0].textContent = DATA.name;
         TARGET.author[0].textContent = DATA.author;
-       // TARGET.email[0].textContent = DATA.email;
+       TARGET.email[0].textContent = DATA.email;
         console.log(DATA.email);
        // TARGET.script[0].textContent = DATA.detail;
 		// image.src = DATA.img;
