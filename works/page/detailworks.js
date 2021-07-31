@@ -6,7 +6,8 @@
 
 const temps = location.href.split("?");
     // const number = temps[1];
-    const number = temps[1];
+    let number = temps[1];
+    number = number.replace(/[^0-9]/g,'');
     let setting = "";
 
 // JavaScript Document
@@ -122,7 +123,7 @@ async function main(){
 		
 		
 		
-	
+
 
 				
 }

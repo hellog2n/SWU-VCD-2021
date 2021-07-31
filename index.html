@@ -4,7 +4,6 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Noto+Sans+KR:wght@900&display=swap"
 		rel="stylesheet">
@@ -36,7 +35,6 @@
 </head>
 <link rel="stylesheet" href="index/index.css">
 <link rel="stylesheet" href="index/water.css">
-<link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <sciprt src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></sciprt>
@@ -46,7 +44,19 @@
 <body>
 
 	<div class="container" onClick="
-	setTimeout(()=>{location.href='main/main.html'},500)
+
+	setTimeout(()=>{
+
+		// Internet Explorer로는 접근할 수 없도록 한다.
+		var agent = navigator.userAgent.toLowerCase();
+	if ( (navigator.appName == 'Netscape' && navigator.userAgent.search('Trident') != -1) || (agent.indexOf('msie') != -1) ) {
+		alert('Internet Explorer는 호환되지 않는 브라우저 입니다.');
+		return;
+	}
+	else {
+		location.href='main/main.html';
+	}},500)
+}
 	" style="cursor:pointer">
 
 		<div class="logo">
