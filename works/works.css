@@ -272,6 +272,9 @@ margin: 0px auto;
   0% {
     background-position: 200px 0;
   }
+  70% {
+    background-position: 200px 200px;
+  }
   100% {
     background-position: 200px 200px;
   }
@@ -286,7 +289,10 @@ margin: 0px auto;
   0% {
     background-size: 200px 0px;
   }
-  70% {
+  15% {
+    background-size: 200px 0px;
+  }
+  80% {
     background-size: 200px 400px;
   }
   100% {
@@ -301,8 +307,8 @@ margin: 0px auto;
   background-clip: text;
   color: transparent;
   text-shadow: black;
-  animation: wave-animation 3s infinite linear, loading-animation 9s infinite linear alternate;
-  background-size: 100px 50px;
+  animation: wave-animation 2s infinite linear, loading-animation 9s infinite linear alternate;
+  background-size: 50px 50px;
   background-repeat: repeat-x;
   opacity: 1;
 }
