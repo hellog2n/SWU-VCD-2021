@@ -1,3 +1,16 @@
+let complete = false;
+
+
+
+function loading_ed() {
+    const ta = document.getElementById('loading_layer');
+    ta.style.display = 'none';
+}
+
+
+
+
+
 // JavaScript Document
 let resolution = "330px";
 let clickCheck = 1;
@@ -166,7 +179,7 @@ async function separateRowFromJson(SOURCE, COLUMNS){
 // 해당 링크로 접속하는 함수
 function sendFunc( aValue ) { 
 	if(window.innerWidth < 768){
-		setTimeout(()=>{location.href="../detail/detail.html?" + aValue; },2000);
+		setTimeout(()=>{location.href="../detail/detail.html?" + aValue; },1000);
 	}
 	 else {
 		location.href="../detail/detail.html?" + aValue;
@@ -237,7 +250,8 @@ async function main(){
 		*/
 	}
 
-
+complete = true;
+loading_ed();
 	
 const files = new Image();
 
@@ -334,12 +348,11 @@ const files = new Image();
 
 	});
 		
-	
-
-
-
 
 }
+
+
+
 window.addEventListener('DOMContentLoaded', main);
 
 
@@ -352,14 +365,14 @@ function handleTabletChange(e) {
   if (e.matches) {
 	 
 	// Then log the following message to the console
-	for(let i = 0; i < img.length - 1; i++){
+	for(let i = 0; i < img.length - 2; i++){
 		img[i].style.width = "330px";
 		img[i].style.height = "330px";
 	}
 	
   }
   else {
-	for(let i = 0; i < img.length - 1; i++){
+	for(let i = 0; i < img.length - 2; i++){
 		img[i].style.width = resolution;
 		img[i].style.height = resolution;
 	}
