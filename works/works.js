@@ -1,13 +1,19 @@
 // JavaScript Document
 let resolution = "330px";
-
-
+let clickCheck = 1;
+$('#all').css('color', '#009999');
 // 네비게이션 섹션을 누를 때 보여지는 섹션이 다르게 적용되는 부분
 document.addEventListener("DOMContentLoaded", 
 
 // ALL
-$('#all').click(e => {
-	
+$('#all').on('click' , e => {
+	$('#video').css('color', '#ffffff');
+	$('#all').css('color', '#009999');
+	$('#uxui').css('color', '#ffffff');
+	$('#bx').css('color', '#ffffff');
+	$('#graphic').css('color', '#ffffff');
+	$('#print').css('color', '#ffffff');
+	clickCheck = 1;
 	$(".uxui").show();
 	$(".bx").show();
 	$(".graphic").show();
@@ -16,8 +22,14 @@ $('#all').click(e => {
 	AOS.refresh();
 }),
 // UXUI
-$('#uxui').click(e => {
-	
+$('#uxui').on('click' , () => {
+	$('#video').css('color', '#ffffff');
+	$('#all').css('color', '#ffffff');
+	$('#uxui').css('color', '#009999');
+	$('#bx').css('color', '#ffffff');
+	$('#graphic').css('color', '#ffffff');
+	$('#print').css('color', '#ffffff');
+	clickCheck = 2;
 	$(".uxui").show();
 	$(".bx").hide();
 	$(".graphic").hide();
@@ -26,8 +38,14 @@ $('#uxui').click(e => {
 
 }),
 // Bx
-$('#bx').click(e => {
-	
+$('#bx').on('click' , () => {
+	$('#video').css('color', '#ffffff');
+	$('#all').css('color', '#ffffff');
+	$('#uxui').css('color', '#ffffff');
+	$('#bx').css('color', '#009999');
+	$('#graphic').css('color', '#ffffff');
+	$('#print').css('color', '#ffffff');
+	clickCheck = 3;
 	$(".uxui").hide();
 	$(".bx").show();
 	$(".graphic").hide();
@@ -37,8 +55,14 @@ $('#bx').click(e => {
 
 }),
 // Graphic
-$('#graphic').click(e => {
-
+$('#graphic').on('click' , () => {
+	$('#video').css('color', '#ffffff');
+	$('#all').css('color', '#ffffff');
+	$('#uxui').css('color', '#ffffff');
+	$('#bx').css('color', '#ffffff');
+	$('#graphic').css('color', '#009999');
+	$('#print').css('color', '#ffffff');
+	clickCheck = 4;
 	$(".uxui").hide();
 	$(".bx").hide();
 	$(".graphic").show();
@@ -48,8 +72,14 @@ $('#graphic').click(e => {
 
 }),
 // 출판
-$('#print').click(e => {
-
+$('#print').on('click' , () => {
+	$('#video').css('color', '#ffffff');
+	$('#all').css('color', '#ffffff');
+	$('#uxui').css('color', '#ffffff');
+	$('#bx').css('color', '#ffffff');
+	$('#graphic').css('color', '#ffffff');
+	$('#print').css('color', '#009999');
+	clickCheck = 5;
 	$(".uxui").hide();
 	$(".bx").hide();
 	$(".graphic").hide();
@@ -58,8 +88,14 @@ $('#print').click(e => {
 	AOS.refresh();
 }),
 // 영상
-$('#video').click(e => {
-
+$('#video').on('click' , () => {
+	$('#video').css('color', '#009999');
+	$('#all').css('color', '#ffffff');
+	$('#uxui').css('color', '#ffffff');
+	$('#bx').css('color', '#ffffff');
+	$('#graphic').css('color', '#ffffff');
+	$('#print').css('color', '#ffffff');
+	clickCheck = 6;
 	$(".uxui").hide();
 	$(".bx").hide();
 	$(".graphic").hide();
@@ -67,8 +103,43 @@ $('#video').click(e => {
 	$(".video").show();
 	AOS.refresh();
 }),
+$('.menuLink').on('click' , e => {
+	if($(this)){
+		$(this).css('color', '#009999');
+		
+	}
+	else {
+		$(this).css('color', '#ffffff');
+	}
+}),
 
-
+// ALL
+$('.menuLink').on('mouseover' , e => {
+	if(e.target){
+		
+		e.target.style.color = '#009999';
+		
+	}
+	
+	
+}),
+// ALL
+$('.menuLink').on('mouseout' , e => {
+	if(e.target){
+		if(clickCheck == 1 && e.target.id == 'all')
+			return;
+		
+		if (clickCheck == 2 && e.target.id == 'uxui')return;
+		if (clickCheck == 3 && e.target.id == 'bx') return;
+		if (clickCheck == 4 && e.target.id == 'graphic') return;
+		if (clickCheck == 5 && e.target.id == 'print') return;
+		if (clickCheck == 6 && e.target.id == 'video') return;
+		e.target.style.color = '#ffffff';
+		// console.log(e.target.id);
+	}
+	
+	
+}),
 );
 
 
@@ -109,9 +180,7 @@ function rand(min, max) {
 	  }
 
 
-function clickEvent() {
 
-}
 
 
 
@@ -129,7 +198,7 @@ async function main(){
 
 	// 초기 화면 크기 설정
 	if(window.innerWidth < 768){
-		resolution = "calc(45vw)";
+		resolution = "calc(40vw)";
 	}
 
 	// resolution -> 해상도 표시하는 부분
@@ -173,13 +242,7 @@ async function main(){
 const files = new Image();
 
 
-$('.item').on("click", () => {
-	if(window.innerWidth < 480){
 
-	}
-
-
-});
 
 
 
