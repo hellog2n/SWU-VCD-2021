@@ -43,7 +43,7 @@ a {
 
 .logo{
 	color: white;
-	font-size: 50px;
+	font-size: 35px;
 	padding: 40px;
 	font-weight: 700;
 }
@@ -167,6 +167,7 @@ svg {
 	}
  
 	.logo {
+		font-size: 2em;
 		padding-top: 20px;
 		padding-bottom: 20px;
 position: relative;
@@ -242,7 +243,7 @@ font-weight: 700;
 		font-size: 2em;
 		padding-top: 20px;
 		padding-bottom: 20px;
-		font-weight: 700;
+		font-weight: 900;
 		
 	}
 	#loading_layer >img {
