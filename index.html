@@ -46,7 +46,19 @@
 <body>
 
 	<div class="container" onClick="
-	setTimeout(()=>{location.href='main/main.html'},500)
+
+	setTimeout(()=>{
+
+		// Internet Explorer로는 접근할 수 없도록 한다.
+		var agent = navigator.userAgent.toLowerCase();
+	if ( (navigator.appName == 'Netscape' && navigator.userAgent.search('Trident') != -1) || (agent.indexOf('msie') != -1) ) {
+		alert('Internet Explorer는 호환되지 않는 브라우저 입니다.');
+		return;
+	}
+	else {
+		location.href='main/main.html';
+	}},500)
+}
 	" style="cursor:pointer">
 
 		<div class="logo">
