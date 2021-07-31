@@ -42,10 +42,10 @@ a {
   padding: 0;
 margin-top: 5%;
 margin-bottom: 5%;
-    font-weight: 500;
+    font-weight: 900;
     font-family: "Noto Sans KR"; 
     color: white;
-    font-size: 3em;
+    font-size: 1em;
     text-align: center;
     width: auto;
 }
@@ -117,7 +117,17 @@ margin-bottom: 5%;
 /* 이름 */
 .author {
     color: white;
-    font-size: 1.2em;
+    font-size: 1.1em;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 900;
+    margin-bottom: 3px;
+     padding-left: 7%;
+    padding-right: 7%;
+}
+
+.email {
+    color: white;
+    font-size: 1em;
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: 900;
     margin-bottom: 3px;
@@ -131,7 +141,7 @@ margin-bottom: 5%;
 /* 작품설명 */
 .script {
     color:white;
-    font-size: 1.3em;
+    font-size: 1.1em;
     font-family: 'Noto Sans KR';
     margin-bottom: 10px;
     white-space: pre-line;
@@ -163,8 +173,8 @@ section {
 }
 .chat-body ul{
   margin: 0;
-  padding-left: 5%;
-  padding-right: 5%;
+  padding-left: 11%;
+  padding-right: 11%;
 }
 
 .chat-footer {
@@ -204,7 +214,7 @@ height: calc(10vw);
 
 
 .image {
-    width: calc(75vw);
+    width: calc(65vw);
     padding: 0;
     display: block;
     margin: 0 auto;
@@ -221,8 +231,8 @@ writing-mode: horizontal-tb;
 }
 
 .glowing {
-  width: 30px;
-  height: 30px;
+  width: 17px;
+  height: 17px;
   z-index: 4;
   border-radius: 50%;
   
@@ -280,15 +290,15 @@ writing-mode: horizontal-tb;
     width: auto;
   }
   .script {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
   .navbar li{
     padding: 8px calc(7vw);
     text-align: center;
   }
   .glowing {
-    width: calc(7vw) - 30px;
-    height: calc(7vw) - 30px;
+    width: calc(6vw) - 30px;
+    height: calc(6vw) - 30px;
 
   }
   .circle{
@@ -305,7 +315,7 @@ writing-mode: horizontal-tb;
     padding: 8px calc(8vw);
   }
   .script {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
   .circle{
     animation: circleGrowUp-300 1s ease-in forwards !important;
@@ -319,7 +329,7 @@ writing-mode: horizontal-tb;
     font-size: calc(4.5vw);
   }
   .script {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
   .navbar li:nth-child(2){
     padding: 8px 10px;
@@ -336,7 +346,7 @@ writing-mode: horizontal-tb;
     font-size: calc(5vw);
   }
   .script {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
   .chat-footer p{
     position: relative;

@@ -25,7 +25,7 @@
  }
  .chat-footer p{
 	position: relative;
-	top: 10px;
+	top: -3px;
 	font-size: calc(1.5vw);
 	color: white;
 	margin-right: calc(10vw);
