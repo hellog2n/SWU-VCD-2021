@@ -15,10 +15,10 @@
     margin: 0px auto;
  background-blend-mode: multiply;
  background-size: cover;
- 
  z-index: 1;
- 
 }
+
+
 @keyframes animatedBackground {
     from { background-position: 50% 30%; }
     to { background-position: 60% 0; }
@@ -43,7 +43,7 @@
     position: absolute;
     width: 100%;
     left: 50%;
-    top: 50%;
+    top: 45%;
     transform: translate(-50%, -50%);
 }
 
@@ -52,9 +52,61 @@
     text-align: center;
     width: 100%;
     position: relative;
-    top : 20px;
+    top : 50px;
 }
 
 body {
     background-color: black;
+}
+
+/* 0 ~ 479px media query */
+@media screen  and (min-width: 0px) and (max-width: 479px){
+    .bubble{
+     width: calc(25vw);
+     height: calc(25vw);
+    }
+}
+ 
+  
+  /* 480 ~ 639px media query */
+  @media screen  and (min-width: 480px) and (max-width: 639px){
+    .bubble{
+        width: calc(20vw);
+        height: calc(20vw);
+       }
+  }
+  
+  /* 640 ~ 779px media query */
+  @media screen  and (min-width: 640px) and (max-width: 779px){
+    .bubble{
+        width: calc(15vw);
+        height: calc(15vw);
+       }
+  }
+  
+  /* 780 ~ 1023px media query */
+  @media screen  and (min-width: 780px) and (max-width: 1023px){
+    .bubble{
+        width: calc(15vw);
+        height: calc(15vw);
+       }
+  
+  }
+  
+  /* 1024 ~ 1279px media query */
+  @media screen  and (min-width: 1024px) and (max-width: 1279px){
+    
+  }
+  /* 1280 ~ 1599px media query */
+  @media screen  and (min-width: 1280px) and (max-width: 1599px){
+    .bubble{
+        width: calc(15vw);
+        height: calc(15vw);
+       }
+  }
+  
+  
+   /* 1600px ~ media query  */
+   @media screen and (min-width: 1600px){
+   
 }

@@ -2,113 +2,60 @@
 <html>
 
 <head>
-	<meta charset="UTF-8">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Noto+Sans+KR:wght@900&display=swap"
-		rel="stylesheet">
-	<style>
-		@media (min-width: 400px) {
-			:root {
-				font-size: 0.875em;
-			}
-		}
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Noto+Sans+KR:wght@900&display=swap"
+        rel="stylesheet">
+    <style>
+        @media (min-width: 400px) {
+            :root {
+                font-size: 0.875em;
+            }
+        }
 
-		:root {
-			font-size: 0.5em;
-		}
+        :root {
+            font-size: 0.5em;
+        }
 
-		@media (min-width: 800px) {
-			:root {
-				font-size: 0.875em;
-			}
-		}
+        @media (min-width: 800px) {
+            :root {
+                font-size: 0.875em;
+            }
+        }
 
-		@media (min-width: 1200px) {
-			:root {
-				font-size: 1em;
-			}
-		}
-	</style>
-	<meta charset="UTF-8">
-	<title>서울여자대학교 38회 졸업전시</title>
+        @media (min-width: 1200px) {
+            :root {
+                font-size: 1em;
+            }
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>서울여자대학교 38회 졸업전시</title>
 </head>
-<link rel="stylesheet" href="index/index.css">
-<link rel="stylesheet" href="index/water.css">
+<link rel="stylesheet" href="index/intro.css">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <sciprt src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></sciprt>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js"
-	crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script>
 
 <body>
 
-	<div class="container" onClick="
-
-	setTimeout(()=>{
-
-		// Internet Explorer로는 접근할 수 없도록 한다.
-		var agent = navigator.userAgent.toLowerCase();
-	if ( (navigator.appName == 'Netscape' && navigator.userAgent.search('Trident') != -1) || (agent.indexOf('msie') != -1) ) {
-		alert('Internet Explorer는 호환되지 않는 브라우저 입니다.');
-		return;
-	}
-	else {
-		location.href='main/main.html';
-	}},500)
-}
-	" style="cursor:pointer">
-
-		<div class="logo">
-			<p class="b" style="position: absolute;">서울여자대학교 시각디자인학과 38회 졸업전시<br>
-				Seoul Women's University Visual Communication Design</p>
-		</div>
-
-		<video class="videopc" autoplay loop playsinline muted="muted">
-			<source src="index/images/swu_vcd_intro.mp4" type="video/mp4">
-		</video>
-		<!--<img class="waves" src="index/images/DEEPLAYER1.png" style="position: absolute; width: 60%;"> -->
+    <article class="loading-intro">
+        <div class="bubble"></div>
+        <p class="loading-text"> 원활한 전시 관람을 위해 저전력 모드를 해제 바랍니다.</p>
+    </article>
+    <script>
+        setTimeout(() => {
 
 
-		<p class="loading wave">DEEP LAYER</p>
-		<!--p class="t waves" style="position: absolute; width: 60%;">DEEP LAYER </p-->
+            location.href = 'intro.html';
 
-		<div class="centered">
-
-			<div class="mainText">
-				<style type="text/css">
-					@font-face p {
-						font-family: "Noto Sans KR";
-						font-style: normal;
-						font-weight: bold;
-					}
-
-					p.a {
-						font-family: 'Dela Gothic One', cursive;
-					}
-
-					p.a1 {
-						font-family: 'Noto Sans KR', sans-serif;
-					}
-
-					p.b {
-						font-family: "Noto Sans KR"
-					}
-				</style>
-
-				<!--p class="a1" style="display:inline; letter-spacing: -6px; " > L AYER</p-->
-			</div>
-		</div>
-	</div>
+        }, 3000);
 
 
-
-	<script type="text/javascript">
-		$('.container').ripples({
-
-		})
-	</script>
-
+    </script>
 
 </body>
 
