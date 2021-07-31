@@ -1,13 +1,17 @@
 @charset "UTF-8";
 /* CSS Document */
+
 body {
-	background-color: #111;
+	padding-top: 180px;
+	background-color: #000;
 	font-family: "Noto Sans KR";
+	overflow-x: hidden;
 }
 a {
 	text-decoration: none;
 	color : white;
 }
+
 * {
 	margin:0;
 	padding:0;
@@ -15,22 +19,37 @@ a {
 .container {
 	grid-auto-rows: minmax(200px, auto);
 	padding: 20px;
-	background-color: lightgray;
+	background-color: black;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-gap: 1rem;
-	width: 700px;
-	height: 60vh;
+	width: auto;
+	height: auto;
 	/* CSS Smooth Scroll */
+}
+
+.section-top {
+	top: 0;
+	z-index: 5;
+	position: fixed;
+	background-color: rgba(0, 0, 0, 0.4);
+	width: 100vw;
+	margin-bottom: 10px;
+	height: auto;
+}
+.section-bottom {
+	margin-top: 10px;
 }
 
 .logo{
 	color: white;
-	font-size: 50px;
-	padding: 50px;
+	font-size: 35px;
+	padding: 40px;
+	font-weight: 700;
 }
 
 section {
+
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -38,48 +57,360 @@ section {
 }
 
 .navbar_menu{
+	width: auto;
 	display: flex;
 	list-style: none;
-	padding-left: 0;
+	padding: 0;
+	flex-wrap: nowrap;
+	margin: 0;
 }
 
 
 .navbar_menu li{
 	padding: 8px 50px;
+	font-size: 1.5em;
+	text-align: center;
+	font-weight: 400;
 }
 
-
+/*
 .navbar_menu li a:hover{
 	color: #009999;
 }
-
-
+*/
+#loading_layer > img {
+	width: calc(10vw) ;
+	height: calc(10vw) ;
+	
+  }
 
 .item {
-	background-color: rgb(255, 0, 0, 0.5);
+	position: relative;
+	
+    width: auto;
+
+	background-color: black;
+	z-index: 0;
 }
+
+/* 평상시에는 아래 작품명과 작가명이 안 보이도록 visibility를 hidden 시켜놓음 */
 .name {
+	visibility: hidden;
 	justify-content: center;
-	color: pink;
+	color: white;
 	text-align: center;
-	align-items: center;
 	position: absolute;
-	z-index: 1;
+	transform: translate(-50%, -50%);
+	z-index: 4;
+	top: 40%; 
+	left: 50%; 
+	width: auto;
+  vertical-align: middle;
+	margin: 0 auto;
+	word-break: keep-all;
+
+	text-justify:inter-word;
 }
 
 .author {
-	justify-content: center;
-	color: pink;
+	top: 60%; 
+	left: 50%; 
+	width: auto;
+	transform: translate(-50%, -50%);
+	visibility: hidden;
+	color: white;
 	text-align: center;
-	align-items: center;
 	position: absolute;
-	z-index: 1;
+	z-index: 4;
+	word-break: keep-all;
+	
+	text-justify:inter-word;
 }
 
-.item:nth-child(odd) {
-	background-color: rgb(0, 255, 0, 0.5);
+
+
+
+
+/* 호버 애니메이션 관련하여 SVG 관리 */
+
+.pos {
+    position: absolute;
+    left : 0;
+    top : 0px;
+}
+.cover_a {
+    z-index: 3;
+}
+.image_a {
+    z-index: 2;
 }
 
-.item:hover{
-	background-color: rgb(0, 0, 0, 0.5);
+svg {
+
+	width: 100%;
+	height: 100%;
 }
+
+
+
+
+@media screen and (max-width: 1190px){
+	
+	@media screen and (min-width: 768px){
+		body {
+			padding-top: 180px;
+		}
+	}
+	body {
+		width: 100vw;
+		
+	}
+ 
+	.logo {
+		font-size: 2em;
+		padding-top: 20px;
+		padding-bottom: 20px;
+position: relative;
+margin: 0px auto;
+font-weight: 700;
+	}
+
+	.container {
+		padding-left: 5%;
+		padding-right: 5%;
+		grid-auto-rows: minmax(100px, auto);
+		padding: 20px;
+		
+		grid-template-columns: repeat(2, 1fr);
+		
+		/* CSS Smooth Scroll */
+	}
+
+	@media screen and (min-width:1000px){
+		.container{
+		grid-template-columns: repeat(3, 1fr) !important;
+		}
+		
+	}
+	img {
+		width: calc(40vw) - 50px !important;
+		height: calc(40vw) - 50px !important;
+	}
+
+	
+	
+.name {
+	font-size: 0.8em;
+}
+.author {
+	font-size: 0.8em;
+}
+
+#loading_layer > img {
+	width: calc(10vw) !important;
+	height: calc(10vw) !important;
+	
+  }
+}
+
+
+@media screen and (max-width: 1000px){
+	.navbar_menu {
+		padding-left: 5%;
+		padding-right: 5%;
+		width: 90%;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+	}
+	.navbar_menu li {
+		font-size: 1.2em;
+		width: 25%;
+		padding: 8px 15px;
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: 480px){
+	.body {
+		padding-top: 100px !important;
+	}
+	.navbar_menu li {
+		font-size: 1.2em;
+	}
+	.logo {
+		font-size: 2em;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		font-weight: 900;
+		
+	}
+	#loading_layer >img {
+		width: calc(20vw) !important;
+		height: calc(20vw) !important;
+		
+	  }
+}
+
+
+@media screen and (max-width: 400px){
+	body {
+		width: 100vw;
+		padding-top: 150px;
+	}
+
+.logo {
+	padding-top: 10px;
+	font-size: 2em;
+	padding-top : 10px;
+	padding-bottom: 10px;
+	font-weight: 700;
+}
+
+.logo-down {
+	font-weight: 700;
+	font-size: 2.5em;
+	padding: 0px;
+}
+
+.logo-down-400 {
+	font-size: 2em;
+	padding: 0px;
+	font-weight: 700;
+}
+
+.navbar_menu li {
+	font-size: 1em;
+	padding: 8px 10px;
+}
+#loading_layer >img {
+	width: calc(20vw) !important;
+	height: calc(20vw) !important;
+	
+  }
+}
+
+
+.nav-down {
+	top: 0;
+	z-index: 5;
+	position: fixed;
+	background-color: rgba(0, 0, 0, 0.4);;
+	width: 100vw;
+	margin-bottom: 10px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.nav-down-400 {
+	top: 0;
+	z-index: 5;
+	position: fixed;
+	background-color: rgba(0, 0, 0, 0.4);;
+	width: 100vw;
+	margin-bottom: 10px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	font-size: 0.8em;
+	font-weight: 700;
+}
+
+.nav-up {
+	padding: 20px;
+	font-size: 1.2em;
+	color: tomato;
+}
+#MOVE_TOP_BTN {
+    position: fixed;
+    right: 2%;
+    bottom: 2%;
+    display: none;
+    z-index: 999;
+ }
+
+@keyframes wave-animation {
+  0% {
+    background-position: 0 bottom;
+  }
+  100% {
+    background-position: 200px bottom;
+  }
+}
+@keyframes loading-animation {
+  0% {
+    background-position: 200px 0;
+  }
+  70% {
+    background-position: 200px 200px;
+  }
+  100% {
+    background-position: 200px 200px;
+  }
+}
+
+
+
+
+
+
+@keyframes loading-animation {
+  0% {
+    background-size: 200px 0px;
+  }
+  15% {
+    background-size: 200px 0px;
+  }
+  80% {
+    background-size: 200px 400px;
+  }
+  100% {
+    background-size: 200px 400px;
+  }
+}
+.wave {
+  background-image: url("images/5hYlAGa.png");
+  -moz-background-clip: text;
+  -o-background-clip: text;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: black;
+  animation: wave-animation 7s infinite linear, loading-animation 7s infinite linear alternate;
+  background-size: 100% 50%;
+
+  background-repeat: repeat-x;
+  opacity: 1;
+}
+
+.chat-footer {
+	padding: 5%;
+	margin-top: 10%;
+	display: flex;
+	flex-direction: row;
+  height: calc(10vw);
+ }
+ .chat-footer p{
+	position: relative;
+	top: 10px;
+	font-size: calc(1.5vw);
+	color: white;
+	margin-right: calc(10vw);
+  }
+  
+  .chat-footer > a  {
+	color: white;
+	height: 100%;
+	font-size: 2em;
+	padding-right: calc(5vw);
+  }
+
+
+  #loading_layer {
+	
+	position: fixed;
+	left: 50%; top: 50%;  
+		transform: Translate(-50%, -50%);
+	   z-index:1000;
+  }
+ 

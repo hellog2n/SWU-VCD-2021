@@ -3,33 +3,66 @@
 
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, maximum-scale=1.0, initial-scale=1.0">
+
+	<meta http-equiv=" X-UA-Compatible" content="ie=edge">
 	<title>서울여자대학교 38회 졸업전시</title>
 
 </head>
 <link rel="stylesheet" href="works.css">
 <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Noto+Sans+KR:wght@400;500;900&display=swap"
+	rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js"
+	crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<script src="scrollCheck.js"></script>
+<script>
+
+
+	$(() => {
+		$(window).scroll(function () {
+			if ($(this).scrollTop() > 0) {
+				$('#MOVE_TOP_BTN').fadeIn();
+			} else {
+				$('#MOVE_TOP_BTN').fadeOut();
+			}
+		});
+
+		$("#MOVE_TOP_BTN").click(() => {
+			$('html, body').animate({
+				scrollTop: 0
+			}, 1000);
+			return false;
+		});
+	});
+</script>
 
 <body>
-	<section>
-		<div class="logo">
-			<p><a href="../main/main.html">DEEP LAYER</a></p>
+
+	<section class="section-top" id="section-top">
+		<div class="logo" id="logo" style="font-weight: 900">
+			<p><a  href="../main/main.html">DEEP LAYER</a></p>
 		</div>
 		<nav>
 			<ul class="navbar_menu" id="navbar_menu">
-				<li><a href="#" class="menuLink" id="all">All</a></li>
-				<li><a href="#" class="menuLink" id="uxui">ux/ui</a></li>
-				<li><a href="#" class="menuLink" id="bx">bx</a></li>
-				<li><a href="#" class="menuLink" id="graphic">graphic</a></li>
+				<li><a href="#" class="menuLink" id="all">ALL</a></li>
+				<li><a href="#" class="menuLink" id="uxui">UX/UI</a></li>
+				<li><a href="#" class="menuLink" id="bx">BX</a></li>
+				<li><a href="#" class="menuLink" id="graphic">Graphic</a></li>
 				<li><a href="#" class="menuLink" id="print">출판</a></li>
 				<li><a href="#" class="menuLink" id="video">영상</a></li>
 			</ul>
 		</nav>
 	</section>
-	<section>
+	<section class="section-bottom">
 		<div class="container" id="container">
-			<script src="works.js"></script>
+			<script defer src="works.js"></script>
+
 
 		</div>
 
@@ -37,9 +70,18 @@
 
 		</div>
 	</section>
+	<a id="MOVE_TOP_BTN" href="#"><img src="../main/top.svg" width="50px !important"></a>
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script>
+		AOS.init({ once: true, });
+	</script>
 
-	<button id='darkMode'>button</button>
-	<script src="../darkmode.js"></script>
+	<footer class="chat-footer">
+		<p>Copyright © 2021 SWUVD. All rights reserved.</p>
+		<a href="https://www.instagram.com/swu_vcd/" target='_blank'><i class="fab fa-instagram"></i></a>
+		<a href="http://swu-design.com/" target='_blank'><i class="fas fa-home"></i></a>
+	</footer>
+	<div id='loading_layer'><img src='images/spinner.gif' style="width: auto; !important"></img></div>
 </body>
 
 </html>

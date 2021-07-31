@@ -1,0 +1,112 @@
+
+.bubble {
+    width: calc(30vw - 150px);
+    height: calc(30vw - 150px);
+    content: '';
+    border-radius: 100% 40% 80% 85%;
+    left: 0;
+    top: 0;
+    background: url(../main/mask.png)  , moz-linear-gradient(170deg, #009999 30%, #119999 9%, #003333, #000000);
+    background: url(../main/mask.png)  ,-webkit-linear-gradient(170deg,#009999 30%, #119999 9%, #003333, #000000 100%);
+    background: url(../main/mask.png)  ,-o-linear-gradient(170deg, #009999 30%, #119999 9%, #003333, #000000 100%);
+    background: url(../main/mask.png)  ,-ms-linear-gradient(170deg, #009999 30%, #119999 9%, #003333, #000000 100%);
+  background: url(../main/mask.png)  ,linear-gradient(170deg,#009999 30%, #119999 9%, #003333, #000000 100%);
+    animation:wave 4s ease infinite, animatedBackground 40s ease infinite;
+    margin: 0px auto;
+ background-blend-mode: multiply;
+ background-size: cover;
+ z-index: 1;
+}
+
+
+@keyframes animatedBackground {
+    from { background-position: 50% 30%; }
+    to { background-position: 60% 0; }
+}
+@keyframes wave{
+    0%{
+        border-radius: 37% 72% 62% 38% / 53% 51% 49% 47%;
+    }
+    30%{
+        border-radius: 45% 55% 49% 51% / 36% 51% 49% 64%;
+    }
+    70%{
+        border-radius: 60% 40% 57% 43% / 47% 62% 38% 53%;
+    }
+    100%{
+        border-radius: 37% 72% 62% 38% / 53% 51% 49% 47%;
+    }
+
+}
+
+.loading-intro {
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -50%);
+}
+
+.loading-text {
+    color: white;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    top : 50px;
+}
+
+body {
+    background-color: black;
+}
+
+/* 0 ~ 479px media query */
+@media screen  and (min-width: 0px) and (max-width: 479px){
+    .bubble{
+     width: calc(25vw);
+     height: calc(25vw);
+    }
+}
+ 
+  
+  /* 480 ~ 639px media query */
+  @media screen  and (min-width: 480px) and (max-width: 639px){
+    .bubble{
+        width: calc(20vw);
+        height: calc(20vw);
+       }
+  }
+  
+  /* 640 ~ 779px media query */
+  @media screen  and (min-width: 640px) and (max-width: 779px){
+    .bubble{
+        width: calc(15vw);
+        height: calc(15vw);
+       }
+  }
+  
+  /* 780 ~ 1023px media query */
+  @media screen  and (min-width: 780px) and (max-width: 1023px){
+    .bubble{
+        width: calc(15vw);
+        height: calc(15vw);
+       }
+  
+  }
+  
+  /* 1024 ~ 1279px media query */
+  @media screen  and (min-width: 1024px) and (max-width: 1279px){
+    
+  }
+  /* 1280 ~ 1599px media query */
+  @media screen  and (min-width: 1280px) and (max-width: 1599px){
+    .bubble{
+        width: calc(15vw);
+        height: calc(15vw);
+       }
+  }
+  
+  
+   /* 1600px ~ media query  */
+   @media screen and (min-width: 1600px){
+   
+}

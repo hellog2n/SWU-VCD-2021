@@ -1,0 +1,474 @@
+body{
+  background-color: black;
+  
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+    
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color : white;
+}
+.container {
+  padding: 0;
+  padding-top: calc(20vw);
+  margin: 0;
+
+
+  width: auto;
+  
+  height: auto;
+}
+.section-top{
+  background-color: black;
+  top: 0;
+  z-index: 5;
+  position: fixed;
+  width: 100vw;
+  margin-bottom: 10px;
+  height: auto;
+ 
+}
+
+.logo{
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0;
+margin-top: 5%;
+margin-bottom: 5%;
+    font-weight: 900;
+    font-family: "Noto Sans KR"; 
+    color: white;
+    font-size: 1em;
+    text-align: center;
+    width: auto;
+}
+
+.back_button{
+  padding-top: 8px;
+    font-weight: 700;
+    font-family: "Noto Sans KR"; 
+    
+    font-size: calc(5vw);
+    padding-left: -20px;
+}
+
+
+
+.back_button:hover {
+  color: #009999;
+  transition: .5s;
+  transform:scale(1.1);             /*  default */
+-webkit-transform:scale(1.1);  /*  크롬 */
+-moz-transform:scale(1.1);     /* FireFox */
+-o-transform:scale(1.1);        /* Opera */
+  
+}
+
+
+.explain {
+  line-height: 33px;
+}
+.left {
+  flex: 0.25;
+  background-color: black;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  align-items: center;
+	justify-content: space-between;
+}
+
+.navbar li{
+  padding: 8px calc(10vw);
+	font-size: 1.5em;
+	text-align: center;
+}
+
+
+
+/* 작품제목 */
+.title {
+    color:#04999A;
+    font-size: 1.2em;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 900;
+    margin-bottom: 20px;
+     padding-left: 7%;
+    padding-right: 7%;
+    white-space: pre-line;
+    word-break: keep-all;
+	text-align: justify;
+	text-justify:inter-word;
+}
+
+/* 이름 */
+.author {
+    color: white;
+    font-size: 1.1em;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 900;
+    margin-bottom: 3px;
+     padding-left: 7%;
+    padding-right: 7%;
+}
+
+.email {
+    color: white;
+    font-size: 1em;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 900;
+    margin-bottom: 3px;
+     padding-left: 7%;
+    padding-right: 7%;
+}
+
+
+
+
+/* 작품설명 */
+.script {
+    color:white;
+    font-size: 1.1em;
+    font-family: 'Noto Sans KR';
+    margin-bottom: 10px;
+    white-space: pre-line;
+    padding-left: 7%;
+    padding-right: 7%;
+    word-break: keep-all;
+	text-align: justify;
+	text-justify:inter-word;
+}
+.section-bottom {
+  margin-top: 10px;
+  
+}
+
+section {
+  display: flex;
+	flex-direction: column;
+
+}
+
+.chat-header {
+  flex: 1;
+}
+
+.chat-body {
+  
+  flex: 6;
+  
+}
+.chat-body ul{
+  margin: 0;
+  padding-left: 11%;
+  padding-right: 11%;
+}
+
+.chat-footer {
+  padding: 5%;
+  margin-top: 10%;
+  flex: 7;
+  display: flex;
+  flex-direction: row;
+height: calc(10vw);
+
+}
+.chat-footer p{
+  position: relative;
+  top: 10px;
+  font-size: calc(1.5vw);
+  color: white;
+  margin-right: calc(10vw);
+}
+
+.chat-footer > a  {
+  color: white;
+  height: 100%;
+  font-size: 2em;
+  padding-right: calc(5vw);
+}
+
+
+
+
+.layout {
+    flex: 6;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.image {
+    width: calc(65vw);
+    padding: 0;
+    display: block;
+    margin: 0 auto;
+    
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    margin-block-start: -5px; 
+writing-mode: horizontal-tb;
+}
+
+.glowing {
+  width: 17px;
+  height: 17px;
+  z-index: 4;
+  border-radius: 50%;
+  
+}
+
+.white{
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 1),
+  0 0 0 8px rgba(255, 255, 255, .1);
+ 
+}
+
+.white:hover {
+  transition: .5s;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 1),
+  0 0 40px rgba(255, 255, 255, 1),
+  0 0 60px rgba(255, 255, 255, 1),
+  0 0 80px rgba(255, 255, 255, 1),
+  0 0 0 8px rgba(255, 255, 255, .1);
+}
+
+.black {
+  background: rgba(0, 0, 0, .7);
+  box-shadow: 0 0 20px rgba(0, 0, 0, .1),
+  0 0 0 8px rgba(0, 0, 0, .1);
+  
+}
+.black:hover {
+  transition: .5s;
+  box-shadow: 0 0 20px rgba(0, 0, 0, .1),
+  0 0 40px rgba(0, 0, 0, .4),
+  0 0 60px rgba(0, 0, 0, .4),
+  0 0 80px rgba(0, 0, 0, .4),
+  0 0 0 8px rgba(0, 0, 0, .1);
+}
+
+
+
+.video {
+  text-align: center;
+}
+
+#MOVE_TOP_BTN {
+    position: fixed;
+    right: 2%;
+    bottom: 2%;
+    display: none;
+    z-index: 999;
+ }
+
+/* 0 ~ 359px media query */
+ @media screen  and (min-width: 0px) and (max-width: 359px){
+  .logo {
+    font-size: calc(6vw);
+    width: auto;
+  }
+  .script {
+    font-size: 1rem;
+  }
+  .navbar li{
+    padding: 8px calc(7vw);
+    text-align: center;
+  }
+  .glowing {
+    width: calc(6vw) - 30px;
+    height: calc(6vw) - 30px;
+
+  }
+  .circle{
+    animation: circleGrowUp-300 1s ease-in forwards !important;
+    }
+}
+
+/* 360 ~ 479px media query */
+@media screen  and (min-width: 360px) and (max-width: 479px){
+  .logo {
+    font-size: calc(5vw);
+  }
+  .navbar li{
+    padding: 8px calc(8vw);
+  }
+  .script {
+    font-size: 1rem;
+  }
+  .circle{
+    animation: circleGrowUp-300 1s ease-in forwards !important;
+    }
+}
+
+/* 480 ~ 639px media query */
+@media screen  and (min-width: 480px) and (max-width: 639px){
+  .logo {
+    width: 100%;
+    font-size: calc(4.5vw);
+  }
+  .script {
+    font-size: 1rem;
+  }
+  .navbar li:nth-child(2){
+    padding: 8px 10px;
+  }
+
+  .circle{
+  animation: circleGrowUp-300 1s ease-in forwards !important;
+  }
+}
+
+/* 640 ~ 779px media query */
+@media screen  and (min-width: 640px) and (max-width: 779px){
+  .logo {
+    font-size: calc(5vw);
+  }
+  .script {
+    font-size: 1rem;
+  }
+  .chat-footer p{
+    position: relative;
+    top: 10px;
+    font-size: calc(2vw);
+    color: white;
+    margin-right: calc(10vw);
+  }
+}
+
+/* 780 ~ 1023px media query */
+@media screen  and (min-width: 780px) and (max-width: 1023px){
+  .logo {
+    font-size: calc(5vw);
+  }
+
+}
+
+/* 1024 ~ 1279px media query */
+@media screen  and (min-width: 1024px) and (max-width: 1279px){
+  .logo {
+    font-size: calc(5vw);
+  }
+}
+/* 1280 ~ 1599px media query */
+@media screen  and (min-width: 1280px) and (max-width: 1599px){
+  .logo {
+    font-size: calc(5vw);
+  }
+  .container {
+    padding-top: calc(15vw);
+}
+}
+
+
+ /* 1600px ~ media query  */
+ @media screen and (min-width: 1600px){
+   .logo {
+     font-size: calc(5vw);
+   }
+   .container {
+    padding-top: calc(15vw);
+}
+.title {
+  font-size: ;
+}
+ }
+ 
+.background {
+  overflow: hidden;
+  width: auto;
+  height: auto;
+}
+
+ .js-circle {
+   top: 50%;
+   left: 50%;
+  position: absolute;
+  z-index: -2;
+}
+ .circle {
+   
+	left: 50%;
+	top: 50%;
+background-color: thistle;
+  position: fixed;
+  z-index: -2;
+  border-radius: 50%;
+ 
+	transform: translate(-50%, -50%);
+  animation: circleGrowUp 1s ease-in forwards;
+ 
+}
+
+.circle-hide {
+  content: '';
+  display: none;
+  top: 0%;
+  left: 0%;
+  
+  background-color: black;
+  position: absolute;
+  z-index: 1;
+  border-radius: 100%;
+
+}
+
+/*
+.js-circle:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: -50px;
+  left: -50px;
+  right: -50px;
+  bottom: -50px;
+  background-color: rgba(255, 255, 255, .2);
+  border-radius: 50%;
+}
+*/
+ @keyframes circleGrowUp {
+  from {
+    width: 0;
+    height: 0;
+  }
+
+  to {
+    width: 200vw;
+    height: 200vw;
+  }
+}
+
+@keyframes circleGrowUp-300 {
+  from {
+    width: 0;
+    height: 0;
+  }
+
+  to {
+    width: 300vw;
+    height: 300vw;
+  }
+}
+
+ 

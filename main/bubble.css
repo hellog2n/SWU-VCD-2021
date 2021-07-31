@@ -1,42 +1,84 @@
 @charset "UTF-8";
 /* CSS Document */
 
+
+
+
 .bubble {
-    width: 650px;
-    height: 450px;
+    width: calc(40vw - 150px);
+    height: calc(30vw - 130px);
     content: '';
     border-radius: 100% 40% 80% 85%;
-    background-image: linear-gradient(170deg, #009999 30%, #119999 9%, #003333, #000000);
-    animation:wave 7s ease infinite;
+    background: url(mask.png)  , moz-linear-gradient(170deg, #009999 30%, #119999 9%, #003333, #000000);
+    background: url(mask.png)  ,-webkit-linear-gradient(170deg,#009999 30%, #119999 9%, #003333, #000000 100%);
+    background: url(mask.png)  ,-o-linear-gradient(170deg, #009999 30%, #119999 9%, #003333, #000000 100%);
+    background: url(mask.png)  ,-ms-linear-gradient(170deg, #009999 30%, #119999 9%, #003333, #000000 100%);
+  background: url(mask.png)  ,linear-gradient(170deg,#009999 30%, #119999 9%, #003333, #000000 100%);
+    animation:wave 7s ease infinite, animatedBackground 40s ease infinite;
     margin: 0px auto;
+ background-blend-mode: multiply;
+ background-size: cover;
+ 
+ z-index: -1;
+ 
+}
+@keyframes animatedBackground {
+    from { background-position: 50% 30%; }
+    to { background-position: 60% 0; }
 }
 
+
+
 .bubble1 {
-    width: 500px;
-    height: 500px;
+    width: calc(40vw - 150px);
+    height: calc(40vw - 150px);
     content: '';
     border-radius: 80% 66% 80% 85%;
-    background-image: linear-gradient(200deg, #009999 30%, #119999 9%, #003333, #000000);
-    animation:wave1 7s ease infinite;
+    background: url(mask.png), moz-linear-gradient(200deg, #009999 30%, #119999 9%, #003333, #000000);
+    background: url(mask.png),-webkit-linear-gradient(200deg, #009999 30%, #119999 9%, #003333, #000000);
+        background: url(mask.png),-o-linear-gradient(200deg, #009999 30%, #119999 9%, #003333, #000000);
+            background: url(mask.png),-ms-linear-gradient(200deg, #009999 30%, #119999 9%, #003333, #000000);
+                background: url(mask.png),linear-gradient(200deg, #009999 30%, #119999 9%, #003333, #000000);
+                
+    animation:wave1 7s ease infinite, animatedBackground 40s ease infinite;
     margin: 0px auto;
+    background-blend-mode: multiply;
+    background-size: cover;
+    z-index: -1;
 }
 .bubble2 {
     width: 350px;
     height: 350px;
     content: '';
     border-radius: 90% 80% 80% 90% / 50% 50% 40% 40%;
-    background-image: linear-gradient(200deg, #009999 30%, #119999 9%, #003333, #000000,#000000);
-    animation:wave2 7s ease infinite;
+    background: url(mask.png), moz-linear-gradient(200deg, #009999 30%, #119999 9%, #003333, #000000,#000000);
+    background: url(mask.png),-webkit-linear-gradient(200deg, #009999 30%, #119999 9%, #003333, #000000,#000000);
+        background: url(mask.png),-o-linear-gradient(200deg, #009999 30%, #119999 9%, #003333, #000000,#000000);
+            background: url(mask.png),-ms-linear-gradient(200deg, #009999 30%, #119999 9%, #003333, #000000,#000000);
+                background: url(mask.png),linear-gradient(200deg, #009999 30%, #119999 9%, #003333, #000000,#000000);
+                
+    animation:wave2 7s ease infinite, animatedBackground 40s ease infinite;
+z-index: -2;
     margin: 0px auto;
+    background-size: cover;
+    background-blend-mode: multiply;
 }
 .bubble3 {
     width: 1000px;
     height: 700px;
     content: '';
     border-radius: 80% 66% 80% 85%;
-    background-image: linear-gradient(200deg, #009999 30%, #119999 9%, #003333, #000000, #000000);
-    animation:wave3 10s ease infinite;
+    background: url(mask.png), moz-linear-gradient(200deg, #009999 30%, #119999 9%, #003333, #000000, #000000);
+    background: url(mask.png),-webkit-linear-gradient(200deg, #009999 30%, #119999 9%, #003333, #000000, #000000);
+        background: url(mask.png),-o-linear-gradient(200deg, #009999 30%, #119999 9%, #003333, #000000, #000000);
+            background: url(mask.png),-ms-linear-gradient(200deg, #009999 30%, #119999 9%, #003333, #000000, #000000);
+                background: url(mask.png),linear-gradient(200deg, #009999 30%, #119999 9%, #003333, #000000, #000000);
+    animation:wave3 10s ease infinite, animatedBackground 40s ease infinite;
     margin: 0px auto;
+    background-size: cover;
+    background-blend-mode: multiply;
+    z-index: -3;
+    
 }
 
 .bubble4 {
@@ -44,36 +86,82 @@
     height: 250px;
     content: '';
     border-radius: 80% 66% 80% 85%;
-    background-image: linear-gradient(130deg, #009999 30%, #119999 9%, #003333, #000000, #000000);
-    animation:wave1 10s ease infinite;
+    background: url(mask.png), moz-linear-gradient(130deg, #009999 30%, #119999 9%, #003333, #000000, #000000);
+    background: url(mask.png),-webkit-linear-gradient(130deg, #009999 30%, #119999 9%, #003333, #000000, #000000);
+        background: url(mask.png),-o-linear-gradient(130deg, #009999 30%, #119999 9%, #003333, #000000, #000000);
+            background: url(mask.png),-ms-linear-gradient(130deg, #009999 30%, #119999 9%, #003333, #000000, #000000);
+                background: url(mask.png),linear-gradient(130deg, #009999 30%, #119999 9%, #003333, #000000, #000000);
+    
+    animation:wave1 10s ease infinite, animatedBackground 40s ease infinite;
     margin: 0px auto;
+    background-size: cover;
+    background-blend-mode: multiply;
+    z-index: -2;
+    
+    
 }
+.not-overflow {
+    width: auto;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    right: 0%;
+    top: 10%;
+}
+
+
 .bubble5 {
-    width: 900px;
+    width: 800px;
+    height: 550px;
+    content: '';
+    /* 66 80 */
+  
+    border-radius: 80% 66% 80% 85%;
+    background: url(mask.png), moz-linear-gradient(200deg, #009999 30%, #119999 9%, #003333, #000000, #000000);
+    background: url(mask.png), -webkit-linear-gradient(200deg, #009999 30%, #119999 9%, #003333, #000000, #000000);
+        background: url(mask.png),-o-linear-gradient(200deg, #009999 30%, #119999 9%, #003333, #000000, #000000);
+            background: url(mask.png),-ms-linear-gradient(200deg, #009999 30%, #119999 9%, #003333, #000000, #000000);
+                background: url(mask.png),linear-gradient(200deg, #009999 30%, #119999 9%, #003333, #000000, #000000);
+                
+     animation:wave 10s ease infinite, animatedBackground 40s ease infinite;
+    margin: 0px auto;
+    background-blend-mode: multiply;
+    background-size: cover;
+    z-index: -4;
+    overflow-x: hidden;
+}
+.bubble6 {
+    width: 550px;
     height: 550px;
     content: '';
     border-radius: 80% 66% 80% 85%;
-    background-image: linear-gradient(200deg, #009999 30%, #119999 9%, #003333, #000000, #000000);
-    animation:wave 10s ease infinite;
+    background: url(mask.png), moz-linear-gradient(200deg, #009999 30%, #119999 9%, #003333, #000000, #000000);
+    background: url(mask.png),-webkit-linear-gradient(200deg, #009999 30%, #119999 9%, #003333, #000000, #000000);
+        background: url(mask.png),-o-linear-gradient(200deg, #009999 30%, #119999 9%, #003333, #000000, #000000);
+            background: url(mask.png),-ms-linear-gradient(200deg, #009999 30%, #119999 9%, #003333, #000000, #000000);
+                background: url(mask.png),linear-gradient(200deg, #009999 30%, #119999 9%, #003333, #000000, #000000);
+                
+    animation:wave 10s ease infinite, animatedBackground 40s ease infinite;
+    background-size: cover;
     margin: 0px auto;
-}
-.bubble6 {
-    width: 700px;
-    height: 700px;
-    content: '';
-    border-radius: 80% 66% 80% 85%;
-    background-image: linear-gradient(200deg, #009999 30%, #119999 9%, #003333, #000000, #000000);
-    animation:wave 10s ease infinite;
-    margin: 0px auto;
+    background-blend-mode: multiply;
+    z-index: -5;
 }
 .longbubble {
     width: 500px;
     height: 350px;
     content: '';
     border-radius: 54% 46% 42% 58% / 60% 58% 42% 40%;
-    background-image: linear-gradient(to bottom right, #008798,#003333, #001111, #000000, #000000);
-    animation:wave2 7s linear infinite;
+    background: url(https://i.ibb.co/FhfBXMD/static.jpg), moz-linear-gradient(to bottom right, #008798,#003333, #001111, #000000, #000000);
+    background: url(https://i.ibb.co/FhfBXMD/static.jpg),-webkit-linear-gradient(to bottom right, #008798,#003333, #001111, #000000, #000000);
+        background: url(https://i.ibb.co/FhfBXMD/static.jpg),-o-linear-gradient(to bottom right, #008798,#003333, #001111, #000000, #000000);
+            background: url(https://i.ibb.co/FhfBXMD/static.jpg),-ms-linear-gradient(to bottom right, #008798,#003333, #001111, #000000, #000000);
+                background: url(https://i.ibb.co/FhfBXMD/static.jpg),linear-gradient(to bottom right, #008798,#003333, #001111, #000000, #000000);
+                
+    animation:wave2 7s linear infinite, animatedBackground 40s ease infinite;
     margin: 100px auto;
+    background-blend-mode: multiply;
+    z-index: -1;
 }
 
 @keyframes wave{
@@ -138,3 +226,193 @@
         border-radius: 60% 40% 32% 68% / 38% 36% 64% 62%;
     }
 }
+
+@media screen and (max-width: 1240px){
+    .bubble2 {
+        width: calc(30vw);
+        height: calc(30vw);
+        left: 1% !important;
+        top: 78% !important;
+
+    }
+    
+    .bubble3 {
+        right: 1% !important;
+        top: 80% !important;
+        width: calc(70vw);
+    height: calc(58vw);
+    
+    }
+}
+
+@media screen and (max-width: 900px){
+    .bubble {
+        width: calc(30vw);
+        height: calc(20vw);
+        left: 1% !important;
+        top: 280px !important;
+    }
+
+    .bubble1 {
+        top: 220px !important;
+        width: calc(25vw);
+    height: calc(25vw);
+
+    }
+    .bubble2 {
+        
+        
+        top: 78% !important;
+
+    }
+    
+    .bubble3 {
+        top: 80% !important;
+        right: 2% !important;
+    }
+
+    .bubble5 {
+        
+        width: calc(80vw);
+    height: calc(44vw);
+    }
+
+    .bubble6 {
+        top: 0;
+        width: calc(40vw);
+    height: calc(40vw);
+    }
+}
+
+
+@media screen and (min-width:481px) and (max-width: 768px){
+    .bubble {
+        width: calc(30vw);
+        height: calc(20vw);
+        left: 1% !important;
+        top: 260px !important;
+    }
+    .bubble1 {
+        right: 10% !important;
+        top: 200px !important;
+        width: calc(25vw);
+    height: calc(25vw);
+
+    }
+    .bubble2 {
+        top: 78% !important;
+    }
+    .bubble3 {
+        top: 80% !important;
+        right: 3% !important;
+    }
+    .bubble4 {
+        
+        width: calc(23vw);
+    height: calc(23vw);
+    }
+    .bubble6 {
+        top: 0;
+        width: calc(40vw);
+    height: calc(40vw);
+    }
+
+    @media screen and (min-width:481px) and (max-width: 581px){
+    
+        .bubble2 {
+            top: 78% !important;
+        }
+        .bubble3 {
+            top: 80% !important;
+            right: 3% !important;
+        }
+        .bubble4 {
+        
+            width: calc(23vw);
+        height: calc(23vw);
+        }
+        .bubble6 {
+            top: 0;
+            left: -10% !important;
+            width: calc(50vw);
+        height: calc(50vw);
+        }
+    }
+}
+
+@media screen and (min-width:361px) and (max-width: 480px){
+    .bubble {
+        width: calc(40w);
+        height: calc(20vw);
+        left: 5% !important;
+        top: 220px !important;
+   
+    }
+    .bubble1 {
+        right: 10% !important;
+        top: 180px !important;
+        width: calc(30vw);
+    height: calc(30vw);
+
+
+    }
+
+    .bubble2 .bubble3, .bubble5 {
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    
+    }
+
+    .bubble4 {
+       
+        width: calc(23vw);
+    height: calc(23vw);
+    }
+    .bubble6 {
+        top: 0;
+     
+        left: -10% !important;
+        width: calc(50vw);
+    height: calc(50vw);
+    }
+}
+
+
+@media screen and (min-width:0) and (max-width: 360px){
+.bubble {
+    width: calc(40vw);
+    height: calc(30vw);
+    left: 1% !important;
+    top: 140px !important;
+}
+
+.bubble1 {
+    right: 10% !important;
+    top: 100px !important;
+    width: calc(30vw);
+height: calc(30vw);
+
+}
+
+.bubble2 {
+    top: 60% !important;
+}
+.bubble3 {
+    top: 75% !important;
+    right: 3% !important;
+    width: calc(80vw);
+    height: calc(71vw);
+}
+.bubble4 {
+        
+    width: calc(23vw);
+height: calc(23vw);
+}
+.bubble6 {
+    top: -10% !important;
+    left: -10% !important;
+    width: calc(55vw) !important;
+height: calc(55vw) !important;
+}
+}
+

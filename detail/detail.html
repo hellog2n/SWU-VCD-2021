@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<html lang="kr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0, initial-scale=1.0">
+
+  <meta http-equiv=" X-UA-Compatible" content="ie=edge">
+  <title>서울여자대학교 38회 졸업전시</title>
+  <link rel="stylesheet" href="detail.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Noto+Sans+KR:wght@400;500;900&display=swap"
+    rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://player.vimeo.com/api/player.js"></script>
+  <script>
+
+
+    $(() => {
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 0) {
+          $('#MOVE_TOP_BTN').fadeIn();
+        } else {
+          $('#MOVE_TOP_BTN').fadeOut();
+        }
+      });
+
+      $("#MOVE_TOP_BTN").click(() => {
+        $('html, body').animate({
+          scrollTop: 0
+        }, 1000);
+        return false;
+      });
+    });
+  </script>
+
+</head>
+
+<body>
+  <div class="background"></div>
+  <div class="container ">
+    <section class="section-top">
+      <nav>
+        <ul class="navbar">
+          <li>
+            <a href="../works/works.html"><i class="fas fa-arrow-left back_button" style="width: 25px;"></i></a>
+          </li>
+          <li>
+            <p class="logo" style="font-weight: 900; font-size: 1.3em"><a href="../main/main.html">DEEP LAYER</a></p>
+          </li>
+
+          <li>
+            <a href="#a">
+              <div class="darkMode glowing white"></div>
+            </a>
+          </li>
+      </nav>
+
+    </section>
+    <section class="chat-wrapper">
+
+      <div class="chat-body">
+        <ul data-aos="fade-right" data-aos-delay="50" data-aos-duration="2500">
+          <!-- 작가 이름 부분 -->
+          <div class="author"></div>
+          <!-- 이메일 부분 -->
+          <div class="email" style="font-weight: 400"></div><br><br>
+
+          <!-- 작품 제목 부분-->
+          <div class="title"></div>
+          
+          <!-- 작품설명 넣어주기 -->
+          <div class="script"></div><br>
+          <div class="layout">
+            <div class="video"></div>
+            <!-- 구글드라이브에서 이미지 링크 따오기 -->
+            <div class="image"></div>
+          </div>
+        </ul>
+        <script src="../works/page/detailworks.js"></script>
+        <script src="darkmode.js"></script>
+      </div>
+      <!-- chat-body end -->
+    </section>
+
+
+    <a id="MOVE_TOP_BTN" href="#"><img src="../main/top.svg" width="50px !important"></a>
+    <footer class="chat-footer">
+      <p>Copyright © 2021 SWUVD. All rights reserved.</p>
+      <a href="https://www.instagram.com/swu_vcd/" target='_blank'><i class="fab fa-instagram"></i></a>
+      <a href="http://swu-design.com/" target='_blank'><i class="fas fa-home"></i></a>
+    </footer>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true, });
+  </script>
+</body>
+
+</html>

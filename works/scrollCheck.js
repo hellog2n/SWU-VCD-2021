@@ -1,43 +1,29 @@
-// Option 2 -jQuery Smooth Scrool
-$('.navbar a').on('click', function(e) {
-if(this.hash !== ''){
-	e.preventDefault();
-
-	const {hash} = this;
-	
-	$('html, body').animate({
-		scrollTop: $(hash).offset().top -150
-	},700);
-}
-				  });
-
-
-
-
-let lastScroll_Top = 0; 
+let lastScrollTop = 0; 
 const delta = 5; 
 // 동작의 구현이 시작되는 위치 
-const navbarHeight = $("#logo_main").innerHeight();
+const navbarHeight = $("#section-top").innerHeight();
 // 영향을 받을 요소를 선택
 
 
 function hasScrolled() { 
     const st = $(this).scrollTop(); 
     // Make sure they scroll more than delta 
-    if(Math.abs(lastScroll_Top - st) <= delta) return; 
+    if(Math.abs(lastScrollTop - st) <= delta) return; 
     // If they scrolled down and are past the navbar, 
     // add class .nav-up. 
     // This is necessary so you never see what is "behind" the navbar. 
     
     
-    if (st > lastScroll_Top && st > navbarHeight){ 
+    if (st > lastScrollTop && st > navbarHeight){ 
         
         // Scroll Down 
         if(window.innerWidth < 400){
-             $('.logo_text').css('display', 'none');
+            $('#section-top').removeClass('section-top').addClass('nav-down-400'); 
+            $('#logo').removeClass('logo').addClass('logo-down-400');      
         }
         else{
-			$('.logo_text').css('display', 'none');
+        $('#section-top').removeClass('section-top').addClass('nav-down'); 
+        $('#logo').removeClass('logo').addClass('logo-down'); 
         }
     }
     else if (st <= navbarHeight){ 
@@ -48,15 +34,17 @@ function hasScrolled() {
              
              if(st + $(window).height() < $(document).height()) {
                  if(window.innerWidth < 400){
-					$('.logo_text').css('display', '');
-                   }
+                    $('#section-top').removeClass('nav-down-400').addClass('section-top'); 
+                    $('#logo').removeClass('logo-down-400').addClass('logo');
+                 }
                  else {
-					$('.logo_text').css('display', '');
+                    $('#section-top').removeClass('nav-down').addClass('section-top'); 
+                    $('#logo').removeClass('logo-down').addClass('logo'); 
                  }
              }
     
             }
-            lastScroll_Top = st; 
+            lastScrollTop = st; 
     }
 
 
