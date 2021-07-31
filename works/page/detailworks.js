@@ -52,7 +52,7 @@ async function separateRowFromJson(SOURCE, COLUMNS){
 async function main(){
 	
 	const SOURCE = 'https://spreadsheets.google.com/feeds/list/1uFbTYJ3_jMkA9FdCntAzzSmx67o-Deey3nm42WkQaKU/2/public/full?alt=json';
-	const COLUMNS = ['num', 'name', 'author', 'detail', 'image', 'video'];
+	const COLUMNS = ['num', 'name', 'author', 'detail', 'image', 'video', 'email'];
     
     
 	const DATA =  await separateRowFromJson(SOURCE, COLUMNS);
@@ -72,7 +72,8 @@ async function main(){
             author : document.getElementsByClassName('author'),
             script : document.getElementsByClassName('script'),
             image :document.getElementsByClassName('image'),
-            video : document.getElementsByClassName('video')
+            video : document.getElementsByClassName('video'),
+           // email : document.getElementsByClassName('email')
 		};
         
         
@@ -100,8 +101,6 @@ async function main(){
             ifrm.setAttribute('allow', "fullscreen");
             ifrm.setAttribute('allow', "picture-in-picture");
             TARGET.video[0].appendChild(ifrm);
-            
-            
         }
         TARGET.script[0].textContent = "";
         const scriptList = DATA.detail.split('<br>');
@@ -113,6 +112,8 @@ async function main(){
         }
         TARGET.title[0].textContent = DATA.name;
         TARGET.author[0].textContent = DATA.author;
+       // TARGET.email[0].textContent = DATA.email;
+        console.log(DATA.email);
        // TARGET.script[0].textContent = DATA.detail;
 		// image.src = DATA.img;
 		
