@@ -318,6 +318,9 @@ font-weight: 700;
   0% {
     background-position: 200px 0;
   }
+  70% {
+    background-position: 200px 200px;
+  }
   100% {
     background-position: 200px 200px;
   }
@@ -332,7 +335,10 @@ font-weight: 700;
   0% {
     background-size: 200px 0px;
   }
-  70% {
+  15% {
+    background-size: 200px 0px;
+  }
+  80% {
     background-size: 200px 400px;
   }
   100% {
@@ -349,6 +355,7 @@ font-weight: 700;
   text-shadow: black;
   animation: wave-animation 7s infinite linear, loading-animation 7s infinite linear alternate;
   background-size: 100% 50%;
+
   background-repeat: repeat-x;
   opacity: 1;
 }
