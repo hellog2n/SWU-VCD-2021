@@ -113,7 +113,7 @@ async function main(){
         TARGET.title[0].textContent = DATA.name;
         TARGET.author[0].textContent = DATA.author;
        TARGET.email[0].textContent = DATA.email;
-        console.log(DATA.email);
+        
        // TARGET.script[0].textContent = DATA.detail;
 		// image.src = DATA.img;
 		
