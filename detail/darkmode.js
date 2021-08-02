@@ -9,7 +9,6 @@ function settingDarkWhite(value){
     const Alists = document.getElementsByTagName("a");
     const Plists = document.getElementsByTagName("p");
     const Wrapper = document.getElementsByClassName("container")[0];
-    const Navbar = document.getElementsByClassName("navbar")[0];
     const backBtn = document.getElementsByClassName("back_button")[0];
     const title = document.getElementsByClassName("title")[0];
     
@@ -21,25 +20,33 @@ function settingDarkWhite(value){
     }
    
     
-
-
+   
     switch(value){
+        
         case true:
-
+            
+            
             Wrapper.style.backgroundColor = "";
             $('.background').addClass('js-circle').addClass('circle');
             $('.circle').css('backgroundColor', '#000000');
             $('.darkMode').removeClass('black');
     $('.darkMode').addClass('white');
+    
         setTimeout(() => {
-                
+            $('.navbar').css('backgroundColor', 'black');
+            $('#navbar').css('backgroundColor', 'black');
+            if (st <=navbarHeight) {
+                $('.navbar').css('backgroundColor', 'transparent');
+            $('#navbar').css('backgroundColor', 'transparent');
+            }
+            
               
-        
-        // document.body.style.backgroundColor = "black";
+            
+            // document.body.style.backgroundColor = "black";
        // Wrapper.style.backgroundColor = "black";
         document.body.style.color = "white";
         backBtn.style.color = "white";
-        Navbar.style.backgroundColor = "black";
+        
 
     for(let idx = 0; idx <Plists.length; idx++){
         Plists[idx].style.color = "white";
@@ -65,17 +72,24 @@ setTimeout(() => {
 
     break;
     case false:
-
+        
+        
         Wrapper.style.backgroundColor = "";
         $('.background').addClass('js-circle').addClass('circle');
         $('.circle').css('backgroundColor','#ffffff');
         $('.darkMode').removeClass('white');
         $('.darkMode').addClass('black');
-        setTimeout(() => {
         
+        setTimeout(() => {
+            $('.navbar').css('backgroundColor', 'white');
+            $('#navbar').css('backgroundColor', 'white');
+            if (st <=navbarHeight) {
+                $('.navbar').css('backgroundColor', 'transparent');
+            $('#navbar').css('backgroundColor', 'transparent');
+            }
         document.body.style.color = "black";
         backBtn.style.color = "black";
-        Navbar.style.backgroundColor = "white";
+       
         for(let idx = 0; idx <Plists.length; idx++){
             Plists[idx].style.color = "black";
             }

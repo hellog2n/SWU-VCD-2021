@@ -1,3 +1,12 @@
+@charset "UTF-8";
+/* CSS Document */
+@font-face {
+  font-family: "Noto Sans KR";
+  src: url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;900&display=swap");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 body{
   background-color: black;
   
@@ -26,12 +35,10 @@ a {
   height: auto;
 }
 .section-top{
-  background-color: black;
   top: 0;
   z-index: 5;
   position: fixed;
   width: 100vw;
-  margin-bottom: 10px;
   height: auto;
  
 }
@@ -85,10 +92,10 @@ margin-bottom: 5%;
   flex-direction: row;
   width: auto;
   padding: 0;
-  margin: 0;
+  margin: 2% 0 2% 0;
   list-style: none;
   align-items: center;
-	justify-content: space-between;
+  justify-content: space-between;
 }
 
 .navbar li{
@@ -102,7 +109,7 @@ margin-bottom: 5%;
 /* 작품제목 */
 .title {
     color:#04999A;
-    font-size: 1.2em;
+    font-size: 1.3em;
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: 900;
     margin-bottom: 20px;
@@ -110,14 +117,13 @@ margin-bottom: 5%;
     padding-right: 7%;
     white-space: pre-line;
     word-break: keep-all;
-	text-align: justify;
 	text-justify:inter-word;
 }
 
 /* 이름 */
 .author {
     color: white;
-    font-size: 1.1em;
+    font-size: 1.3em;
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: 900;
     margin-bottom: 3px;
@@ -130,7 +136,7 @@ margin-bottom: 5%;
     font-size: 1em;
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: 900;
-    margin-bottom: 3px;
+    margin-bottom: 30px;
      padding-left: 7%;
     padding-right: 7%;
 }
@@ -140,6 +146,7 @@ margin-bottom: 5%;
 
 /* 작품설명 */
 .script {
+  width: auto;
     color:white;
     font-size: 1.1em;
     font-family: 'Noto Sans KR';
@@ -148,12 +155,12 @@ margin-bottom: 5%;
     padding-left: 7%;
     padding-right: 7%;
     word-break: keep-all;
-	text-align: justify;
+	
 	text-justify:inter-word;
 }
 .section-bottom {
-  margin-top: 10px;
-  
+  margin-bottom: calc(10vw);
+  margin-top: 2vw;
 }
 
 section {
@@ -177,29 +184,6 @@ section {
   padding-right: 11%;
 }
 
-.chat-footer {
-  padding: 5%;
-  margin-top: 10%;
-  flex: 7;
-  display: flex;
-  flex-direction: row;
-height: calc(10vw);
-
-}
-.chat-footer p{
-  position: relative;
-  top: 10px;
-  font-size: calc(1.5vw);
-  color: white;
-  margin-right: calc(10vw);
-}
-
-.chat-footer > a  {
-  color: white;
-  height: 100%;
-  font-size: 2em;
-  padding-right: calc(5vw);
-}
 
 
 
@@ -286,11 +270,11 @@ writing-mode: horizontal-tb;
 /* 0 ~ 359px media query */
  @media screen  and (min-width: 0px) and (max-width: 359px){
   .logo {
-    font-size: calc(6vw);
+    font-size: calc(4.5vw) !important;
     width: auto;
   }
   .script {
-    font-size: 1rem;
+    font-size: 0.6rem;
   }
   .navbar li{
     padding: 8px calc(7vw);
@@ -304,63 +288,111 @@ writing-mode: horizontal-tb;
   .circle{
     animation: circleGrowUp-300 1s ease-in forwards !important;
     }
+    .section-bottom{
+      margin: 15% 0 10% 0;
+    }
+    .title, .author{
+      font-size: 1.1rem;
+    }
+    .email{
+      font-size: 0.8rem;
+    }
 }
 
 /* 360 ~ 479px media query */
 @media screen  and (min-width: 360px) and (max-width: 479px){
   .logo {
-    font-size: calc(5vw);
+    font-size: calc(4.5vw) !important;
+  }
+  .navbar {
+    margin: 4% 0 4% 0;
   }
   .navbar li{
     padding: 8px calc(8vw);
   }
   .script {
-    font-size: 1rem;
+    font-size: 0.77rem;
   }
   .circle{
     animation: circleGrowUp-300 1s ease-in forwards !important;
     }
+    .section-bottom{
+      margin: 3em 0 10% 0;
+    }
+    .title, .author{
+      font-size: 1rem !important;
+    }
+    .email{
+      font-size: 0.8rem;
+    }
+    
 }
 
 /* 480 ~ 639px media query */
 @media screen  and (min-width: 480px) and (max-width: 639px){
   .logo {
     width: 100%;
-    font-size: calc(4.5vw);
+    font-size: calc(4.5vw) !important;
   }
   .script {
-    font-size: 1rem;
+    font-size: 0.85rem;
+  }
+  .navbar {
+    margin: 4% 0 4% 0;
   }
   .navbar li:nth-child(2){
     padding: 8px 10px;
   }
-
+  .section-bottom{
+    margin: 2em 0 10% 0;
+  }
   .circle{
   animation: circleGrowUp-300 1s ease-in forwards !important;
+  }
+  .title, .author{
+    font-size: 1rem !important;
+  }
+  .email{
+    font-size: 0.8rem;
   }
 }
 
 /* 640 ~ 779px media query */
 @media screen  and (min-width: 640px) and (max-width: 779px){
   .logo {
-    font-size: calc(5vw);
+    font-size: calc(4.5vw) !important;
   }
   .script {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
-  .chat-footer p{
-    position: relative;
-    top: 10px;
-    font-size: calc(2vw);
-    color: white;
-    margin-right: calc(10vw);
+  .navbar {
+    margin: 4% 0 4% 0;
   }
+  .title, .author{
+    font-size: 1.2rem !important;
+  }
+  .email{
+    font-size: 0.8rem;
+  }
+  
 }
 
 /* 780 ~ 1023px media query */
 @media screen  and (min-width: 780px) and (max-width: 1023px){
   .logo {
     font-size: calc(5vw);
+  }
+  .navbar {
+    margin: 3% 0 3% 0;
+  }
+  .title, .author{
+    font-size: 1.2rem !important;
+  }
+  .email{
+    font-size: 0.8rem;
+  }
+  .script {
+    font-size: 0.9rem;
   }
 
 }
@@ -370,6 +402,19 @@ writing-mode: horizontal-tb;
   .logo {
     font-size: calc(5vw);
   }
+  .navbar {
+    margin: 3% 0 3% 0;
+  }
+  .title, .author{
+    font-size: 1.4rem !important;
+  }
+  .email{
+    font-size: 0.9rem;
+  }
+  .script {
+    font-size: 1.1rem;
+  }
+  
 }
 /* 1280 ~ 1599px media query */
 @media screen  and (min-width: 1280px) and (max-width: 1599px){
@@ -378,6 +423,15 @@ writing-mode: horizontal-tb;
   }
   .container {
     padding-top: calc(15vw);
+}
+.title, .author{
+  font-size: 1.4rem !important;
+}
+.email{
+  font-size: 0.9rem;
+}
+.script {
+  font-size: 1.1rem;
 }
 }
 
@@ -390,9 +444,7 @@ writing-mode: horizontal-tb;
    .container {
     padding-top: calc(15vw);
 }
-.title {
-  font-size: ;
-}
+
  }
  
 .background {
@@ -434,19 +486,108 @@ background-color: thistle;
 
 }
 
-/*
-.js-circle:after {
-  content: '';
-  position: absolute;
-  z-index: -1;
-  top: -50px;
-  left: -50px;
-  right: -50px;
-  bottom: -50px;
-  background-color: rgba(255, 255, 255, .2);
-  border-radius: 50%;
+.chat-footer {
+	padding-left: 6%;
+	padding-right: 6%;
+
+	flex: 7;
+	display: block;
+	
+	margin: 3% 0 4% 0;
+  height: calc(10vw);
+ }
+ .chat-footer > p {
+	 width: 100%;
+	 position: relative;
+	font-size: 1.2em;
+ }
+ .chat-footer > p:nth-of-type(1){
+	
+
+	
+	margin-bottom: 0;
+	margin-top: 2%;
+  }
+  .chat-footer > p:nth-of-type(2){
+display: none;
+
+
+	margin: 2% 0 0 0;
+  }
+  .chat-footer > p:nth-of-type(3){
+	display: none;
+	margin: 2% 0 0 0;
+  }
+  .chat-footer > p:nth-of-type(4){
+	margin: 0% 0 1% 0;
+  }
+  
+  .chat-footer > a  {
+	color: white;
+	height: 100%;
+	font-size: 3em;
+	padding-right: 30px;
+	margin-bottom: 0%;
+margin-top: 0;
+  }
+/* Footer 관련 미디어쿼리 */
+  @media screen and (min-width:0px) and (max-width:879px){
+    .chat-footer > p:nth-of-type(1) {
+			display: none;
+		}
+		.chat-footer > p:nth-of-type(2) {
+			display: block;
+		}
+	.chat-footer > a {
+		padding-right: 15px;
+	}
+	
+	.chat-footer > p {
+		font-size: 1.2em !important;
+	}
+
+	@media screen and (max-width: 668px){
+    .chat-footer {
+      margin-top: 10%;
+      margin-bottom: 20% !important;
+    }
+		.chat-footer > p {
+			font-size: 1.1em !important;
+		}
+	}
+	@media screen and (max-width: 612px){
+		.chat-footer > p {
+			font-size: 1em !important;
+    }
+    
+  }
+  @media screen and (max-width: 556px){
+		.chat-footer > p:nth-of-type(2) {
+      display: none;
+    }
+    .chat-footer > p:nth-of-type(3) {
+      display: block;
+    }
+    .chat-footer > a {
+			font-size: 1.7em !important;
+    }
+  }
+  @media screen and (max-width: 418px){
+		.chat-footer > p {
+			font-size: 0.9em !important;
+		}
+  }
+  
+	@media screen and (max-width: 376px){
+		.chat-footer > p {
+			font-size: 0.8em !important;
+    }
+    
+	}
 }
-*/
+
+
+
  @keyframes circleGrowUp {
   from {
     width: 0;
