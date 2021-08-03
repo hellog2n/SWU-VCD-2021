@@ -35,6 +35,7 @@ function hasScrolled() {
         // Scroll Down 
         if(window.innerWidth < 400){
              $('.logo_text').css('display', 'none');
+             $('.logo_main').css('text', 'none');
         }
         else{
 			$('.logo_text').css('display', 'none');

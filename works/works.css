@@ -392,14 +392,16 @@ font-weight: 700;
 		transform: Translate(-50%, -50%);
 	   z-index:1000;
   }
- 
+ #line {
+	 display: none;
+ }
 
   .chat-footer {
 	padding-left: 5%;
 	padding-right: 5%;
-
+	bottom: 0;
 	flex: 7;
-	display: block;
+	display: none;
 	
 	margin: 3% 0 4% 0;
   height: calc(10vw);
