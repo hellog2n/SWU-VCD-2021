@@ -189,22 +189,25 @@ a {
 	display: inline-flex;
 }
 .desc > img{
-	margin-left: 10%;
+	margin-left: 5%;
 	width: 360px;
 	height: auto;
 }
 .desc > .text{
 	margin-left: calc(3vw);
-	margin-right: calc(3vw);
+	margin-right: 5%;
 	width: auto;
 	height: auto;
 	font-size: 20px;
+	word-break: keep-all;
+	text-justify:inter-word;
 }
 
 .about_d {
 
 	margin-bottom: 40%;
-	width: calc(100vw - 20px) !important;
+	width: 100vw;
+	
 }
 
 .aligns{
@@ -215,26 +218,32 @@ a {
 }
 
 .credit_text > h2 {
-	font-size: calc(7vw);
+	font-size: 6rem;	
+}
+.credit_box {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 
-
 .credit_text {
-	padding-left: 5%;
+	
 	display: grid;
 	column-gap: 20px;
 	row-gap: 20px;
+	width: 1000px;
 }
 
 .credit_items {
 	align-self: start;
 line-height: 2;
+padding-right: 50px;
 
 }
 
 
-.credit_items:nth-child(2), .credit_items:nth-child(9), .credit_items:nth-child(11) {
+.credit_items:nth-child(2), .credit_items:nth-child(9), .credit_items:nth-child(11), .credit_items:nth-child(12) {
 	grid-column: 2 / span 4;
 }
 .credit_items:nth-child(2) {
@@ -243,7 +252,19 @@ line-height: 2;
 .credit_items:nth-child(1), .credit_items:nth-child(3), .credit_items:nth-child(8), .credit_items:nth-child(10) {
 	text-align: right;
 }
+.credit_items:nth-child(12) {
+	text-align: justify;
+}
 
+.credit_items:nth-child(1), .credit_items:nth-child(2) {
+	margin: 0;
+}
+#people2{
+	display: inline;
+}
+#people1{
+	display: none;
+}
 
 
 
@@ -324,7 +345,7 @@ line-height: 2;
 		padding-left: 20% !important;
 	}
 
-	
+
 
 }
 
@@ -408,6 +429,7 @@ section {
 
 .vain {
 	height: 100%;
+	margin-bottom: 30%;
 }
 .vain2 {
 	height: 150px;
@@ -437,7 +459,7 @@ section {
 .about_b  > h2 {
 	margin-top: 10%;
 	font-size: calc(7vw);
-	padding-left: calc(10vw - 10px);
+	padding-left: 5%;
 }
 @media screen and (min-width:0px) and (max-width:1040px){
 	.chat-footer > a {
@@ -495,11 +517,108 @@ section {
 	
 }
 .desc > .text {
-	width: auto;
+	width: calc(80vw);
 	height: auto;
 	margin-bottom: 10%;
+	margin-right: calc(3vw);
+}
+
+@media screen and (min-width: 1000px){
+	.credit_items {
+		font-size: 0.95em;
+	}
+	.credit_text > h2 {
+		font-size: 5em;
+	}
+	.credit_text {
+		width: 900px;
+	}
+}
+@media screen and (min-width: 800px) and (max-width: 999px){
+	.credit_items {
+		font-size: 0.9em;
+		padding-right: 30px;
+	}
+	.credit_text > h2 {
+		font-size: 4em;
+	}
+	.credit_text {
+		width: 800px;
+		
+	}
+	
+}
+@media screen and (min-width: 700px) and (max-width: 799px){
+	.credit_items {
+		font-size: 0.8em;
+		padding-right: 30px;
+	}
+	.credit_text > h2 {
+		font-size: 3em;
+	}
+	.credit_text {
+		width: 700px;
+		
+	}
+}
+	@media screen and (min-width: 600px) and (max-width: 699px){
+		.credit_items {
+			font-size: 0.75em;
+			padding-right: 10px;
+		}
+		.credit_text > h2 {
+			font-size: 3em;
+		}
+		.credit_text {
+			width: 580px;
+			
+		}	
+}
+@media screen and (min-width: 361px) and (max-width: 599px){
+	
+	.credit_items {
+		font-size: 0.7em;
+		padding-right: 10px;
+		
+	}
+	.credit_text > h2 {
+		font-size: calc(10vw);
+	}
+	.credit_text {
+		column-gap: 8px !important;
+		row-gap: 30px !important;
+		width: calc(90vw);
+		
+	}
+	.credit_items:nth-child(2){
+		font-size: calc(1vw);
+	}
+	
+}
+@media screen and (min-width: 0px) and (max-width: 360px){
+	
+	.credit_items {
+		font-size: 0.7em;
+		padding-right: 10px;
+		
+	}
+	.credit_text > h2 {
+		font-size: calc(7vw);
+	}
+	.credit_text {
+		column-gap: 8px !important;
+		row-gap: 30px !important;
+		width: calc(90vw);
+		
+	}
+	.credit_items:nth-child(2){
+		font-size: calc(0.8vw);
+	}
+	
 }
 }
+
+
 
 @media only screen and (min-width: 481px) and (max-width: 580px){
 	body {
@@ -510,7 +629,7 @@ section {
 	.desc > .text {
 		width: calc(90vw);
 		font-size: 1em;
-		max-width: calc(100vw - 10px) !important;
+		max-width: calc(80vw) !important;
 
 
 	}
@@ -522,7 +641,7 @@ section {
 		height: 70%;
 	}
 	.credit_items {
-		font-size: calc(2.8vw);
+		font-size: 0.8em;
 	}
 	.credit_text {	
 		column-gap: 8px;
@@ -546,15 +665,16 @@ body {
 }
 .about_b  > h2 {
 	margin-top: 10%;
-	font-size: 5rem;
+	font-size: 3rem;
 	padding-left: 60px;
 }
 .desc > .text {
-	max-width: calc(90vw) !important;
-	width: calc(90vw);
+	max-width: calc(80vw) !important;
+	margin-left: 5%;
+	width: calc(80vw);
 	height: auto;
 	margin-bottom: 10%;
-	
+	font-size: 1em;
 }
 
 .about_a > h1 {
@@ -599,12 +719,12 @@ body {
 
 
 	.desc > .text {
-		width: calc(90vw);
+		width: calc(80vw);
 		position: relative;
 		
 		height: auto;
 		padding : 10px;
-		font-size: 0.9em;
+		font-size: 0.8em;
 		margin: 0;
 	}
 
@@ -616,12 +736,8 @@ body {
 	.navbar_menu li{
 		padding: 0px 30px !important;
 	}
-	.credit_items {
-		font-size: calc(3vw);
-	}
-	.about_d {
-		width: calc(100vw - 20px) !important;
-	}
+	
+
 	
 	.vain {
 		height: 70%;
@@ -630,6 +746,11 @@ body {
 
 
 
+
+	}
+
+
+@media only screen and (max-width: 580px){
 
 	/* GRID 수정 */
 	.credit_items:nth-child(3) {
@@ -655,11 +776,14 @@ body {
 	.credit_items:nth-child(1), .credit_items:nth-child(3), .credit_items:nth-child(8), .credit_items:nth-child(10) {
 		text-align: right;
 	}
-
+	#people1 {
+		display: inline;
 	}
-
-
-
+	#people2 {
+		display: none;
+		padding-right: 5%;
+	}
+}
 
 
 	@media only screen and (min-width: 0px) and (max-width: 360px){
@@ -704,17 +828,6 @@ body {
 		}
 
 
-		.credit_items {
-			font-size: 0.5em;
-		}
-		.credit_text {
-			
-			column-gap: 10px;
-		}
-
-		.about_d {
-			width: calc(100vw - 20px) !important;
-		}
 		.aligns {
 			word-break: keep-all;
 	text-align: justify;

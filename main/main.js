@@ -38,7 +38,7 @@ function hasScrolled() {
              $('.logo_main').css('text-align', 'center');
              $('.navbar_logo').css('margin-left', '0');
         }
-        else{
+        else {
 			$('.logo_text').css('display', 'none');
         }
     }
@@ -54,9 +54,17 @@ function hasScrolled() {
                     $('.logo_main').css('text-align', 'left');
                     $('.navbar_logo').css('margin-left', '30px');
                    }
-                 else {
-					$('.logo_text').css('display', '');
+                else if(window.innerWidth >= 480 && window.innerWidth < 900){
+                    $('.logo_text').css('display', '');
+                    $('.logo_main').css('text-align', 'left');
+                    $('.navbar_logo').css('margin-left', '30px');
                  }
+                 else if(window.innerWidth >= 901){
+                    $('.logo_text').css('display', '');
+                    $('.logo_main').css('text-align', 'left');
+                    $('.navbar_logo').css('margin-left', '100px');
+                 }
+
              }
     
             }
@@ -80,4 +88,6 @@ let didScroll; // 스크롤시에 사용자가 스크롤했다는 것을 알림
             } }, 250); 
             
 
+
+            
     

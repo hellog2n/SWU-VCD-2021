@@ -467,7 +467,7 @@ background-color: thistle;
   position: fixed;
   z-index: -2;
   border-radius: 50%;
- 
+ overflow-x: hidden;
 	transform: translate(-50%, -50%);
   animation: circleGrowUp 1s ease-in forwards;
  
@@ -595,8 +595,8 @@ margin-top: 0;
   }
 
   to {
-    width: 200vw;
-    height: 200vw;
+    width: 250vw;
+    height: 250vw;
   }
 }
 
