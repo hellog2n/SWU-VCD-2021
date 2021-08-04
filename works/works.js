@@ -1,6 +1,7 @@
 let complete = false;
-
-
+const mobileMaxWidth = 780;
+let initialWindow = 0;
+initialWindow = window.innerWidth;
 
 function loading_ed() {
     const ta = document.getElementById('loading_layer');
@@ -12,7 +13,7 @@ function loading_ed() {
 
 
 // JavaScript Document
-let resolution = "330px";
+let resolution = "300px";
 let clickCheck = 1;
 $('#all').css('color', '#009999');
 // 네비게이션 섹션을 누를 때 보여지는 섹션이 다르게 적용되는 부분
@@ -160,9 +161,19 @@ $('.menuLink').on('mouseout' , e => {
 
 
 // 구글 스프레드 시트를 이용한 이미지 임베딩 소스코드 
-async function separateRowFromJson(SOURCE, COLUMNS){
-	const FETCHED_SOURCE = await fetch(SOURCE);
-  	let temp = await FETCHED_SOURCE.json();
+async function separateRowFromJson(SOURCE1, SOURCE2, COLUMNS){
+	let temp = {};
+    try {
+    const FETCHED_SOURCE = await fetch(SOURCE1);
+      temp = await FETCHED_SOURCE.json();
+    }
+catch{
+     
+        const FETCHED_SOURCE = await fetch(SOURCE2);
+        temp = await FETCHED_SOURCE.json();
+        console.log('source2 loaded');
+    
+}
  	temp = temp.feed.entry;
 
 	const _DATA = [];
@@ -178,7 +189,8 @@ async function separateRowFromJson(SOURCE, COLUMNS){
 
 // 해당 링크로 접속하는 함수
 function sendFunc( aValue ) { 
-	if(window.innerWidth < 768){
+	if(window.innerWidth < 780){
+		
 		setTimeout(()=>{location.href="../detail/detail.html?" + aValue; },1000);
 	}
 	 else {
@@ -201,17 +213,19 @@ function rand(min, max) {
 // 구글스프레드시트에서 데이터를 갖고와서 처리하는 코드
 async function main(){
 	
-	const SOURCE = 'https://spreadsheets.google.com/feeds/list/1uFbTYJ3_jMkA9FdCntAzzSmx67o-Deey3nm42WkQaKU/1/public/full?alt=json';
+	const SOURCE1 = 'https://spreadsheets.google.com/feeds/list/1uFbTYJ3_jMkA9FdCntAzzSmx67o-Deey3nm42WkQaKU/1/public/full?alt=json';
+	
+	const SOURCE2 = "https://spreadsheets.google.com/feeds/list/1pWsxKLjWLEn4uD0RiAHMMoGw-0jT632C4Y9UH6lw34o/2/public/full?alt=json";
 	const COLUMNS = ['num', 'name', 'author', 'img', 'section', 'link'];
 	
-	const DATA =  await separateRowFromJson(SOURCE, COLUMNS);
+	const DATA =  await separateRowFromJson(SOURCE1, SOURCE2, COLUMNS);
 	
 	const allNumber = DATA.length;
 	const container = document.getElementById("container");
 
 	// 초기 화면 크기 설정
 	if(window.innerWidth < 768){
-		resolution = "calc(40vw)";
+		resolution = "calc(35vw)";
 	}
 
 	// resolution -> 해상도 표시하는 부분
@@ -234,7 +248,7 @@ async function main(){
 		const author = TARGET.item[i].childNodes[2];
 
 
-		image.src = DATA[i].img;
+		image.src = "images/thumbnail/" + DATA[i].img;
 		name.textContent = DATA[i].name;
 		author.textContent = DATA[i].author;
 
@@ -251,13 +265,14 @@ async function main(){
 	}
 
 complete = true;
+
 loading_ed();
 	
 const files = new Image();
 
 
-
-
+$('.chat-footer').css('display', 'block');
+$('#line').css('display', 'block');
 
 
 
@@ -266,6 +281,8 @@ const files = new Image();
 // 호버 관리하는 부분
 // 마우스가 호버 중이라면
 	$('.item').mouseenter(function(){
+
+		if(window.innerWidth > mobileMaxWidth){
 		let image_link = "";
 
 		// 해당 객체의 ID 값을 갖고와라
@@ -273,7 +290,7 @@ const files = new Image();
 
 		// 문자열 중 숫자만 반환
 		const numID = id_check.replace(/[^0-9]/g, "");
-		files.src = DATA[numID-1].img;
+		files.src = "images/thumbnail/" + DATA[numID-1].img;
 
 		// 이미지 파일 검증
 		if(files.complete == false){
@@ -284,7 +301,7 @@ const files = new Image();
 
 		// 파일이 존재한다면 해당 썸네일을 갖고오라.
 		else {
-			image_link = DATA[numID-1].img;
+			image_link = "images/thumbnail/" + DATA[numID-1].img;
 		}
 
 		// 랜덤하게 GIF 마스크 이미지 선택하도록 설정
@@ -324,12 +341,13 @@ const files = new Image();
 	<image x="0" y="0" class="space" href=${image_link}  height="330px" width="330px" />
 </g>
 </svg>`);
-		
+	}
 	});
 
 	
 	// 마우스가 호버 상태가 아닐 때, 마우스가 해당 객체에서 벗어날 때 이벤트 처리
 	$('.item').mouseleave(function(){
+		if(window.innerWidth > mobileMaxWidth){
 		const id_check = $(this).attr("id");
 
 		// (주현쓰가 관리해야할 부분) - id = item(1 ~ 82 보통 숫자로 되어있음)의 자식인 img 태그의 css를 display를 block하라.
@@ -345,10 +363,72 @@ const files = new Image();
 		$(`#${id_check}`).children('.name').css("visibility", "hidden");
 		$(`#${id_check}`).children('.author').css("visibility", "hidden");
 		
-
+		}
 	});
 		
 
+	// 모바일 상에서 클릭시
+	$('.item').click(function(){
+
+		if(window.innerWidth <= mobileMaxWidth){
+		let image_link = "";
+
+		// 해당 객체의 ID 값을 갖고와라
+		const id_check = $(this).attr("id");
+
+		// 문자열 중 숫자만 반환
+		const numID = id_check.replace(/[^0-9]/g, "");
+		files.src = "images/thumbnail/" + DATA[numID-1].img;
+
+		// 이미지 파일 검증
+		if(files.complete == false){
+			// 파일이 존재하지 않다면 임시썸네일로 대체하라.
+			
+			image_link = "images/thumbnail/altthumb.png";
+		}
+
+		// 파일이 존재한다면 해당 썸네일을 갖고오라.
+		else {
+			image_link = "images/thumbnail/" + DATA[numID-1].img;
+		}
+
+		// 랜덤하게 GIF 마스크 이미지 선택하도록 설정
+		const randNum = rand(1,3);
+
+		
+		 $(`#${id_check}`).children('img').css("visibility", "hidden");
+		
+		
+
+	
+		$(`#${id_check}`).children('.name').css("visibility", "visible");
+		$(`#${id_check}`).children('.author').css("visibility", "visible");
+		
+		
+		 $(`#${id_check}`).append(() => `<svg viewBox="0 0 330 330" class="pos cover_a">
+<defs>
+	<mask id="MASK2" maskunits="userSpaceOnUse" maskcontentunits="userSpaceOnUse">
+		<image xlink:href="../index/images/wave${randNum}.gif" height="330px" width="330px" />
+	</mask>
+</defs>
+<g mask="url(#MASK2)">
+	<image x="0" y="0" class="space" href="../index/images/cover_new.png" height="330px" width="330px" opacity="80%" />
+</g>
+</svg>
+
+
+<svg viewBox="0 0 330 330" class="pos image_a">
+<defs>
+	<mask id="MASK1" maskunits="userSpaceOnUse" maskcontentunits="userSpaceOnUse">
+		<image xlink:href="../index/images/wave${randNum}.gif" height="330px" width="330px" />
+	</mask>
+</defs>
+<g mask="url(#MASK1)">
+	<image x="0" y="0" class="space" href=${image_link}  height="330px" width="330px" />
+</g>
+</svg>`);
+	}
+	});
 }
 
 
@@ -356,7 +436,7 @@ const files = new Image();
 window.addEventListener('DOMContentLoaded', main);
 
 
-// Create a condition that targets viewports at least 768px wide
+// Create a condition that targets viewports at least 780px wide
 const mediaQuery = window.matchMedia('(min-width: 780px)')
 
 function handleTabletChange(e) {
@@ -366,17 +446,20 @@ function handleTabletChange(e) {
 	 
 	// Then log the following message to the console
 	for(let i = 0; i < img.length - 2; i++){
-		img[i].style.width = "330px";
-		img[i].style.height = "330px";
+		img[i].style.width = "300px";
+		img[i].style.height = "300px";
 	}
-	
+
   }
   else {
+	  const temp = 0;
+	  if(initialWindow > 780){
 	for(let i = 0; i < img.length - 2; i++){
 		img[i].style.width = resolution;
 		img[i].style.height = resolution;
 	}
-  }
+}
+}
   }
 
 
