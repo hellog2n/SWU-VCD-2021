@@ -1,6 +1,7 @@
 let complete = false;
 const mobileMaxWidth = 780;
-
+let initialWindow = 0;
+initialWindow = window.innerWidth;
 
 function loading_ed() {
     const ta = document.getElementById('loading_layer');
@@ -12,7 +13,7 @@ function loading_ed() {
 
 
 // JavaScript Document
-let resolution = "330px";
+let resolution = "300px";
 let clickCheck = 1;
 $('#all').css('color', '#009999');
 // 네비게이션 섹션을 누를 때 보여지는 섹션이 다르게 적용되는 부분
@@ -189,6 +190,7 @@ catch{
 // 해당 링크로 접속하는 함수
 function sendFunc( aValue ) { 
 	if(window.innerWidth < 780){
+		
 		setTimeout(()=>{location.href="../detail/detail.html?" + aValue; },1000);
 	}
 	 else {
@@ -223,7 +225,7 @@ async function main(){
 
 	// 초기 화면 크기 설정
 	if(window.innerWidth < 768){
-		resolution = "calc(40vw)";
+		resolution = "calc(35vw)";
 	}
 
 	// resolution -> 해상도 표시하는 부분
@@ -444,17 +446,20 @@ function handleTabletChange(e) {
 	 
 	// Then log the following message to the console
 	for(let i = 0; i < img.length - 2; i++){
-		img[i].style.width = "330px";
-		img[i].style.height = "330px";
+		img[i].style.width = "300px";
+		img[i].style.height = "300px";
 	}
-	
+
   }
   else {
+	  const temp = 0;
+	  if(initialWindow > 780){
 	for(let i = 0; i < img.length - 2; i++){
 		img[i].style.width = resolution;
 		img[i].style.height = resolution;
 	}
-  }
+}
+}
   }
 
 

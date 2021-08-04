@@ -11,7 +11,7 @@ function settingDarkWhite(value){
     const Wrapper = document.getElementsByClassName("container")[0];
     const backBtn = document.getElementsByClassName("back_button")[0];
     const title = document.getElementsByClassName("title")[0];
-    
+    const line = document.getElementsByTagName("hr")[0];
     let circleDelay;
     if(window.innerWidth < 600){
         circleDelay = [400, 900];
@@ -46,7 +46,7 @@ function settingDarkWhite(value){
        // Wrapper.style.backgroundColor = "black";
         document.body.style.color = "white";
         backBtn.style.color = "white";
-        
+        line.color = "white";
 
     for(let idx = 0; idx <Plists.length; idx++){
         Plists[idx].style.color = "white";
@@ -89,7 +89,7 @@ setTimeout(() => {
             }
         document.body.style.color = "black";
         backBtn.style.color = "black";
-       
+        line.color = "black";
         for(let idx = 0; idx <Plists.length; idx++){
             Plists[idx].style.color = "black";
             }

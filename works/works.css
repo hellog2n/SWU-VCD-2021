@@ -166,14 +166,7 @@ svg {
 		
 	}
  
-	.logo {
-		font-size: 2em;
-		padding-top: 20px;
-		padding-bottom: 20px;
-position: relative;
-margin: 0px auto;
-font-weight: 700;
-	}
+	
 
 	.container {
 		padding-left: 5%;
@@ -192,10 +185,12 @@ font-weight: 700;
 		}
 		
 	}
+	/*
 	img {
 		width: calc(40vw) - 50px !important;
 		height: calc(40vw) - 50px !important;
 	}
+	*/
 
 	
 	

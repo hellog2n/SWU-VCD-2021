@@ -317,7 +317,7 @@ writing-mode: horizontal-tb;
     animation: circleGrowUp-300 1s ease-in forwards !important;
     }
     .section-bottom{
-      margin: 3em 0 10% 0;
+      margin: 2em 0 3em 0;
     }
     .title, .author{
       font-size: 1rem !important;
