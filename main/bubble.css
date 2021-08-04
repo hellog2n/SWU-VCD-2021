@@ -249,11 +249,13 @@ z-index: -3;
         top: 80% !important;
         width: calc(70vw);
     height: calc(58vw);
+    background-size: cover !important;
     
     }
     .bubble5 {
         width: 650px;
         height: 400px; 
+        background-size: cover !important;
     }
     .bubble6 {
         width: 500px;

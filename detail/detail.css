@@ -198,7 +198,7 @@ section {
 
 
 .image {
-    width: calc(65vw);
+    width: calc(75vw);
     padding: 0;
     display: block;
     margin: 0 auto;
@@ -499,7 +499,7 @@ background-color: thistle;
  .chat-footer > p {
 	 width: 100%;
 	 position: relative;
-	font-size: 1.2em;
+	font-size: 1.1em;
  }
  .chat-footer > p:nth-of-type(1){
 	
@@ -543,7 +543,7 @@ margin-top: 0;
 	}
 	
 	.chat-footer > p {
-		font-size: 1.2em !important;
+		font-size: 1em !important;
 	}
 
 	@media screen and (max-width: 668px){
@@ -552,12 +552,12 @@ margin-top: 0;
       margin-bottom: 20% !important;
     }
 		.chat-footer > p {
-			font-size: 1.1em !important;
+			font-size: 1em !important;
 		}
 	}
 	@media screen and (max-width: 612px){
 		.chat-footer > p {
-			font-size: 1em !important;
+			font-size: 0.8em !important;
     }
     
   }
@@ -574,13 +574,13 @@ margin-top: 0;
   }
   @media screen and (max-width: 418px){
 		.chat-footer > p {
-			font-size: 0.9em !important;
+			font-size: 0.75em !important;
 		}
   }
   
 	@media screen and (max-width: 376px){
 		.chat-footer > p {
-			font-size: 0.8em !important;
+			font-size: 0.75em !important;
     }
     
 	}
