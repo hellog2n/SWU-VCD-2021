@@ -19,11 +19,21 @@ function getParameterByName(name) {
 }
 
 // 구글 스프레드 시트를 이용한 이미지 임베딩 소스코드 
-async function separateRowFromJson(SOURCE, COLUMNS){
+async function separateRowFromJson(SOURCE1, SOURCE2, COLUMNS){
     let urlList = [];
     const LINK_COLUMNS = ['imagelink', 'videolink'];
-	const FETCHED_SOURCE = await fetch(SOURCE);
-  	let temp = await FETCHED_SOURCE.json();
+    let temp = {};
+    try {
+    const FETCHED_SOURCE = await fetch(SOURCE1);
+      temp = await FETCHED_SOURCE.json();
+    }
+catch{
+     
+        const FETCHED_SOURCE = await fetch(SOURCE2);
+        temp = await FETCHED_SOURCE.json();
+        console.log('source2 loaded');
+    
+}
  	temp = temp.feed.entry;
     const IDX_NUMBER = number -1;
     const _DATA = {};
@@ -51,22 +61,14 @@ async function separateRowFromJson(SOURCE, COLUMNS){
 
 async function main(){
 	
-	const SOURCE = 'https://spreadsheets.google.com/feeds/list/1uFbTYJ3_jMkA9FdCntAzzSmx67o-Deey3nm42WkQaKU/2/public/full?alt=json';
+    const SOURCE1 = 'https://spreadsheets.google.com/feeds/list/1uFbTYJ3_jMkA9FdCntAzzSmx67o-Deey3nm42WkQaKU/2/public/full?alt=json';
+    const SOURCE2 = "https://spreadsheets.google.com/feeds/list/1pWsxKLjWLEn4uD0RiAHMMoGw-0jT632C4Y9UH6lw34o/2/public/full?alt=json";
 	const COLUMNS = ['num', 'name', 'author', 'detail', 'image', 'video', 'email'];
     
     
-	const DATA =  await separateRowFromJson(SOURCE, COLUMNS);
+	const DATA =  await separateRowFromJson(SOURCE1, SOURCE2, COLUMNS);
 	
-	// const container = document.getElementById("container");
-
 	
-		// container.innerHTML+=`<a class="item" href="#" id="item${count}"><img src='' onError="this.onerror=null; this.src='./images/thumbnail/altthumb.png'"/><p class="name"></p><p class="author"></p></a>`;
-  
-	
-		// document.write(`<a class="item" href="#"><img src='' onError="this.onerror=null; this.src='./images/thumbnail/altthumb.png'" id='item' class='uxui_img' /><p class="name"></p><p class="author"></p></a>`);
-
-		// document.write(`<a class="thumb" href="#"><img src='./images/thumbnail/${count}.png' id='thumb' class='uxui_img' /></a>`);
-
 		const TARGET={
             title : document.getElementsByClassName('title'),
             author : document.getElementsByClassName('author'),
@@ -113,13 +115,8 @@ async function main(){
         TARGET.title[0].textContent = DATA.name;
         TARGET.author[0].textContent = DATA.author;
        TARGET.email[0].textContent = DATA.email;
-        console.log(DATA.email);
-       // TARGET.script[0].textContent = DATA.detail;
-		// image.src = DATA.img;
-		
-
-
-		// TARGET.item[i].textContent = DATA[i].num;
+        
+       
         
 		
 		
