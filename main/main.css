@@ -284,7 +284,7 @@ padding-right: 50px;
 	.vain {
 		height: 80%;
 	}
-
+	
 	body {
 		padding-top: 240px;
 	}
@@ -292,14 +292,13 @@ padding-right: 50px;
 		flex-wrap: wrap;
 		
 	}
-	@media screen and (min-width: 769){
-		.navbar_logo{margin-bottom: 10px;}
+	@media screen and (min-width: 769px){
+		.navbar_logo{margin-bottom: 0px !important;}
 	}
 	.navbar_logo{
 		position: relative;
 		width: auto;
 		flex-basis: 100%;
-		
 	}
 	.navbar_menu{
 		width: auto;
@@ -453,7 +452,7 @@ section {
 	padding-right: 40% !important;
 }
 .about_a > h1:nth-of-type(2){
-	padding-left: 30% !important;
+	padding-left: 32% !important;
 }
 
 .about_b  > h2 {
@@ -582,7 +581,7 @@ section {
 		
 	}
 	.credit_text > h2 {
-		font-size: calc(10vw);
+		font-size: calc(8vw);
 	}
 	.credit_text {
 		column-gap: 8px !important;
@@ -750,7 +749,7 @@ body {
 	}
 
 
-@media only screen and (max-width: 580px){
+@media only screen and (max-width: 600px){
 
 	/* GRID 수정 */
 	.credit_items:nth-child(3) {

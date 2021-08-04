@@ -38,8 +38,13 @@ function hasScrolled() {
              $('.logo_main').css('text-align', 'center');
              $('.navbar_logo').css('margin-left', '0');
         }
+        else if(window.innerWidth < 900) {
+            $('.logo_text').css('display', 'none');
+            $('.logo_main').css('text-align', 'center');
+             $('.navbar_logo').css('margin-left', '0');
+        }
         else {
-			$('.logo_text').css('display', 'none');
+            $('.logo_text').css('display', 'none');
         }
     }
     else if (st <= navbarHeight){ 
@@ -54,15 +59,15 @@ function hasScrolled() {
                     $('.logo_main').css('text-align', 'left');
                     $('.navbar_logo').css('margin-left', '30px');
                    }
-                else if(window.innerWidth >= 480 && window.innerWidth < 900){
+                else if(window.innerWidth < 900){
                     $('.logo_text').css('display', '');
                     $('.logo_main').css('text-align', 'left');
                     $('.navbar_logo').css('margin-left', '30px');
                  }
-                 else if(window.innerWidth >= 901){
+                 else {
                     $('.logo_text').css('display', '');
                     $('.logo_main').css('text-align', 'left');
-                    $('.navbar_logo').css('margin-left', '100px');
+                    $('.navbar_logo').css('margin-left', '80px');
                  }
 
              }
@@ -89,5 +94,31 @@ let didScroll; // 스크롤시에 사용자가 스크롤했다는 것을 알림
             
 
 
-            
+
     
+    // Create a condition that targets viewports at least 780px wide
+const mediaQuery = window.matchMedia('(min-width: 900px)')
+
+function handleNavBar(e) {
+  // Check if the media query is true
+  
+  if (e.matches) {
+	 
+                    $('.logo_main').css('text-align', 'left');
+                    $('.navbar_logo').css('margin-left', '80px');
+
+  }
+  else {
+    $('.navbar_logo').css('margin-left', '30px');
+  }
+  
+
+
+  }
+
+
+// Register event listener
+mediaQuery.addListener(handleNavBar)
+
+// Initial check
+handleNavBar(mediaQuery)
