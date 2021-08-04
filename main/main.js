@@ -33,9 +33,10 @@ function hasScrolled() {
     if (st > lastScroll_Top && st > navbarHeight){ 
         
         // Scroll Down 
-        if(window.innerWidth < 400){
+        if(window.innerWidth < 479){
              $('.logo_text').css('display', 'none');
-             $('.logo_main').css('text', 'none');
+             $('.logo_main').css('text-align', 'center');
+             $('.navbar_logo').css('margin-left', '0');
         }
         else{
 			$('.logo_text').css('display', 'none');
@@ -48,8 +49,10 @@ function hasScrolled() {
 
              
              if(st + $(window).height() < $(document).height()) {
-                 if(window.innerWidth < 400){
-					$('.logo_text').css('display', '');
+                 if(window.innerWidth < 479){
+                    $('.logo_text').css('display', '');
+                    $('.logo_main').css('text-align', 'left');
+                    $('.navbar_logo').css('margin-left', '30px');
                    }
                  else {
 					$('.logo_text').css('display', '');

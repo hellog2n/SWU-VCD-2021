@@ -155,6 +155,7 @@ a {
 	font-size: 20px;
 	line-height: 22px;
 	color: white;
+	margin-top: 0;
 }
 
 .navbar {
@@ -177,6 +178,7 @@ a {
 	padding-left: 0px;
 
 	flex-direction: row;
+
 }
 
 .desc {
@@ -269,12 +271,14 @@ line-height: 2;
 		flex-wrap: wrap;
 		
 	}
-	
+	@media screen and (min-width: 769){
+		.navbar_logo{margin-bottom: 10px;}
+	}
 	.navbar_logo{
 		position: relative;
 		width: auto;
 		flex-basis: 100%;
-		margin-left: 50px !important;
+		
 	}
 	.navbar_menu{
 		width: auto;
@@ -327,12 +331,14 @@ line-height: 2;
 .navbar_logo {
 	font-size: 200%;
 	margin-left: 80px;
+	margin-bottom: 30px;
 }
 
 .navbar_logo  .logo_main {
 	font-weight: 900;
 	padding-top: 0px;
 	font-size: 100%;
+	margin-bottom: 0;
 }
 .logo_main {
 	font-size: 24px;
@@ -353,6 +359,7 @@ line-height: 2;
 	/* padding-left: calc(var(--margin) + 0.1rem); */
 	justify-content: center;
 	
+	
 }
 
 
@@ -372,7 +379,9 @@ line-height: 2;
 	font-size: 12px;
 	color:white;
 }
-
+.navbar_logo > p:nth-of-type(2){
+	margin-top: 0;
+}
 
 
 
@@ -500,7 +509,7 @@ section {
 	}
 	.desc > .text {
 		width: calc(90vw);
-		font-size: calc(5vw - 7px);
+		font-size: 1em;
 		max-width: calc(100vw - 10px) !important;
 
 
@@ -519,6 +528,10 @@ section {
 		column-gap: 8px;
 	}
 
+	.navbar_logo {
+		margin-left: 30px;
+		margin-bottom: 10px;
+	}
 }
 
 
@@ -547,6 +560,10 @@ body {
 .about_a > h1 {
 	font-size: calc(17vw);
 }
+.navbar_logo {
+	margin-left: 50px;
+	margin-bottom: 10px;
+}
 }
 
 
@@ -572,7 +589,12 @@ body {
 	}
 
 	.navbar_logo {
+		margin-left: 30px;
 		font-size: 120%;
+		margin-bottom: 5px !important;
+	}
+	.logo_main  {
+		margin-bottom: 10px !important;
 	}
 
 
@@ -582,7 +604,7 @@ body {
 		
 		height: auto;
 		padding : 10px;
-		font-size: 1em;
+		font-size: 0.9em;
 		margin: 0;
 	}
 
@@ -658,6 +680,7 @@ body {
 
 		.navbar_logo {
 			font-size: 1em;
+			margin-bottom: 5px !important;
 		}
 		.navbar_logo .logo_text {
 			font-size: 0.5em;
