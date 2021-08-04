@@ -7,6 +7,7 @@
   font-style: normal;
   font-display: swap;
 }
+
 body{
   background-color: black;
   
@@ -92,7 +93,7 @@ margin-bottom: 5%;
   flex-direction: row;
   width: auto;
   padding: 0;
-  margin: 2% 0 2% 0;
+  
   list-style: none;
   align-items: center;
   justify-content: space-between;
@@ -203,6 +204,12 @@ section {
     display: block;
     margin: 0 auto;
     
+}
+@media only screen and (min-width: 1000px){
+  .image {
+    width: calc(60vw);
+    
+}
 }
 
 .image img {
@@ -382,9 +389,7 @@ writing-mode: horizontal-tb;
   .logo {
     font-size: calc(5vw);
   }
-  .navbar {
-    margin: 3% 0 3% 0;
-  }
+  
   .title, .author{
     font-size: 1.2rem !important;
   }
@@ -402,9 +407,7 @@ writing-mode: horizontal-tb;
   .logo {
     font-size: calc(5vw);
   }
-  .navbar {
-    margin: 3% 0 3% 0;
-  }
+ 
   .title, .author{
     font-size: 1.4rem !important;
   }
@@ -499,7 +502,9 @@ background-color: thistle;
  .chat-footer > p {
 	 width: 100%;
 	 position: relative;
-	font-size: 1.1em;
+  font-size: 1.1em;
+  font-family: "Noto Sans KR";
+  font-weight: 400;
  }
  .chat-footer > p:nth-of-type(1){
 	

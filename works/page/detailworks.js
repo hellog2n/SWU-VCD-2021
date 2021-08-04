@@ -1,5 +1,5 @@
 
-
+const initialWindow = window.innerWidth;
 /* global location */
 
 /* eslint no-restricted-globals: ["off"] */
@@ -96,8 +96,14 @@ async function main(){
             ifrm.setAttribute("src", DATA.videolink);
             
             ifrm.style.alignItems = "center";
-            ifrm.style.width = "calc(65vw)";
-            ifrm.style.height = "calc(50vw)";
+            if(initialWindow > 1000){
+            ifrm.style.width = "calc(60vw)";
+            ifrm.style.height = "calc(45vw)";
+            }
+            else {
+                ifrm.style.width = "calc(65vw)";
+                ifrm.style.height = "calc(50vw)"; 
+            }
             ifrm.setAttribute('frameborder', 0);
             ifrm.setAttribute('allow', "autoplay");
             ifrm.setAttribute('allow', "fullscreen");
