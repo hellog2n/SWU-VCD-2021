@@ -1,8 +1,12 @@
-# 서울여자대학교 시각디자인학과 2021년 졸업전시 웹페이지
+# 서울여자대학교 시각디자인학과 2021 졸업전시 웹페이지 :seedling:
+
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=http%3A%2F%2Fswuvd2021.com&count_bg=%23009999&title_bg=%23555555&icon=csswizardry.svg&icon_color=%23FFBF00&title=his&edge_flat=false)](https://hits.seeyoufarm.com)
+
+[>>> 서울여대 38회 졸업전시 사이트 접속 <<<](http://swuvd2021.com/)
 
 ## 관리자
-- Javascript / html / CSS : 서울여대 장유진
-- html / CSS : 서울여대 이주현
+- Javascript / html / CSS : 서울여대 장유진 :whale2: 
+- html / CSS : 서울여대 이주현 :dolphin:
 
 ## 백업용 임시 스프레드 시트 관리
 
