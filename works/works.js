@@ -248,7 +248,7 @@ async function main(){
 		const author = TARGET.item[i].childNodes[2];
 
 
-		image.src = DATA[i].img;
+		image.src = "images/thumbnail/" + DATA[i].img;
 		name.textContent = DATA[i].name;
 		author.textContent = DATA[i].author;
 
@@ -290,7 +290,7 @@ $('#line').css('display', 'block');
 
 		// 문자열 중 숫자만 반환
 		const numID = id_check.replace(/[^0-9]/g, "");
-		files.src = DATA[numID-1].img;
+		files.src = "images/thumbnail/" + DATA[numID-1].img;
 
 		// 이미지 파일 검증
 		if(files.complete == false){
@@ -301,7 +301,7 @@ $('#line').css('display', 'block');
 
 		// 파일이 존재한다면 해당 썸네일을 갖고오라.
 		else {
-			image_link = DATA[numID-1].img;
+			image_link = "images/thumbnail/" + DATA[numID-1].img;
 		}
 
 		// 랜덤하게 GIF 마스크 이미지 선택하도록 설정
@@ -378,7 +378,7 @@ $('#line').css('display', 'block');
 
 		// 문자열 중 숫자만 반환
 		const numID = id_check.replace(/[^0-9]/g, "");
-		files.src = DATA[numID-1].img;
+		files.src = "images/thumbnail/" + DATA[numID-1].img;
 
 		// 이미지 파일 검증
 		if(files.complete == false){
@@ -389,7 +389,7 @@ $('#line').css('display', 'block');
 
 		// 파일이 존재한다면 해당 썸네일을 갖고오라.
 		else {
-			image_link = DATA[numID-1].img;
+			image_link = "images/thumbnail/" + DATA[numID-1].img;
 		}
 
 		// 랜덤하게 GIF 마스크 이미지 선택하도록 설정

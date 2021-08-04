@@ -68,16 +68,7 @@ async function main(){
     
 	const DATA =  await separateRowFromJson(SOURCE1, SOURCE2, COLUMNS);
 	
-	// const container = document.getElementById("container");
-
 	
-		// container.innerHTML+=`<a class="item" href="#" id="item${count}"><img src='' onError="this.onerror=null; this.src='./images/thumbnail/altthumb.png'"/><p class="name"></p><p class="author"></p></a>`;
-  
-	
-		// document.write(`<a class="item" href="#"><img src='' onError="this.onerror=null; this.src='./images/thumbnail/altthumb.png'" id='item' class='uxui_img' /><p class="name"></p><p class="author"></p></a>`);
-
-		// document.write(`<a class="thumb" href="#"><img src='./images/thumbnail/${count}.png' id='thumb' class='uxui_img' /></a>`);
-
 		const TARGET={
             title : document.getElementsByClassName('title'),
             author : document.getElementsByClassName('author'),
@@ -125,12 +116,7 @@ async function main(){
         TARGET.author[0].textContent = DATA.author;
        TARGET.email[0].textContent = DATA.email;
         
-       // TARGET.script[0].textContent = DATA.detail;
-		// image.src = DATA.img;
-		
-
-
-		// TARGET.item[i].textContent = DATA[i].num;
+       
         
 		
 		
