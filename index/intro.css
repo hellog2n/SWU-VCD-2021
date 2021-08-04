@@ -51,7 +51,7 @@
     color: white;
     text-align: center;
     width: 100%;
-    font-size: 2em;
+    font-size: calc(4vw);
     position: relative;
     top : 50px;
 }
