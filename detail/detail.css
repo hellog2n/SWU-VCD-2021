@@ -568,9 +568,7 @@ margin-top: 0;
     .chat-footer > p:nth-of-type(3) {
       display: block;
     }
-    .chat-footer > a {
-			font-size: 1.7em !important;
-    }
+    
   }
   @media screen and (max-width: 418px){
 		.chat-footer > p {
