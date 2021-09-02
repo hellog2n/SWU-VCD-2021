@@ -243,13 +243,13 @@ padding-right: 50px;
 }
 
 
-.credit_items:nth-child(2), .credit_items:nth-child(9), .credit_items:nth-child(11), .credit_items:nth-child(12) {
+.credit_items:nth-child(2), .credit_items:nth-child(9), .credit_items:nth-child(11), .credit_items:nth-child(12), .credit_items:nth-child(14) {
 	grid-column: 2 / span 4;
 }
 .credit_items:nth-child(2) {
 	align-self: center;
 }
-.credit_items:nth-child(1), .credit_items:nth-child(3), .credit_items:nth-child(8), .credit_items:nth-child(10) {
+.credit_items:nth-child(1), .credit_items:nth-child(3), .credit_items:nth-child(8), .credit_items:nth-child(10), .credit_items:nth-child(13) {
 	text-align: right;
 }
 .credit_items:nth-child(12) {

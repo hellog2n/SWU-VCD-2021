@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -9,7 +9,7 @@
 	<title>서울여자대학교 38회 졸업전시</title>
 
 </head>
-<link rel="stylesheet" href="works.css?v2">
+<link rel="stylesheet" href="works.css?v8">
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <script src="https://kit.fontawesome.com/c171f64d6e.js" crossorigin="anonymous"></script>
@@ -21,7 +21,7 @@
 	crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
-<script src="scrollCheck.js"></script>
+ <script src="scrollCheck.js"></script> 
 <script>
 
 
@@ -44,7 +44,11 @@
 </script>
 
 <body>
-
+<?php
+				// error_reporting(E_ALL);
+				// ini_set("display_errors", 1);
+include('works.php');
+			?>
 	<section class="section-top" id="section-top">
 		<div class="logo" id="logo" style="font-weight: 900">
 			<p><a href="../main/main.html">DEEP LAYER</a></p>
@@ -62,10 +66,12 @@
 	</section>
 	<section class="section-bottom">
 		<div class="container" id="container">
-			<script defer src="works.js?v2"></script>
-
+			
+			
 
 		</div>
+		<script src="works.js?v7"></script>
+
 
 		</div>
 
@@ -84,7 +90,7 @@
 		<br>
 	</footer>
 
-	<a id="MOVE_TOP_BTN" href="#"><img src="../main/top.svg" width="50px !important"></a>
+	 <a id="MOVE_TOP_BTN" href="#"><img src="../main/top.svg" width="50px !important"></a>
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	<script>
 		AOS.init({ once: true, });

@@ -44,7 +44,7 @@ a {
 .logo{
 	color: white;
 	font-size: 35px;
-	padding: 40px;
+	padding: 30px;
 	font-weight: 700;
 }
 
@@ -95,7 +95,7 @@ section {
 
 /* 평상시에는 아래 작품명과 작가명이 안 보이도록 visibility를 hidden 시켜놓음 */
 .name {
-	visibility: hidden;
+	 visibility: hidden;
 	justify-content: center;
 	color: white;
 	text-align: center;
@@ -104,7 +104,7 @@ section {
 	z-index: 4;
 	top: 40%; 
 	left: 50%; 
-	width: auto;
+	width: 85%;
   vertical-align: middle;
 	margin: 0 auto;
 	word-break: keep-all;
@@ -115,7 +115,7 @@ section {
 .author {
 	top: 60%; 
 	left: 50%; 
-	width: auto;
+	width: 90%;
 	transform: translate(-50%, -50%);
 	visibility: hidden;
 	color: white;
@@ -225,6 +225,12 @@ svg {
 		padding: 8px 15px;
 		text-align: center;
 	}
+
+	@media screen and (min-width: 481px){
+		.logo {
+		padding:20px !important;
+	}
+	}
 }
 
 @media screen and (max-width: 480px){
@@ -283,6 +289,14 @@ svg {
 	width: calc(20vw) !important;
 	height: calc(20vw) !important;
 	
+  }
+
+  .author {
+  	top: 70%;
+  	transform: translate(-50%, -50%);
+  }
+  .name {
+  	width: 80% !important;
   }
 }
 

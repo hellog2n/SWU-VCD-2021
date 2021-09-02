@@ -33,6 +33,7 @@ $('#all').on('click' , e => {
 	$(".graphic").show();
 	$(".print").show();
 	$(".video").show();
+	
 	AOS.refresh();
 }),
 // UXUI
@@ -50,6 +51,7 @@ $('#uxui').on('click' , () => {
 	$(".print").hide();
 	$(".video").hide();
 
+AOS.refresh();
 }),
 // Bx
 $('#bx').on('click' , () => {
@@ -160,32 +162,6 @@ $('.menuLink').on('mouseout' , e => {
 
 
 
-// 구글 스프레드 시트를 이용한 이미지 임베딩 소스코드 
-async function separateRowFromJson(SOURCE1, SOURCE2, COLUMNS){
-	let temp = {};
-    try {
-    const FETCHED_SOURCE = await fetch(SOURCE1);
-      temp = await FETCHED_SOURCE.json();
-    }
-catch{
-     
-        const FETCHED_SOURCE = await fetch(SOURCE2);
-        temp = await FETCHED_SOURCE.json();
-        console.log('source2 loaded');
-    
-}
- 	temp = temp.feed.entry;
-
-	const _DATA = [];
-	for(let i=0; i<Object.keys(temp).length; i++){
-		_DATA[i]={};
-		for(let k=0; k<Object.keys(COLUMNS).length; k++){;
-			_DATA[i][COLUMNS[k]] = temp[i]['gsx$'+COLUMNS[k]].$t;
-		}
-	}
-	
-	return _DATA;
-}
 
 // 해당 링크로 접속하는 함수
 function sendFunc( aValue ) { 
@@ -213,12 +189,9 @@ function rand(min, max) {
 // 구글스프레드시트에서 데이터를 갖고와서 처리하는 코드
 async function main(){
 	
-	const SOURCE1 = 'https://spreadsheets.google.com/feeds/list/1uFbTYJ3_jMkA9FdCntAzzSmx67o-Deey3nm42WkQaKU/1/public/full?alt=json';
+	// const COLUMNS = ['num', 'name', 'author', 'img', 'section'];
 	
-	const SOURCE2 = "https://spreadsheets.google.com/feeds/list/1pWsxKLjWLEn4uD0RiAHMMoGw-0jT632C4Y9UH6lw34o/2/public/full?alt=json";
-	const COLUMNS = ['num', 'name', 'author', 'img', 'section', 'link'];
-	
-	const DATA =  await separateRowFromJson(SOURCE1, SOURCE2, COLUMNS);
+	const DATA =  await separateRowFromJson();
 	
 	const allNumber = DATA.length;
 	const container = document.getElementById("container");
@@ -230,8 +203,15 @@ async function main(){
 
 	// resolution -> 해상도 표시하는 부분
 	for (let count = 1; count <= allNumber; count++) {
-		container.innerHTML+=`<a class="item" data-aos="fade-right" data-aos-delay="50" data-aos-duration="2500" href="#" onclick="javascript:sendFunc('${count}'); return false;" id="item${count}"><img src='' onError="this.onerror=null;  this.src='./images/thumbnail/altthumb.png'" 
-		style="width: ${resolution}; height: ${resolution};"/><p class="name"></p><p class="author"></p>
+
+		const thumbnail = "images/thumbnail/" + DATA[count-1].img;
+		const name = DATA[count-1].name;
+		const author = DATA[count-1].author;
+
+
+
+		container.innerHTML+=`<a class="item" data-aos="fade-right" data-aos-delay="50" data-aos-duration="2500" href="#" onclick="javascript:sendFunc('${count}'); return false;" id="item${count}"><img src='${thumbnail}' onError="this.onerror=null;  this.src='./images/thumbnail/altthumb.png'" 
+		style="width: ${resolution}; height: ${resolution};"/><p class="name">${name}</p><p class="author">${author}</p>
 		</a>`;
 	}
 		const TARGET={
@@ -240,17 +220,7 @@ async function main(){
 
 
 	for(let i=0; i<DATA.length; i++){
-		// img tag
-		const image = TARGET.item[i].childNodes[0];
-		// p tag
-		const name = TARGET.item[i].childNodes[1];
-		// p tag
-		const author = TARGET.item[i].childNodes[2];
-
-
-		image.src = "images/thumbnail/" + DATA[i].img;
-		name.textContent = DATA[i].name;
-		author.textContent = DATA[i].author;
+		
 
 		TARGET.item[i].classList.add(DATA[i].section);
 		// TARGET.item[i].setAttribute('href', DATA[i].link);
@@ -281,7 +251,6 @@ $('#line').css('display', 'block');
 // 호버 관리하는 부분
 // 마우스가 호버 중이라면
 	$('.item').mouseenter(function(){
-
 		if(window.innerWidth > mobileMaxWidth){
 		let image_link = "";
 
@@ -303,7 +272,6 @@ $('#line').css('display', 'block');
 		else {
 			image_link = "images/thumbnail/" + DATA[numID-1].img;
 		}
-
 		// 랜덤하게 GIF 마스크 이미지 선택하도록 설정
 		const randNum = rand(1,3);
 
@@ -322,11 +290,11 @@ $('#line').css('display', 'block');
 		 $(`#${id_check}`).append(() => `<svg viewBox="0 0 330 330" class="pos cover_a">
 <defs>
 	<mask id="MASK2" maskunits="userSpaceOnUse" maskcontentunits="userSpaceOnUse">
-		<image xlink:href="../index/images/wave${randNum}.gif" height="330px" width="330px" />
+		<image xlink:href="images/wave${randNum}.gif" height="330px" width="330px" />
 	</mask>
 </defs>
 <g mask="url(#MASK2)">
-	<image x="0" y="0" class="space" href="../index/images/cover_new.png" height="330px" width="330px" opacity="80%" />
+	<image x="0" y="0" class="space" href="images/cover_new.png" height="330px" width="330px" opacity="80%" />
 </g>
 </svg>
 
@@ -334,7 +302,7 @@ $('#line').css('display', 'block');
 <svg viewBox="0 0 330 330" class="pos image_a">
 <defs>
 	<mask id="MASK1" maskunits="userSpaceOnUse" maskcontentunits="userSpaceOnUse">
-		<image xlink:href="../index/images/wave${randNum}.gif" height="330px" width="330px" />
+		<image xlink:href="images/wave${randNum}.gif" height="330px" width="330px" />
 	</mask>
 </defs>
 <g mask="url(#MASK1)">
@@ -367,7 +335,7 @@ $('#line').css('display', 'block');
 	});
 		
 
-	// 모바일 상에서 클릭시
+	// 모바일 상에서 클릭 시
 	$('.item').click(function(){
 
 		if(window.innerWidth <= mobileMaxWidth){
@@ -390,6 +358,7 @@ $('#line').css('display', 'block');
 		// 파일이 존재한다면 해당 썸네일을 갖고오라.
 		else {
 			image_link = "images/thumbnail/" + DATA[numID-1].img;
+
 		}
 
 		// 랜덤하게 GIF 마스크 이미지 선택하도록 설정
@@ -408,11 +377,11 @@ $('#line').css('display', 'block');
 		 $(`#${id_check}`).append(() => `<svg viewBox="0 0 330 330" class="pos cover_a">
 <defs>
 	<mask id="MASK2" maskunits="userSpaceOnUse" maskcontentunits="userSpaceOnUse">
-		<image xlink:href="../index/images/wave${randNum}.gif" height="330px" width="330px" />
+		<image xlink:href="images/wave${randNum}.gif" height="330px" width="330px" />
 	</mask>
 </defs>
 <g mask="url(#MASK2)">
-	<image x="0" y="0" class="space" href="../index/images/cover_new.png" height="330px" width="330px" opacity="80%" />
+	<image x="0" y="0" class="space" href="images/cover_new.png" height="330px" width="330px" opacity="80%" />
 </g>
 </svg>
 
@@ -420,7 +389,7 @@ $('#line').css('display', 'block');
 <svg viewBox="0 0 330 330" class="pos image_a">
 <defs>
 	<mask id="MASK1" maskunits="userSpaceOnUse" maskcontentunits="userSpaceOnUse">
-		<image xlink:href="../index/images/wave${randNum}.gif" height="330px" width="330px" />
+		<image xlink:href="images/wave${randNum}.gif" height="330px" width="330px" />
 	</mask>
 </defs>
 <g mask="url(#MASK1)">
@@ -441,22 +410,24 @@ const mediaQuery = window.matchMedia('(min-width: 780px)')
 
 function handleTabletChange(e) {
   // Check if the media query is true
-  const img = document.getElementsByTagName('img');
+  const item = document.getElementsByTagName('item');
   if (e.matches) {
 	 
 	// Then log the following message to the console
-	for(let i = 0; i < img.length - 2; i++){
-		img[i].style.width = "300px";
-		img[i].style.height = "300px";
+	for(let i = 0; i < item.length; i++){
+		item[i].firstChild.style.width = "300px";
+		item[i].firstChild.style.height = "300px";
 	}
+
+	
 
   }
   else {
 	  const temp = 0;
 	  if(initialWindow > 780){
-	for(let i = 0; i < img.length - 2; i++){
-		img[i].style.width = resolution;
-		img[i].style.height = resolution;
+	for(let i = 0; i < item.length; i++){
+		item[i].firstChild.style.width = resolution;
+		item[i].firstChild.style.height = resolution;
 	}
 }
 }
