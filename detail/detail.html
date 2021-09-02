@@ -61,7 +61,9 @@
           <li>
             <a href="#a">
               <div class="darkMode glowing white"></div>
+
             </a>
+
           </li>
       </nav>
 
@@ -73,7 +75,7 @@
           <!-- 작가 이름 부분 -->
           <div class="author"></div>
           <!-- 이메일 부분 -->
-          <div class="email" style="font-weight: 400;"></div><br><br>
+          <div class="email" id ="email" style="font-weight: 400;"></div><br><br>
 
           <!-- 작품 제목 부분-->
           <div class="title"></div>
@@ -86,9 +88,11 @@
             <div class="image"></div>
           </div>
         </ul>
-        <script src="../works/page/detailworks.js?v2"></script>
-        <script defer src="darkmode.js?v2"></script>
-        <script src="scrollCheck.js?v2"></script>
+        <?php
+			include('detail.php');
+        ?>
+         <script defer src="darkmode.js"></script>
+        <script src="scrollCheck.js"></script> 
       </div>
       <!-- chat-body end -->
     </section>
@@ -104,10 +108,10 @@
       <p>Copyright © 2021 SWUVD. All rights reserved.</p>
       <br>
     </footer>
-    <a id="MOVE_TOP_BTN" href="#"><img src="../main/top.svg" width="50px !important"></a>
+    </a>
 
   </div>
-
+ <a id="MOVE_TOP_BTN" href="#"><img src="../main/top.svg" width="50px !important"></a> 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init({ once: true, });

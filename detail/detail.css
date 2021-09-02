@@ -68,7 +68,6 @@ margin-bottom: 5%;
 }
 
 
-
 .back_button:hover {
   color: #009999;
   transition: .5s;
@@ -140,6 +139,10 @@ margin-bottom: 5%;
     margin-bottom: 30px;
      padding-left: 7%;
     padding-right: 7%;
+    word-break: keep-all;
+  white-space: pre-line;
+  text-justify:inter-word;
+  width: 100%;
 }
 
 
@@ -155,9 +158,9 @@ margin-bottom: 5%;
     white-space: pre-line;
     padding-left: 7%;
     padding-right: 7%;
-    word-break: keep-all;
+    
 	
-	text-justify:inter-word;
+	text-align: justify;
 }
 .section-bottom {
   margin-bottom: calc(10vw);
@@ -186,7 +189,10 @@ section {
 }
 
 
-
+.hyperlink:hover {
+text-decoration: underline;
+text-decoration-color: "#009999";
+}
 
 
 .layout {
@@ -201,8 +207,10 @@ section {
 .image {
     width: calc(75vw);
     padding: 0;
+
     display: block;
     margin: 0 auto;
+    margin-top: 30px;
     
 }
 @media only screen and (min-width: 1000px){
