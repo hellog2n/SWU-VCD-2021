@@ -2,7 +2,7 @@
 
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=http%3A%2F%2Fswuvd2021.com&count_bg=%23009999&title_bg=%23555555&icon=csswizardry.svg&icon_color=%23FFBF00&title=his&edge_flat=false)](https://hits.seeyoufarm.com)
 
-[>>> 서울여대 38회 졸업전시 사이트 접속 <<<](https://wkddbjyjmail.mycafe24.com/main/main.html)
+[>>> 서울여대 38회 졸업전시 사이트 접속 <<<](https://wkddbjyjmail.mycafe24.com/)
 
 ## 관리자
 - Javascript / PHP / html / CSS : 서울여대 장유진 :whale2: 
